@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolce Vita</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header que contiene al nav-->
+        <header class="row">
+            <!-- Navbar -->
+            <nav class="col-12 navbar navbar-dark fixed-top navbar-expand-sm navbar-colors">
+                
+                <!-- Logo de la marca (brand) -->
+                <a class="d-none d-lg-inline navbar-brand" href="#">
+                    <img src="logo.png" width="30" height="30" alt="">
+                </a>
+
+                <!-- Boton toggler para desplegar y contraer en formatos moviles -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- El menu nav en sí -->
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-sm-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productos">Productos</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#platos">Platos</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#restaurante">Restaurante</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#nuestroequipo">Nuestro equipo</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Contenido de la página-->
+        <main class="row">
+            <!-- Imagen de fondo a toda pantalla en primer plano, con un pequeño formulario de registro -->
+            <div class="col-12">
+                <section class="row align-items-center bienvenida" id="inicio">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12 texto-bienvenida">
+                                <h1>Dolce Vita</h1>
+                                <p>
+                                    Cocina tradicional
+                                    <br>
+                                    que te transportará a Italia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contenido del resto de la pagina -->
+                <div class="container">
+                    <!-- Seccion de la pagina, con cambio de alteracion de orden en el contenido de los articulos (imagen-texto, texto-imagen) -->
+                    <section class="row" id="productos">
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <h2>Productos</h2>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam quos, quaerat repellat ratione voluptas voluptatum sint pariatur. Quidem veniam saepe ex modi facere consectetur nesciunt at, possimus et perspiciatis expedita!  
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <figure>
+                                <img src="productos.jpg">
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!-- Seccion de la pagina, con cambio de alteracion de orden en el contenido de los articulos (imagen-texto, texto-imagen) -->
+                    <section class="row" id="platos">
+                        <div class="col-12 col-12 col-sm-6 col-lg-12 order-1 order-sm-2 order-md-1">
+                            <h2>Platos</h2>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam quos, quaerat repellat ratione voluptas voluptatum sint pariatur. Quidem veniam saepe ex modi facere consectetur nesciunt at, possimus et perspiciatis expedita!  
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-12 order-2 order-sm-1 order-sm-2">
+                            <figure>
+                                <img src="platos.jpg">
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!-- Seccion de la pagina, con cambio de alteracion de orden en el contenido de los articulos (imagen-texto, texto-imagen) -->
+                    <section class="row" id="restaurante">
+                        <div class="col-12 col-12 col-sm-6 col-lg-12">
+                            <h2>Restaurante</h2>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam quos, quaerat repellat ratione voluptas voluptatum sint pariatur. Quidem veniam saepe ex modi facere consectetur nesciunt at, possimus et perspiciatis expedita!  
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <figure>
+                                <img src="restaurante.jpg">
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!-- Seccion de la pagina, con cambio de alteracion de orden en el contenido de los articulos (imagen-texto, texto-imagen) -->
+                    <section class="row" id="nuestroequipo">
+                        <div class="col-12">
+                            <h2>Nuestro equipo</h2>
+                            <div class="row">
+                                <div class="ficha-persona col-12 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-12">
+                                            <img class="rounded-circle rotate-scale-up" src="equipo1.jpg" alt="">
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-12">
+                                            <h3>Cocinero</h3>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            </p> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ficha-persona col-12 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-12">
+                                            <img class="rounded-circle rotate-scale-up" src="equipo2.jpg" alt="">
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-12">
+                                            <h3>Chef</h3>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            </p> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ficha-persona col-12 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-12">
+                                            <img class="rounded-circle rotate-scale-up" src="equipo3.jpg" alt="">
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-12">
+                                            <h3>Camarero</h3>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            </p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <!-- Solo para propósitos de pruebas -->
+            <!-- <div class="col-12 d-sm-none">
+                Extrapequeño (móvil)
+            </div>
+            <div class="col-12 d-none d-sm-block d-md-none">
+                Pequeño (tablet vertical/móvil)
+            </div>
+            <div class="col-12 d-none d-md-block d-lg-none">
+                Mediano (tablet horizontal)
+            </div>
+            <div class="col-12 d-none d-lg-block d-xl-none">
+                Grande (escritorio)
+            </div>
+            <div class="col-12 d-none d-xl-block">
+                Extragrande (escritorio ultra-wide)
+            </div> -->
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="row py-2">
+            <div class="col-12 col-sm-6">
+                <img src="mapa.png">
+            </div>
+            <div class="col-12 col-sm-6">
+                <h3>Contacto</h3>
+                <p>Calle Carlos III, nº 3 - Cartagena</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Pequeño script para controlar que al clicar en un enlace del navbar, se contraiga (en las versiones para moviles) -->
+    <!-- https://es.stackoverflow.com/questions/414160/no-se-contrae-el-listado-del-men%C3%BA-hamburguesa-o-colapsado-de-boostrap-cuando-s
+    https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-navbar-on-click
+    https://www.codeply.com/p/uWBbtTSsle-->
+    <script>
+        /*-- APlicamos a todos los enlaces del navbar menos al último que es un desplegable --*/
+        let navbar = document.querySelectorAll(".navbar-nav>li>a");
+        let menuToogle = document.querySelector("#collapsibleNavId");
+        let bsCollapse = new bootstrap.Collapse(menuToogle, {toggle:false});
+        for (let i = 0; i < navbar.length - 1; i++) {
+            let enlace = navbar[i];
+            enlace.addEventListener("click", () => {
+                bsCollapse.hide();
+            });
+        }
+
+        /*-- Aplicamos a los enlaces del desplegable --*/
+        let desplegable = document.querySelectorAll(".dropdown-menu>.dropdown-item");
+        desplegable.forEach((enlace) => {
+            enlace.addEventListener("click", () => {
+                bsCollapse.hide();
+            });
+        });
+        
+        /*-- Con JQuery (todavia no lo hemos dado asi que no entiendo como funciona ni por que es mas sencillo de hacer que en JavaScript) --*/
+        // $('.navbar-nav>li>a').on('click', function(){
+        //     $('.navbar-collapse').collapse('hide');
+        // });
+    </script>
+</body>
+</html>

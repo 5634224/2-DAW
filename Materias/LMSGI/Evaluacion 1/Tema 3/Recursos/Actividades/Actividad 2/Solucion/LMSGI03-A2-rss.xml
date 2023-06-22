@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Canal examen diciembre LLMM</title>
+        <language>es</language>
+        <description>
+            Este canal es para mostrar la oferta educativa sobre ciclos
+            formativos de programación de aplicaciones del CIFP Carlos III.
+        </description>
+        <link>https://www.llegarasaprogramarconfp.es</link>
+        <item>
+            <title>Desarrollo de aplicaciones Web</title>
+            <guid>https://www.llegarasaprogramarconfp.es/cfgs_daw</guid>
+            <description>
+                Esta entrada es para informar sobre las características del CFGS de DAW.
+                Debe contener más información que el título.
+            </description>
+        </item>
+        <item>
+            <title>Desarrollo de aplicaciones Multiplataforma</title>
+            <guid>https://www.llegarasaprogramarconfp.es/cfgs_dam</guid>
+            <description>
+                Esta entrada es para informar sobre las características del CFGS de DAM.
+                Debe contener más información que el título.
+            </description>
+        </item>
+    </channel>
+</rss>

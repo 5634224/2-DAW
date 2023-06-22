@@ -1,0 +1,155 @@
+/*-- Import --*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+@import '_maquetacion';
+@import '_variables';
+
+/*-- Estilos --*/
+
+body {
+    @include wrapper;
+
+    font-family: $letra;
+    font-size: $t-letra;
+    font-weight: $peso-cuerpo;
+    background-color: $color-fondo-pagina; // Explicar en la memoria
+
+    h1 { 
+        @include titulos("h1");
+    }
+
+    h2 {
+        @include titulos("h2");
+    }
+
+    h3 {
+        @include titulos("h3");
+    }
+}
+
+header {
+    // @include row;
+    img {
+        width: 10%;
+        float: left;
+    }
+
+    h1 { 
+        text-align: center;
+        margin: 0;
+        color: colorRojoRandom();
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0;
+        color: colorVerdeRandom();
+    }
+
+    background-color: $color-fondo;
+    padding: 1%;
+}
+
+a {
+    text-decoration: none;
+    color: $color-enlaces;
+}
+
+nav {
+    @include row;
+    @include navHorizontal;
+
+    ul {
+        @include col(12);
+        li {
+            a {
+                // color: $color-enlaces-nav;
+                font-weight: $peso-cuerpo;
+
+                &:hover {
+                    font-weight: $peso-negrita;
+                    color: $color-enlaces-nav-hover;
+                }
+            }
+        }
+    }
+}
+
+section {
+    @include row;
+    @include margin-top-bloques;
+    min-height: 20em;
+
+    article {
+        @include col(4, 4px, white, solid, $numArticulos);
+        // @include col(4);
+        @for $i from 1 through $numArticulos { //nColumnas
+            &:nth-of-type(#{$i}) {
+                background-color: colorRandom();
+            }
+        }
+
+        a {
+            @include row;
+            img {
+                @include col(3); //25%
+                // width: 25%;
+                // display: inline-block;
+            }
+    
+            div {
+                @include col(9); //75%
+                // width: 75%;
+                // display: inline-block;
+            }
+        }
+    }
+}
+
+footer {
+    // @include row;
+
+    text-align: center;
+    div, p {
+        background-color: $color-fondo;
+        @include margin-top-bloques;
+    }
+
+    div {
+        img {
+            width: 3em;
+        }
+    }
+
+    p {
+        @include margin-bottom-bloques;
+        font-size: calc($t-letra * 0.8);
+    }
+}
+
+@media screen and (max-width: $lg) { //max 992px
+    section {
+        article {
+            @include col(6, 4px, $color-fondo-pagina, solid, $numArticulos);
+        }
+    }
+}
+
+@media screen and (max-width: $md) { //max 768px
+    header {
+        text-align: center;
+        img {
+            float: none;
+        }
+    }
+
+    section {
+        article {
+            @include col(12);
+        }
+    }
+
+    nav {
+        @include navVertical;
+    }
+
+}

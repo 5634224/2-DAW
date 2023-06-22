@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="catalogo">
+        <xs:complexType>
+            <!-- Hijos -->
+            <xs:sequence>
+                <xs:element name="miembro" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="rol_principal" use="required"> <!-- Para que sea requerido el atributo, es necesario especificarlo -->
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="director"></xs:enumeration>
+                                    <xs:enumeration value="actriz"></xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+
+                        <xs:attribute name="id">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:ID">
+                                    <xs:pattern value="P[1-9]" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+
+                        <xs:attribute name="mensualidad" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minInclusive value="0"></xs:minInclusive>
+                                    <xs:fractionDigits value="2"></xs:fractionDigits>
+                                    <xs:totalDigits value="5"></xs:totalDigits>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+
+                        <xs:attribute name="miembro" type="xs:IDREF" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            
+            <!-- Atributos -->
+            <xs:attribute name="inicio" type="xs:date" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

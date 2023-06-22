@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parking nombre="Central" localidad="Cartagena" fecha="07/10/2021">    
+    <tipos_abono>
+        <tipo_abono id="COM" descripcion="completo" cuota="75" desde="00:00" hasta="23:59"/>
+        <tipo_abono id="LAB" descripcion="laboral" cuota="50" desde="06:00" hasta="21:00"/>
+        <tipo_abono id="LAM" descripcion="laboral mañana" cuota="35" desde="06:00" hasta="15:00"/>
+        <tipo_abono id="LAT" descripcion="laboral tarde" cuota="35" desde="14:00" hasta="22:00"/>
+    </tipos_abono>
+    <abonados>
+        <abonado numero="1" nombre="Pepe" telefono="968123456" tipo_abono="COM">
+                <tarjeta numero="1234567890" estado="activa" matricula="1234BBB" />
+                <tarjeta numero="1234567891" estado="activa" matricula="1235BBC" />
+                <tarjeta numero="1234567892" estado="inactiva" />
+        </abonado>
+        <abonado numero="2" nombre="Paco" telefono="968123457" tipo_abono="LAM">
+            <tarjeta numero="1234567895" estado="activa" />
+        </abonado>
+        <abonado numero="3" nombre="Marta" telefono="968123458" tipo_abono="LAT">
+            <tarjeta numero="1234567896" estado="activa" matricula="4567BBD" />
+        </abonado>
+    </abonados>
+    <accesos>
+        <acceso numero="1" matricula="1235BBC" fecha_hora_entrada="07/10/2021 09:05" modo="abonado" tarjeta="1234567891" />
+        <acceso numero="2" matricula="7894KML" fecha_hora_entrada="07/10/2021 09:06" modo="ticket" />
+        <acceso numero="3" matricula="4567FFD" fecha_hora_entrada="07/10/2021 09:09" modo="ticket" 
+          fecha_hora_salida="07/10/2021 12:15" importe="6,45" />
+        <acceso numero="4" matricula="6547DHL" fecha_hora_entrada="07/10/2021 10:02" modo="abonado" 
+          fecha_hora_salida="07/10/2021 13:58" tarjeta="1234567895" />
+    </accesos>   
+</parking>

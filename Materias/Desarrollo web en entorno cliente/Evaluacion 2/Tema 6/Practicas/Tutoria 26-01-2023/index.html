@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="practica.js"></script>
+
+    <style>
+
+        td {
+            /* border: medium solid; */
+            width: 20px;
+            height: 20px;
+        }
+
+        table {
+            border: 8px;
+            border-spacing: 10px;
+            border-color: white;
+            /* border-style: solid; */
+        }
+
+        td button {
+            width: 20px;
+            height: 20px;
+            border-radius: 0;
+            border-color: black;
+            border-width: 2px;
+        }
+
+        .verde {
+            background-color: green;
+        }
+
+        .gris {
+            background-color: gray;
+        }
+
+        .rojo {
+            background-color: red;
+        }
+
+        .centrarT {
+            text-align: center;
+        }
+
+        .centrar {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+    <title>DOM Y EVENTOS</title>
+</head>
+<body>
+    <div id="contenedor">
+        <h1 class="centrarT">RESERVAS DE CINE CARLOS III</h1>
+        <table class="centrar">
+            
+        </table>
+        <div class="centrarT">
+            <label>Total Reservas: </label>
+            <input type="number" id="totalReservas" name="totalReservas" value="0">
+            <button id="guardar" name="guardar">GUARDAR</button>
+            <input type="reset" id="limpiar" name="limpiar" value="LIMPIAR">
+        </div>
+        
+    </div>
+</body>
+</html>

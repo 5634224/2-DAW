@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>CIFP Carlos III – Novedades</title>
+        <link>http://www.cifpcarlos3.es/novedades</link>
+        <description>
+            Canal destinado a informar sobre las novedades del centro Carlos III
+        </description>
+        <language>es-ES</language>
+        <item>
+            <title>Plazo abierto para curso ocupacional</title>
+            <guid>http://www.cifpcarlos3.es/novedades/plazo_ocupacional</guid>
+            <description>
+                Plazo de inscripción abierto para curso de formación ocupacional.
+            </description>
+        </item>
+        <item>
+            <title>Carrera solidaria en marcha</title>
+            <guid>http://www.cifpcarlos3.es/novedades/carrera</guid>
+            <description>
+                Nuestro proyecto para organizar la carrera solidaria sigue adelante.
+            </description>
+        </item>
+        <item>
+            <title>Notas de la primera evaluación publicadas</title>
+            <guid>http://www.cifpcarlos3.es/novedades/notas</guid>
+            <description>
+                Novedades respecto a la publicación de notas de la primera evaluación.
+            </description>
+        </item>
+    </channel>
+</rss>

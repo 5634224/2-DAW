@@ -1,0 +1,1 @@
+db:open('LMSGI05A5')/modulo

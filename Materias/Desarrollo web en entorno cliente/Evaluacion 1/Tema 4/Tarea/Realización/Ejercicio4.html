@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWEC 04 - Ejercicio 4 - Clases y objetos en ES6</title>
+</head>
+<body>
+    <script>
+        function writeln(cadena) {
+            document.writeln("" + cadena);
+            document.writeln("<br>")
+        }
+        
+        class Curso {
+            constructor (nombre) {
+                this.nombre = nombre;
+                this.alumnos = [];
+                this.maximo = 10;
+            }
+
+            modificarMaximo(numeroMaximo) {
+                if (typeof(numeroMaximo) == "number") {
+                    if (numeroMaximo < this.alumnos.length) {
+                        alert("No puede establecer un número máximo de alumnos inferior al actual número de alumnos (" + this.alumnos.length + ")");
+                        return;
+                    }
+                    this.maximo = numeroMaximo;
+                }
+            }
+
+            agregarAlumnos(nombre) {
+                if (this.alumnos.length < this.maximo) {
+                    if (typeof(nombre) == "string") {
+                        this.alumnos.push({"nombre":nombre, "nota":null});
+                    }
+                } else {
+                    alert("Se ha alcanzado el número máximo de alumnos en el curso (" + this.maximo + ").")
+                }
+            }
+
+            agregarNota(nombreAlumno, nota) {
+                if (typeof(nombreAlumno) == "string" && typeof(nota) == "number") {
+                    for (let al of this.alumnos) {
+                        if (al.nombre == nombreAlumno) {
+                            al.nota = nota;
+                            return;
+                        }
+                    }
+                }
+            }
+
+            listar() {
+                return Array.from(this.alumnos);
+            }
+
+            eliminarAlumnos(nombreAlumno) {
+                for (let i = 0; i < this.alumnos.length; i++) {
+                    if (this.alumnos[i].nombre == nombreAlumno) {
+                        this.alumnos.splice(i, 1);
+                        return;
+                    }
+                }
+            }
+
+            estadisticas() {
+                /*-- Declaración de variables --*/
+                let notaMaxima = 0;
+                let notaMedia = 0;
+                /*-- Recopila los datos recorriendo el array de alumnos --*/
+                for (let al of this.alumnos) {
+                    notaMedia += al.nota;
+                    if (al.nota > notaMaxima) {
+                        notaMaxima = al.nota;
+                    }
+                }
+                notaMedia = notaMedia / this.alumnos.length;
+
+                /*-- Devuelve un objeto literal que contiene ambos datos --*/
+                return {"notaMaxima":notaMaxima, "notaMedia":notaMedia};
+            }
+        }
+
+        /*======================================================================
+                EJECUCIÓN DE UN PEQUEÑO SCRIPT DE PRUEBAS DE LOS MÉTODOS
+        =======================================================================*/
+
+        let paso = 1;
+        let segundoDAW
+        function ejecucion() {
+            switch (paso) {
+                case 1:
+                    console.log("1. Creación del objeto Curso:");
+                    segundoDAW = new Curso("2º de DAW");
+                    console.log(segundoDAW);
+                    break;
+                case 2:
+                    console.log("2. Modificación del máximo de alumnos:");
+                    segundoDAW.modificarMaximo(2);
+                    console.dir(segundoDAW);
+                    break;
+                case 3:
+                    console.log("3. Agregar alumnos al curso (Santiago):");
+                    segundoDAW.agregarAlumnos("Santiago");
+                    console.dir(segundoDAW);
+                    break;
+                case 4:
+                    console.log("4. Agregar alumnos al curso (Francisco):");
+                    segundoDAW.agregarAlumnos("Francisco");
+                    console.dir(segundoDAW);
+                    break;
+                case 5:
+                    console.log("5. Agregar alumnos al curso (Raul: alcanzado límite máximo, no deja):");
+                    segundoDAW.agregarAlumnos("Raul");
+                    console.dir(segundoDAW);
+                    break;
+                case 6:
+                    console.log("6. Agregar nota al alumno Santiago:");
+                    segundoDAW.agregarNota("Santiago", 10);
+                    console.dir(segundoDAW);
+                    break;
+                case 7:
+                    console.log("7. Agregar nota al alumno Francisco:");
+                    segundoDAW.agregarNota("Francisco", 9);
+                    console.dir(segundoDAW);
+                    break;
+                case 8:
+                    console.log("8. Listar los alumnos del curso:");
+                    console.dir(segundoDAW.listar());
+                    break;
+                case 9:
+                    console.log("9. Método estadisticas para mostrar nota media y nota máxima:");
+                    let estadisticas = segundoDAW.estadisticas();
+                    console.log("Nota media: " + estadisticas.notaMedia + ", Nota máxima: " + estadisticas.notaMaxima);
+                    break;
+                case 10:
+                    console.log("10. Eliminar alumno del curso (Francisco):");
+                    segundoDAW.eliminarAlumnos("Francisco");
+                    console.dir(segundoDAW);
+                    console.log("Ejecución de las pruebas finalizada.")
+                    break;
+                default:
+                    console.log("Ejecución de las pruebas finalizada.")
+            }
+            paso++;
+        }
+
+        window.onload = () => {
+            document.getElementById("ejecucionPasoAPaso").onclick = ejecucion;
+            document.getElementById("reset").onclick = () => {
+                location.reload();
+            }
+        }
+    </script>
+    <h1>DWEC 04 - Ejercicio 4 - Clases y objetos en ES6</h1>
+    <p>Por favor, mira la consola de JavaScript para verificar el ejercicio.</p>
+    <label>Ejecucion paso a paso para ver los resultados de la consola actualizados en tiempo real</label>
+    <input type="button" id="ejecucionPasoAPaso" value="Ejecutar paso a paso">
+    <input type="button" id="reset" value="Empezar de nuevo la ejecución del ejercicio">
+</body>
+</html>

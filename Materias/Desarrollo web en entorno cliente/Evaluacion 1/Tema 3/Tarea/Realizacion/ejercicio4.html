@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+
+    <script>
+        /*===============================================
+                            FUNCIONES
+        ================================================*/
+
+        /**
+         * Convierte un año de dos cifras a un año de 4 cifras.
+         * Damos por hecho que las fechas que se introduzcan serán del siglo XXI o del siglo XX, ya que no se puede inferir si nos referimos a años anteriores (o posteriores) a los
+         * comprendidos en dichos siglos. Solo los seres humanos (y quizás las inteligencias artificiales) podrían hacerlo (y siempre con un contexto por detrás).
+         * @param int anyo Especifica el año.
+         */
+        function convertirAnyoACuatroCifras(anyo) {
+            if (typeof(anyo) == "string") {
+                let anyoEnNumero = parseInt(anyo);
+                let fechaActual = new Date().getFullYear().toString();
+                let fechaActualDosCifras = fechaActual.substring(Math.max(0, fechaActual.length - 2), fechaActual.length);
+
+                if (anyo <= fechaActualDosCifras) {
+                    let resultado = parseInt(fechaActual.substring(0, Math.max(0, Math.min(fechaActual.length - 2, fechaActual.length))))
+                    resultado = resultado * Math.pow(10, fechaActual.length - (fechaActual.length - Math.max(0, Math.min(fechaActual.length - 2, fechaActual.length)))) + parseInt(anyo);
+                    return resultado;
+                } else {
+                    let resultado = parseInt(fechaActual.substring(0, Math.max(0, Math.min(fechaActual.length - 2, fechaActual.length)))) - 1;
+                    resultado = resultado * Math.pow(10, fechaActual.length - (fechaActual.length - Math.max(0, Math.min(fechaActual.length - 2, fechaActual.length)))) + parseInt(anyo);
+                    return resultado;
+                }
+            }
+        }
+
+        /**
+         * Devuelve si un año es bisiesto o no.
+         * @param int anyo Especifica el año.
+         * @return boolean true si es bisiesto, false si no.
+         */
+        function esBisiesto(anyo) {
+            // Info: https://www.wikiwand.com/es/A%C3%B1o_bisiesto
+            if (anyo % 100 == 0) { // Si es año secular
+                return anyo % 4 == 0 && anyo % 400 == 0 ? true : false;
+            } else { // Si no es un año secular
+                return anyo % 4 == 0 ? true : false;
+            }
+        }
+
+        /**
+         * Devuelve el número de días de un mes.
+         * @param int numMes Especifica el mes.
+         * @param int anyo Especifica el año.
+         * @return int El número de días de un mes.
+         */
+        function calcularDiasMes(numMes, anyo) {
+            switch (numMes) {
+                /*-- Meses de 31 días --*/
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    return 31;
+                    break;
+                /*-- Meses de 30 días --*/
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    return 30;
+                    break;
+                /*-- Febrero: caso especial --*/
+                case 2:
+                    return 28 + (esBisiesto(anyo) ? 1 : 0);
+                    break;
+            }
+        }
+
+        function validarFecha() {
+            /*-- Variables globales --*/
+            let fecha = document.getElementById("fecha").value;
+            /*-- Comprobaciones --*/
+            if (typeof(fecha) == "string") {
+                /*-- Creamos la expresión regular que permitirá validar la cadena fecha --*/
+                let patron = /^((0[1-9])|((1|2)[0-9])|(3[0-1]))(\-|\/)((0[1-9])|(1[0-2]))\6([0-9]{2})$/;
+                ///^((^0[1-9]$)|(^(1|2)[0-9]$)|(^3[0-1]$))(^\-$|^\/$)((^0[1-9]$)|(^1[0-2]$))\6[0-9]{2}$/;
+
+                /*-- Verificamos si la cadena cumple con el patrón establecido --*/
+                let datosFecha = fecha.match(patron);
+                if (!datosFecha) {
+                    window.alert("Fecha inválida (no cumple con la expresion regular). Teclea una fecha con el formato dd/mm/aa o dd-mm-aa"); // Formato de fecha inválido
+                    return;
+                }
+
+                /*-- Verificamos los datos de cada campo de la fecha --*/
+                //let prueba = parseInt(datosFecha[2]);
+                if (parseInt(datosFecha[7]) < 1 || parseInt(datosFecha[7]) > 12
+                    || parseInt(datosFecha[1]) < 1 || parseInt(datosFecha[1]) > calcularDiasMes(parseInt(datosFecha[7]), convertirAnyoACuatroCifras(datosFecha[10]))) {
+                        window.alert("Fecha inválida (no cumple las comprobaciones manuales). Teclea una fecha con el formato dd/mm/aa o dd-mm-aa"); // La fecha no es válida
+                } else {
+                    /*-- Guardamos la fecha en el almacenamiento local --*/
+                    window.localStorage.setItem("fecha", fecha);
+                    document.getElementById("resultado").innerText = "Tu cumpleaños es el " + fecha;
+                    document.getElementById("reset").removeAttribute("hidden");
+                }
+            }
+        }
+
+        function reset() {
+            window.localStorage.clear();
+            document.getElementById("reset").setAttribute("hidden", "hidden");
+            //document.getElementById("resultado").setAttribute("hidden", "hidden");
+            document.getElementById("resultado").innerText = "";
+            document.getElementsByTagName('div')[0].removeAttribute("hidden");
+        }
+
+
+        function inicializar() {
+            /*-- Asignar funciones a los botones --*/
+            document.getElementById('enviar').onclick=validarFecha;
+            document.getElementById('reset').onclick=reset;
+
+            /*-- Comprueba si ya hay alguna fecha guardada en el almacenamiento local --*/
+            let fecha = window.localStorage.getItem("fecha");
+            if (typeof(fecha) == 'string') {
+                document.getElementById("resultado").innerText = "Tu cumpleaños es el " + fecha;
+                document.getElementsByTagName('div')[0].setAttribute("hidden", "hidden");
+            } else {
+                document.getElementById("reset").setAttribute("hidden", "hidden");
+            }
+        }
+    </script>
+</head>
+<body onLoad="inicializar()">
+    <div>
+        <label>Introduce la fecha de tu cumpleaños (dd/mm/aa o dd-mm-aa)</label>
+        <input type="text" id="fecha">
+        <input type="button" id="enviar" value="Enviar">
+    </div>
+
+    <p id="resultado"></p>
+    <p>
+        <input type="button" id="reset" value="Resetear formulario">
+    </p>
+</body>
+</html>

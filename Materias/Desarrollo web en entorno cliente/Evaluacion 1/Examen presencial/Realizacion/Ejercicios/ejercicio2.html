@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2. Cadenas, arrays, objetos</title>
+</head>
+<body>
+    <h1>Ejercicio 1. Cadenas y almacenamiento local</h1>
+    <h3>PERSONAS INTRODUCIDAS</h3>
+    <script>
+        function writeln(texto) {
+            document.writeln(texto + "<br>");
+        }
+
+        let expresionSeguir = /^[A-Z]\w*\s(\d){1,3}$/;
+        let expresionFin = /^[Ff][Ii][Nn]$/;
+        let personas = new Array();
+        let persona = "";
+        let consultando = true;
+        // let br = document.createElement("br");
+
+        while (consultando) {
+            if (!(persona == "" || persona == null)) {
+                if (persona.match(expresionSeguir)) {
+                    let indiceSeparador = persona.indexOf(" ");
+                    let objPersona = {nombre: persona.substring(0, indiceSeparador),
+                                    edad: persona.substring(indiceSeparador + 1, persona.length)};
+                    personas.push(objPersona);
+                    persona = ""; // para que el while en la siguiente iteracion vuelva a pasar por este if
+                } else if (persona.match(expresionFin)) {
+                    consultando = false;
+                    /*-- Imprime las personas del array --*/
+                    let indiceMayor = new Array();
+                    let sumaEdades = 0;
+                    for (let i = 0; i < personas.length; i++) {
+                        let element = personas[i];
+                        document.body.append(element.nombre + " " + element.edad);
+                        document.body.insertAdjacentHTML("beforeend", "<br>");
+                        if (indiceMayor.length >= 1) { // Si ya hay algun elemento
+                            if (element.edad == personas[indiceMayor[0]].edad) {
+                                indiceMayor.push(i); // añade el indice de la nueva mayor persona
+                            } else if (element.edad > personas[indiceMayor[0]].edad) {
+                                indiceMayor = new Array(); // vacia el array creando uno nuevo
+                                indiceMayor.push(i); // añade el indice de la nueva mayor persona
+                            }
+                        } else { // Si esta empezando a meter elementos
+                            indiceMayor.push(i); // añade el indice de la nueva mayor persona
+                        }
+
+                        sumaEdades += Number.parseInt(element.edad);
+                    }
+                    document.body.insertAdjacentHTML("beforeend", "<br>");
+
+                    /*-- Personas con mayor edad --*/
+                    document.body.append("Personas de mayor edad: ");
+                    for (let i = 0; i < indiceMayor.length; i++) {
+                        document.body.append(personas[indiceMayor[i]].nombre + " ");
+                    }
+                    document.body.insertAdjacentHTML("beforeend", "<br>");
+                    document.body.append("Edad media: " + (sumaEdades / personas.length).toFixed(1));
+                    /*-- Se termina el bucle de pedirle datos al usuario --*/
+                    consultando = false;
+                } else {
+                    persona = prompt("Introduzca un usuario en formato Aaaaa n");
+                }
+            } else {
+                persona = prompt("Introduzca un usuario en formato Aaaaa n");
+            }
+        }
+    </script>
+</body>
+</html>

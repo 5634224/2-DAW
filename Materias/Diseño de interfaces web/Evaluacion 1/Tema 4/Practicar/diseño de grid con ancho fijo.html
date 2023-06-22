@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            width: 980px;
+            margin: 0 auto;
+            padding-right: 20px;
+        }
+
+        .row {
+            clear: both;
+        }
+
+        .col {
+            float: left;
+            margin-left: 20px;
+            width: 60px;
+            background: rgb(255,150,150);
+        }
+
+        .col.span2 {
+            width: 140px;
+        }
+
+        .col.span3 {
+            width: 220px;
+        }
+
+        .col.span4 {
+            width: 220px;
+        }
+
+        .col.span5 {
+            width: 460px;
+        }
+
+        .col.span6 {
+            width: 460px;
+        }
+
+        /* @for $tamano from 1 to 12 {
+            .col.span{$tamano} {
+                width: (60 * $tamano + 20 * $tamano) * 1px;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+            <div class="col">5</div>
+            <div class="col">6</div>
+            <div class="col">7</div>
+            <div class="col">8</div>
+            <div class="col">9</div>
+            <div class="col">10</div>
+            <div class="col">11</div>
+            <div class="col">12</div>
+        </div>
+        <div class="row">
+            <div class="col span1">13</div>
+            <div class="col span6">14</div>
+            <div class="col span3">15</div>
+            <div class="col span2">16</div>
+        </div>
+    </div>
+</body>
+</html>

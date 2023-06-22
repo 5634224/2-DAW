@@ -1,0 +1,10 @@
+SELECT car_id, art_nombre, art_precio_venta, SUM(FLOOR(car_cantidad))
+FROM carritos_compra
+JOIN articulos ON (carritos_compra.car_articulo = articulos.art_id)
+WHERE carritos_compra.car_cliente = 4
+GROUP BY car_id;
+
+SELECT art_nombre, car_cantidad
+FROM carritos_compra
+JOIN articulos ON (carritos_compra.car_articulo = articulos.art_id)
+WHERE carritos_compra.car_cliente = 4

@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box; /* Esto es costumbre mia ponerlo ya siempre */
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+main table {
+    margin: 0.5em auto;
+}
+
+main table tbody td img {
+    object-fit: scale-down;
+    width: 100%;
+    max-height: 200px;
+}
+
+main table tbody td  {
+    padding: 0.5em 4em;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resumenIVA>
+	<presentacion fecha="2016-01-20">
+		<periodo desde="2015-10-01" hasta="2015-12-31" />
+		<presentador cif="B12345678" razon="Empre,S.A." />
+		<liquidacion importe="750.00" iban="ES1812345678901234567890" cargo="2016-01-30"/>
+		<observaciones></observaciones>
+	</presentacion>
+	<soportado total="2400.00">
+		<iva porcentaje="21.00" base="10000.00" cuota="2100.00" />
+		<iva porcentaje="10.00" base= "3000.00" cuota= "300.00" />
+	</soportado>
+	<repercutido total="2400.00">
+		<iva porcentaje="21.00" base="15000.00" cuota="3150.00" />
+	</repercutido>
+</resumenIVA>

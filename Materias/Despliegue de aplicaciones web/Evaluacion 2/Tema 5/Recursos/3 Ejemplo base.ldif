@@ -1,0 +1,10 @@
+#usuarios
+dn: ou=usuarios,dc=empresa,dc=local
+objectclass: organizationalUnit
+ou: usuarios
+
+#grupos
+dn: ou=grupos,dc=empresa,dc=local
+objectclass: organizationalUnit
+ou: grupos
+

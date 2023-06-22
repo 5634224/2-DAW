@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<partido fecha="Mon, 28 Nov 2022 16:00:00 GMT" liga="nacional" categoria="cadetes">
+    <localizacion localidad="Aguilas" direccion="C. Electra, s/n, 30880 Águilas, Murcia" instalaciones="El Rubial"/>
+    <equipo_arbitral>
+        <arbitro DNI="23829353L" nombre="Juan Pedro Iglesias" rol="primer arbitro"/>
+        <arbitro DNI="30316404N" nombre="Marcos Consentino" rol="segundo arbitro"/>
+        <arbitro DNI="99871319Y" nombre="Julio Piñero" rol="juez de linea"/>
+    </equipo_arbitral>
+
+    <equipo id="ABCD1" nombre="Cartagena" origen="Cartagena - Murcia">
+        <jugadores>
+            <jugador id="001" DNI="10074770B" nombre="Emilio Jose Ribera" dorsal="1"></jugador>
+            <jugador id="002" DNI="10795713L" nombre="Benjamin Moya" dorsal="2"></jugador>
+            <jugador id="003" DNI="73573832Y" nombre="Marian Afonso" dorsal="3"></jugador>
+        </jugadores>
+        <cambios>
+            <cambio hora="09:23" dorsal_saliente="1" dorsal_entrante="4"></cambio>
+            <cambio hora="25:23" dorsal_saliente="3" dorsal_entrante="6"></cambio>
+        </cambios>
+        <cuerpo_tecnico>
+            <miembro tipo="primer entrenador" DNI="40958160J" nombre="Jose Rafael Gracia"></miembro>
+            <miembro tipo="segundo entrenador" DNI="22048240A" nombre="Unai Domenech"></miembro>
+            <miembro tipo="asistente medico" DNI="02371199Z" nombre="Claudio San Martin"></miembro>
+        </cuerpo_tecnico>
+    </equipo>
+    <equipo id="EFGH2" nombre="Aguilas" origen="Aguilas - Murcia">
+        <jugadores>
+            <jugador id="001" DNI="50000867V" nombre="Carmelo Benitez" dorsal="5"></jugador>
+            <jugador id="002" DNI="09598200R" nombre="Florencio Vazquez" dorsal="9"></jugador>
+            <jugador id="003" DNI="43203113M" nombre="Fabian Cuesta" dorsal="7"></jugador>
+        </jugadores>
+        <cambios>
+            <cambio hora="10:23" dorsal_saliente="5" dorsal_entrante="7"></cambio>
+            <cambio hora="29:23" dorsal_saliente="9" dorsal_entrante="12"></cambio>
+        </cambios>
+        <cuerpo_tecnico>
+            <miembro tipo="primer entrenador" DNI="15964134H" nombre="Ricardo Dieguez"></miembro>
+            <miembro tipo="segundo entrenador" DNI="72972210H" nombre="Armando Bello"></miembro>
+            <miembro tipo="asistente medico" DNI="64675571P" nombre="Juan Andres Blazquez"></miembro>
+        </cuerpo_tecnico>
+    </equipo>
+
+    <resultado>
+        <set id="1" inicio="16:00" duracion="15">
+            <tanteo>
+                <puntuacion equipo="ABCD1" puntos="25" />
+                <puntuacion equipo="EFGH2" puntos="20" />
+            </tanteo>
+            <tiempos_muertos>
+                <tiempo_muerto minuto="10" solicitante="ABCD1"/>
+            </tiempos_muertos>
+            <observaciones>
+                <observacion minuto="10">
+                    Falta cometida por el jugador 001 del equipo ABCD1.
+                </observacion>
+            </observaciones>
+        </set>
+        <set id="2" inicio="16:16" duracion="10">
+            <tanteo>
+                <puntuacion equipo="ABCD1" puntos="25" />
+                <puntuacion equipo="EFGH2" puntos="14" />
+            </tanteo>
+            <tiempos_muertos>
+                <tiempo_muerto minuto="2" solicitante="ABCD1"/>
+            </tiempos_muertos>
+            <observaciones>
+                <observacion minuto="2">
+                    Falta cometida por el jugador 002 del equipo EFGH2.
+                </observacion>
+            </observaciones>
+        </set>
+        <set id="3" inicio="16:27" duracion="20">
+            <tanteo>
+                <puntuacion equipo="ABCD1" puntos="25" />
+                <puntuacion equipo="EFGH2" puntos="18" />
+            </tanteo>
+            <tiempos_muertos>
+                <tiempo_muerto minuto="10" solicitante="ABCD1"/>
+            </tiempos_muertos>
+            <observaciones>
+                <observacion minuto="15">
+                    Falta cometida por el jugador 002 del equipo EFGH2.
+                </observacion>
+            </observaciones>
+        </set>
+        
+    </resultado>
+</partido>

@@ -1,0 +1,9 @@
+#usuarios
+dn: ou=usuarios,dc=examen,dc=local
+objectclass: organizationalUnit
+ou: usuarios
+
+#grupos
+dn: ou=grupos,dc=examen,dc=local
+objectclass: organizationalUnit
+ou: grupos

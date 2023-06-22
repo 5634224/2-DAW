@@ -1,0 +1,18 @@
+Creamos la clase Usuario. Sus atributos serán nombre, fecha de nacimiento, sexo (M o F) y actividades, que será un array de objetos de las subclases Ciclismo, Carrera y Elíptica. En los métodos nos encontraremos con:
+
+1. Edad: nos devuelve un número entero basándonos en la fecha actual y la fecha de nacimiento.
+2. Inserta actividad: introduce una actividad en el array.
+3. Total ciclismo: devuelve un array asociativo con la distancia total, los metros de ascenso total, tiempo total y velocidad media que suman todos las actividades de ciclismo del usuario. El tiempo total se devuelve en segundos.
+4. Total carrera: de forma similar al anterior, devuelve un array asociativo con suma la distancia total, el tiempo total y calcula el ritmo medio. El tiempo total y el ritmo se devuelve en segundos.
+5. Total elíptica: devuelve array asociativo con la suma total de pasos, dureza y tiempo total.
+6. Numero de actividades: devuelve el número de actividades que hay almacenadas en el array del usuario.
+7. Devuelve actividad (i): recibe un número entero como parámetro y devuelve la actividad que en el array está en la posición indicada por ese número.
+8. Elimina actividad (i): recibe un número entero como parámetro y elimina la actividad que en el array está en la posición indicada por ese número. No deben quedar huecos en el array.
+9. Ordena actividades: al ejecutar este método, las actividades quedarán ordenadas por fecha. Debemos modificar insertaActividad para que al hacer una inserción llame al método de ordenación.
+
+A continuación trabajaremos con un solo usuario:
+
+1. Creamos un formulario que permita insertar cualquiera de los tres tipos de actividades que hemos definido.
+2. Tras insertar una actividad debe mostrarse junto con el formulario la lista de actividades del usuario dentro de una tabla. Las filas se mostrarán de un color diferente según el tipo de actividad que se esté mostrando.
+3. Junto a cada actividad, y al final de la fila, aparecerá un botón para poder eliminar la actividad.
+4. Finalmente y fuera de la tabla, aparecerán los totales de las tres actividades.

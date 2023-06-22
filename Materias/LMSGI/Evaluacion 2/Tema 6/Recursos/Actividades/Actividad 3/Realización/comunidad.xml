@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comunidad fecha_actualizacion="2020-01-20T08:00:00">
+	<propietarios>
+		<propietario id="JMMM" apellidos="Mendoza Martínez" nombre="José Manuel" alcorriente="true" />
+		<propietario id="AFGL" apellidos="Gálvez Lorente" nombre="Ana Francisca" alcorriente="true" />
+		<propietario id="CNAA" apellidos="Casas Nuevas" nombre="Alfredo Arturo" alcorriente="true" />
+		<propietario id="CEGL" apellidos="Gómez López" nombre="Cristina Elena" alcorriente="true" />
+		<propietario id="GRNC" apellidos="Navas Conesa" nombre="Gregorio Rodrigo" />
+		<propietario id="IPUL" apellidos="Usillos Liarte" nombre="Ignacio Patricio" />
+	</propietarios>
+	<propiedades>
+		<propiedad id="C01" tipo="vivienda120" contacto="CNAA">
+			<participacion propietario="CNAA" porcentaje="50" />
+			<participacion propietario="AFGL" porcentaje="50" />
+		</propiedad>
+		<propiedad id="C02" tipo="vivienda90">
+			<participacion propietario="GRNC" porcentaje="100" />
+		</propiedad>
+		<propiedad id="C03" tipo="vivienda90" contacto="CEGL">
+			<participacion propietario="IPUL" porcentaje="50" />
+			<participacion propietario="CEGL" porcentaje="50" />
+		</propiedad>
+		<propiedad id="C04" tipo="vivienda150">
+			<participacion propietario="JMMM" porcentaje="100" />
+		</propiedad>
+		<propiedad id="G01" tipo="garaje" contacto="CNAA">
+			<participacion propietario="CNAA" porcentaje="50" />
+			<participacion propietario="AFGL" porcentaje="50" />
+		</propiedad>
+		<propiedad id="G02" tipo="garaje">
+			<participacion propietario="JMMM" porcentaje="100" />
+		</propiedad>
+	</propiedades>
+	<cuotas>
+		<cuota tipo="vivienda90" valor="35.0" />
+		<cuota tipo="vivienda120" valor="45.0" />
+		<cuota tipo="vivienda150" valor="50.0" />
+		<cuota tipo="garaje" valor="15.0" />
+	</cuotas>
+	<derramas>
+		<derrama id="D001" valor="20.0" asunto="Arreglos fachada" desde="2019-10-01" hasta="2020-09-01">
+		Se ha procedido a restaurar la fachada completa, usando mortero monocapa,
+		según acuerdo de junta ordinaria de la fecha 15/07/2019.
+		</derrama>
+	</derramas>
+</comunidad>

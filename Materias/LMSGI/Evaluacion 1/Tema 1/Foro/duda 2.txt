@@ -1,0 +1,10 @@
+Duda con la sintaxis... Textualmente la teoria dice asi:
+"Antes de poder utilizar un prefijo de un espacio de nombres, para resolver la ambigüedad de dos o más etiquetas, es necesario declarar el espacio de nombres, es decir, asociar un índice con el URI asignado al espacio de nombres, mediante un atributo especial xmlns. Esto se hace entre el prólogo y el ejemplar de un documento XML y su sintaxis es la siguiente:
+
+<conexion>://<direccionservidor>/<apartado1>/<apartado2>/...
+
+"
+
+Planteamiento de la duda:
+
+si queremos usar los espacios de nombres de forma local, la sintaxis tambien seria con http://nombreCarpeta1/nombreCarpeta2 etc etc o seria con la ruta local de Windows? no queda del todo claro en el ejemplo, ya que no se especifica si eso seria para hacerlo en remoto o local o como...

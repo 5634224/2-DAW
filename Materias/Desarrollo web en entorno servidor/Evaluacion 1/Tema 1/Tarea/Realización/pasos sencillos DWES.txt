@@ -1,0 +1,34 @@
+#Instalamos y configuramos la arquitectura LAMP
+sudo apt install apache2
+sudo apt install php8.1
+sudo a2enmod php8.1
+sudo apt install mysql-server mysql-client
+#Instalamos PHPMyAdmin
+sudo mysql -u root -p
+CREATE USER 'super'@'localhost' IDENTIFIED BY 's';
+GRANT ALL PRIVILEGES ON * . * TO 'super'@'localhost';
+exit
+sudo apt install phpmyadmin
+sudo service apache2 restart
+#Instalamos NetBeans
+sudo apt install openjdk-17-jdk openjdk-17-jre openjdk-17-jre-headless
+sudo snap install netbeans --classic
+#Damos permisos a la carpeta /var/www/html para que NetBeans pueda guardar ahi los proyectos:
+sudo chmod 777 /var/www -R
+#Instalamos xdebug:
+sudo apt install php-xdebug
+#Configuracion xdebug:
+sudo gedit /etc/php/8.1/mods-available/xdebug.ini
+
+zend_extension=xdebug.so
+xdebug.remote_enable=1
+xdebug.remote_handler=dbgp
+xdebug.remote_mode=req
+xdebug.remote_host=127.0.0.1
+xdebug.remote_port=9000
+xdebug.idekey=netbeans-xdebug
+xdebug.mode=develop,debug;
+
+#Reiniciamos Apache2:
+sudo service apache2 restart
+sudo systemctl restart apache2

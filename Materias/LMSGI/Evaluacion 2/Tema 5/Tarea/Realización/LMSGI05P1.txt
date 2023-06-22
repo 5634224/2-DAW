@@ -1,0 +1,11 @@
+Apartado A:
+/catalogo/elenco/miembro[@rol_principal='director']/@nombre/data()
+
+Apartado B:
+/catalogo/titulos/genero/titulo[not(@nrm)]/@nombre/data()
+
+Apartado C:
+/catalogo/titulos/genero[titulo/reparto[@miembro='JS1' and @rol='protagonista']]/@nombre/data()
+
+Apartado D:
+/catalogo/titulos/genero/titulo[@anyo >= 2000 and @anyo <= 2009 and @duracion > 120]/@nombre/data()

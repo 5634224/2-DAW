@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Actividad 4</title>
+    </head>
+    <body>
+        <script>
+            
+            let total = 0;
+            let contador = 0;
+
+            do {
+                let numero;
+                while (numero == null) {
+                    numero = parseInt(prompt("Introduce un número:"));
+                    if (isNaN(numero)) { // La funcion isNaN comprueba si la variable contiene un número o si se han introducido letras
+                        window.alert("Por favor, introduce un número, no introduzcas letras.");
+                        numero = null;
+                    }
+                }
+
+                if (isNaN(numero)) { // La funcion isNaN comprueba si la variable contiene un número o si se han introducido letras
+                    window.alert("Por favor, introduce un número, no introduzcas letras.");
+                    numero = null;
+                }
+
+                /*-- Avanza una posición en la iteración --*/
+                contador++;
+                total += numero;
+            } while (total < 50);
+
+            /*-- Escribe por pantalla el total de números introducdos y la suma total de los números --*/
+            document.write("Total de números introducidos: " + contador + "<br>");
+            document.write("Suma total de los números: " + total);
+        </script>
+
+        <p>Hecho por Santiago Francisco San Pablo Raposo, 2º DAW</p>
+    </body>
+</html>

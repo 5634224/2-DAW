@@ -1,0 +1,3 @@
+div id cuerpo:  flex-wrap
+img: class="flex-ai-start"
+div campos formulario: flex-wrap

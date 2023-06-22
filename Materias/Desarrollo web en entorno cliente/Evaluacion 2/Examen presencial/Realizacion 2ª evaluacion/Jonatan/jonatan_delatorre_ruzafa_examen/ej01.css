@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    zoom: 200%;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+ul {
+    list-style: none;
+    padding-left:0;
+    user-select: none;
+}
+
+li {
+    border-top: 1px solid black;
+}
+
+.seleccionado {
+    background-color: blue;
+    color: white;
+}

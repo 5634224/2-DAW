@@ -1,0 +1,56 @@
+Mi última idea:
+SELECT clicompras.cli_id, clicompras.cli_nombre, clicompras.Cantidad, clicarritos.Carrito
+FROM (SELECT cli_id, cli_nombre, IFNULL(SUM(lineas_ventas.lin_cantidad * articulos.art_precio_venta), 0) AS Cantidad
+      FROM clientes
+      LEFT JOIN cabeceras_ventas ON (clientes.cli_id = cabeceras_ventas.cab_cliente)
+      LEFT JOIN lineas_ventas ON (cabeceras_ventas.cab_id = lineas_ventas.lin_cabecera)
+      LEFT JOIN articulos ON (lineas_ventas.lin_articulo = articulos.art_id)
+      GROUP BY cli_id, cli_nombre
+      ) AS clicompras
+      JOIN (SELECT cli_id, COUNT(carritos_compra.car_id) AS Carrito
+                 FROM clientes
+                 LEFT JOIN carritos_compra ON (clientes.cli_id = carritos_compra.car_cliente)
+           		 GROUP BY cli_id) AS clicarritos
+      ON (clicompras.cli_id = clicarritos.cli_id)
+ORDER BY clicompras.cli_nombre, clicompras.cli_id ASC;
+
+
+
+
+
+Intento fallido:
+
+SELECT cli_id, cli_nombre, IFNULL(SUM(lineas_ventas.lin_cantidad * articulos.art_precio_venta), 0) as Cantidad, COUNT(carritos_compra.car_cantidad) AS Carrito
+FROM clientes
+LEFT JOIN cabeceras_ventas ON (clientes.cli_id = cabeceras_ventas.cab_cliente)
+LEFT JOIN lineas_ventas ON (cabeceras_ventas.cab_id = lineas_ventas.lin_cabecera)
+LEFT JOIN articulos ON (lineas_ventas.lin_articulo = articulos.art_id)
+LEFT JOIN carritos_compra ON (clientes.cli_id = carritos_compra.car_cliente)
+GROUP BY clientes.cli_nombre
+ORDER BY cli_nombre ASC
+
+Idea temporal mientras tanto:
+SELECT cli_id, cli_nombre, IFNULL(SUM(lineas_ventas.lin_cantidad * articulos.art_precio_venta), 0) as Cantidad
+FROM clientes
+LEFT JOIN cabeceras_ventas ON (clientes.cli_id = cabeceras_ventas.cab_cliente)
+LEFT JOIN lineas_ventas ON (cabeceras_ventas.cab_id = lineas_ventas.lin_cabecera)
+LEFT JOIN articulos ON (lineas_ventas.lin_articulo = articulos.art_id)
+GROUP BY clientes.cli_nombre
+ORDER BY cli_nombre ASC
+
+
+$resultado = $bd->query("SELECT cli_id, cli_nombre, "
+                        . "IFNULL(SUM(lineas_ventas.lin_cantidad * articulos.art_precio_venta), 0) as Cantidad "
+                        . "FROM clientes "
+                        . "LEFT JOIN cabeceras_ventas ON (clientes.cli_id = cabeceras_ventas.cab_cliente) "
+                        . "LEFT JOIN lineas_ventas ON (cabeceras_ventas.cab_id = lineas_ventas.lin_cabecera) "
+                        . "LEFT JOIN articulos ON (lineas_ventas.lin_articulo = articulos.art_id) "
+                        . "GROUP BY clientes.cli_id, clientes.cli_nombre "
+                        . "ORDER BY cli_nombre ASC; ",
+                        MYSQLI_USE_RESULT);
+
+Y esto no sé que es:
+(SELECT COUNT(carritos_compra.car_cantidad) AS 'Carritos de la compra'
+     FROM clientes LEFT JOIN carritos_compra ON (clientes.cli_id = carritos_compra.car_cliente)
+     WHERE 
+    )

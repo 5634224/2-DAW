@@ -1,0 +1,30 @@
+#grupo informaticos:
+dn: cn=informaticos,ou=grupos,dc=examen,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: informaticos
+gidNumber: 33
+
+#usuario esteban:
+dn: uid=esteban,ou=usuarios,dc=examen,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+cn: esteban
+sn: ""
+loginShell: /bin/bash
+uidNumber: 1004
+gidNumber: 33
+homeDirectory: /home/esteban
+userPassword: 123456
+
+#usuario santiago:
+dn: uid=santiago,ou=usuarios,dc=examen,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+cn: santiago
+sn: "san pablo"
+loginShell: /bin/bash
+uidNumber: 1005
+gidNumber: 33
+homeDirectory: /home/santiago
+userPassword: 123456

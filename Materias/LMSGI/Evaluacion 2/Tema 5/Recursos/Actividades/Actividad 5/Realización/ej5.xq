@@ -1,0 +1,1 @@
+/modulo/prueba/parte/ejercicio/items/item[@peso > 20]/@descripcion/data()

@@ -1,0 +1,162 @@
+@import "_variables";
+@import "_preproc";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&display=swap');
+
+body {
+    font-family: $letra;
+    font-size: $t-letra;
+    font-weight: $peso-cuerpo;
+    background-color: colorFondoPagina();
+
+    h1 {
+        color: colorVerdeRandom();
+        @include titulo("h1");
+    }
+
+    h2 {
+        color: colorVerdeRandom();
+        @include titulo("h2");
+    }
+
+    h3 {
+        color: colorVerdeRandom();
+        @include titulo("h3");
+    }
+}
+
+.navbar.navbar-colors {
+    
+    background-color: $darkgreen;
+    color: $maygreen;
+
+    a.navbar-brand {
+        padding: 0;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .nav-link {
+        color: $maygreen;
+    }
+
+
+}
+
+main {
+    .bienvenida {
+        background-image: url("paralax.jpg");
+        min-height: 300px;
+
+        /* Create the parallax scrolling effect */
+        /*https://www.w3schools.com/howto/howto_css_parallax.asp*/
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .texto-bienvenida {
+            padding-top: 150px;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            h1 {
+                background-color: rgba($cream, 50%);
+                color: $deepgreen;
+            }
+
+            p {
+                background-color: rgba($deepgreen, 50%);
+                color: $cream;
+            }
+        }
+    }
+
+    div.container {
+        margin-top: 1em;
+        section {
+            padding: 1em;
+            @include bg-alternate-section;
+
+            figure {
+                img {
+                    width: 100%;
+
+                    @media screen and (min-width: 576px) { /* sm */
+                        width: 90%;
+                        text-align: center;
+                    }
+
+                    @media screen and (min-width: 992px) { /* lg */
+                        max-height: 300px;
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+
+        section#nuestroequipo { // setup personalizado para la seccion de nuestroequipo
+            .ficha-persona {
+                height: 300x;
+                div {
+                    // height: 300px;
+                    img {
+                        width: 50%;
+                        height: 50%;
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}
+
+footer{
+    background-color: $orange;
+    img {
+        width: 100%;
+    }
+}
+
+/* ANIMACIONES */
+.rotate-scale-up:hover {
+	-webkit-animation: rotate-scale-up 0.65s linear both;
+	        animation: rotate-scale-up 0.65s linear both;
+}
+
+/**
+ * ----------------------------------------
+ * animation rotate-scale-up
+ * ----------------------------------------
+ */
+ @-webkit-keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateZ(180deg);
+              transform: scale(2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+  }
+  @keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateZ(180deg);
+              transform: scale(2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+  }
+  

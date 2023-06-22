@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilo.css" rel="stylesheet" type="text/css">
+    <title>Inicio</title>
+</head>
+<body>
+    <!-- Contenedor principal o wrapper -->
+    <div id="wrapper">
+        <!-- Encabezado -->
+        <header class="row ovh pl pr">
+            <div class="col-12">
+                <div id="logotipo">
+                    <img src="assets/img/logotipo-vectores.svg">
+                </div>
+                <div id="titulo">
+                    <h1>Agua Cortina</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Menu de navegacion -->
+        <nav id="mainNav" class="row ovh pegajoso hNav">
+            <div class="col-12">
+                <ul class="ovh">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Contenedor principal donde va a estar el contenido de la página web -->
+        <main class="row ovh">
+            <!-- Contenedor que alberga secciones (en este caso una) -->
+            <div id="sections" class="col-10">
+                <section class="row ovh">
+                    <article id="formContacto" class="col-12 pl pr">
+                        <div class="row ovh">
+                            <div class="col-3 pr">
+                                <img src="assets/img/form.svg">
+                            </div>
+                            <div class="col-9 pl pr">
+                                <h2>P&aacutegina de contacto</h2>
+                                <form action="" method="post">
+                                    <div>
+                                        <label class="lbl-width">Nombre <span style="color: red;">*</span></label>
+                                        <input type="text" id="nombre" name="nombre" class="form-caja-texto" required>
+                                    </div>
+                                    <div>
+                                        <label class="lbl-width">Email <span style="color: red;">*</span></label>
+                                        <input type="email" id="email" name="email" class="form-caja-texto" required>
+                                    </div>
+                                    <div>
+                                        <label class="lbl-width">Tel&eacutefono</label>
+                                        <input type="tel" id="telefono" name="telefono" class="form-caja-texto">
+                                    </div>
+                                    <div>
+                                        <label class="lbl-width">Mensaje <span style="color: red;">*</span></label>
+                                        <textarea id="mensaje" name="mensaje" class="form-caja-texto form-text-area" required></textarea>
+                                    </div>
+                                    <div>
+                                        <input type="submit" value="Enviar" class="btn-azul">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+
+            <!-- Barra lateral para la publicidad -->
+            <aside class="col-2 publiV">
+                <div>
+                    <p>Anuncios</p>
+                    <img src="assets/img/publi/crespillos-banner.jpg" class="fl">
+                    <img src="assets/img/publi/marinera-banner.jpg" class="fl">
+                    <p>Google AdChoices</p>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Pie de pagina -->
+        <footer class="row ovh pl pr">
+            <div class="col-12">
+                <div>
+                    <img src="assets/img/logotipo-vectores.svg">
+                </div>
+                <div>
+                    <span style="font-weight: bold;">&copy; 2022 Agua Cortina</span> &ndash;
+                    <nav>
+                        <ul>
+                            <a href="contacto.html">Contacto</a>
+                            <a href="avisoLegal.html">Aviso legal</a>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

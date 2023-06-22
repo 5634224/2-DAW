@@ -1,0 +1,36 @@
+<!ELEMENT examenes_distancia (aulas,grupo*)>
+<!ELEMENT aulas (aula+)>
+<!ELEMENT aula ANY>
+<!ELEMENT grupo (modulo*)>
+<!ELEMENT modulo ANY>
+<!ELEMENT ubicacion ANY>
+<!ELEMENT asistentes ANY>
+
+
+<!ATTLIST examenes_distancia
+    centro CDATA #REQUIRED
+>
+
+<!ATTLIST aula
+    id CDATA #REQUIRED
+    capacidad CDATA #REQUIRED
+    equipos CDATA #IMPLIED
+>
+
+<!ATTLIST grupo
+    id CDATA #REQUIRED
+>
+
+<!ATTLIST modulo
+    id CDATA #REQUIRED
+    fecha CDATA #REQUIRED
+>
+
+<!ATTLIST ubicacion
+    aula CDATA #REQUIRED
+>
+
+<!ATTLIST asistentes
+    portatil CDATA #REQUIRED
+    alumnos CDATA #REQUIRED
+>

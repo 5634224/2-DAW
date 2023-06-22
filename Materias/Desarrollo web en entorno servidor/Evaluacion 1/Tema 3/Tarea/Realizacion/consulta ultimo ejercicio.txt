@@ -1,0 +1,14 @@
+START TRANSACTION;
+INSERT INTO cabeceras_ventas (cab_cliente, cab_fecha) VALUES (5, (SELECT CURRENT_TIMESTAMP FROM DUAL));
+SELECT * FROM cabeceras_ventas;
+SELECT * FROM carritos_compra WHERE car_cliente = 5;
+INSERT INTO lineas_ventas 
+    SELECT NULL, 
+    	(SELECT LAST_INSERT_ID() FROM DUAL), car_articulo, car_cantidad
+    FROM carritos_compra
+    WHERE car_cliente = 5
+    ;
+SELECT * FROM lineas_ventas;
+SELECT * FROM cabeceras_ventas;
+SELECT * FROM carritos_compra WHERE car_cliente = 5;
+ROLLBACK;

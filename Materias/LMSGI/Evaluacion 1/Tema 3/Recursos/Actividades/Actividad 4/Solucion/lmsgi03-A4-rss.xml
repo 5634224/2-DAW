@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Novedades del CIFP Carlos III</title>
+        <link>https://www.cifpcarlos3.es</link>
+        <description>
+            La finalidad del canal es mostrar las noticias relacionadas con
+            nuestro centro de estudios.
+        </description>
+        <language>es-es</language>
+        <item>
+            <title>Pruebas libres curso 22/23. Programaciones y Orientaciones</title>
+            <guid>https://www.cifpcarlos3.es/novedades/innovafest</guid>
+            <link>https://www.cifpcarlos3.es/novedades/innovafest</link>
+            <description>
+                ¡¡PONIÉNDO A LA FORMACIÓN PROFESIONAL EN SU SITIO!! PROGRAMA INNOVA Y EMPRENDE FEST https://cifpcarlos3.net/innovayemprendefest
+            </description>
+            <pubDate>Mon, 14 Nov 2022 17:45:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Curso gratuito. Certificado de profesionalidad</title>
+            <guid>https://www.cifpcarlos3.es/novedades/certificado</guid>
+            <link>https://www.cifpcarlos3.es/novedades/certificado</link>
+            <description>
+                En breve iniciamos la impartición del módulo de un certificado de profesionalidad: Gestión Administrativa y Financiera del Comercio Internacional.
+            </description>
+            <pubDate>Mon, 14 Nov 2022 17:44:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Lista Definitiva Admitidos – Gestión contable</title>
+            <guid>https://www.cifpcarlos3.es/novedades/lista</guid>
+            <link>https://www.cifpcarlos3.es/novedades/lista</link>
+            <description>
+                Lista DEFINITIVO de admitidos CERTIFICADO DE PROFESIONALIDAD GESTIÓN CONTABLE Y GESTIÓN ADMINISTRATIVA PARA AUDITORÍA
+            </description>
+            <pubDate>Mon, 14 Nov 2022 17:43:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

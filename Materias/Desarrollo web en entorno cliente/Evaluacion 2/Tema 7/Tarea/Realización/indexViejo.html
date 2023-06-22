@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Santiago San Pablo Raposo">
+    <title>Ejercicios DWEC04</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial;
+        }
+
+        header {
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-bottom: 1em;
+            width: 20em;
+            background-color: burlywood;
+        }
+
+        fieldset {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-grow {
+            flex-grow: 1;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+    </style>
+
+    <script>
+        function mostrarVisualizando(ejercicio) {
+            document.getElementById('visualizando').removeAttribute("hidden");
+            document.getElementById('visualizando').innerHTML = "<b>Visualizando</b>: " + ejercicio;
+        }
+    </script>
+</head>
+<body>
+    <div class="flex-row">
+        <header class="flex-column">
+            <h3 style="text-align: center;">Tabla de contenidos:</h3>
+            <p id="visualizando" hidden>Visualizando: </p>
+            <div class="flex-column flex-grow justify-content-center">
+                <fieldset>
+                    <legend>Ejercicio 1</legend>
+                    <a href="ejercicio1.html" target="contenido">Ejercicio 1 - AJAX y JSON - Usuarios</a>
+                </fieldset>
+                <fieldset>
+                    <legend>Ejercicio 2</legend>
+                    <a href="ejercicio2.html" target="contenido">Ejercicio 2 - AJAX y JSON - Bicicletas</a>
+                </fieldset>
+            </div>
+        </header>
+        <div class="flex-column flex-grow" style="background-color:white;">
+            <iframe name="contenido" style="width: 100%; height: 100vh; border: 0px;"></iframe>
+        </div>
+    </div>
+    <script>
+        //mostrarVisualizando(document.links[0].innerText);
+        //console.log("Hola1, estoy haciendo algo");
+        for (i = 0; i < document.links.length; i++) {
+            //https://www.youtube.com/watch?v=8frJ_4n3s-A
+            //console.log("Hola2, estoy haciendo algo");
+            document.links[i].addEventListener("click", e=>{
+                //console.dir(e.target);
+                mostrarVisualizando(e.target.innerText);
+            })
+            //document.links[i].onclick = mostrarVisualizando(document.links[i].innerText);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        let patron = /^\d{6}-[A-Z|a-z|ñ-ñ]$/;
+        let mensaje = prompt("Introduce un código con formato nnnnnn-a (6 dígitos seguidos de un guión y una letra)");
+        while (!patron.test(mensaje)) { // Pide el código hasta que se introduzca uno correcto
+            mensaje = prompt("Introduce un código con formato nnnnnn-a (6 dígitos seguidos de un guión y una letra)");
+        }
+
+        document.write("El código introducido es correcto")
+    </script>
+</body>
+</html>

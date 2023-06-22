@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<!-- ==================================================== -->
+
+<!-- Build file for our first web application -->
+
+<project name="AntWarWebApp" default="all" basedir=".">
+
+<property name="src" value="${basedir}/src"/>
+<property name="webinf" value="${src}/WEB-INF"/>
+<property name="clases" value="${webinf}/classes"/>
+<property name="libs" value="${webinf}/lib"/>
+
+<property name="warFile" value="AntWarWebApp.war"/>
+<property name="warDir" value="${basedir}/war"/>
+
+<property name="tomcat.webapps" value="/var/lib/tomcat7/webapps/ant" />
+
+
+
+
+<target name="clean"
+
+   description="Delete old build directories">
+
+    <delete dir="${src}"/>
+    <delete dir="${webinf}"/>
+    <delete dir="${clases}"/>
+    <delete dir="${libs}"/>
+    <delete dir="${warDir}"/>
+</target>
+ 
+
+<target name="init" depends= "clean">
+
+<!-- Create Web-inf and classes directories -->
+
+<mkdir dir="${src}"/>
+<mkdir dir="${webinf}"/>
+<mkdir dir="${clases}"/>
+<mkdir dir="${libs}"/>
+
+</target>
+
+ 
+
+<!-- Main target -->
+
+<target name="all" depends="init,build,buildWar"/>
+
+<!-- Compile Java Files and store in /build/src directory -->
+
+<target name="build" >
+
+  <echo message="compiling servlet ...."/>
+
+ <javac srcdir="." destdir="${clases}" debug="true" includeantruntime="false" includes="**/*.java"/>
+
+<!--<javac srcdir="${src}" destdir="${classdir}" debug="true" includes="**/*.java" includeantruntime="false"/>-->
+
+</target>
+
+ 
+
+<!-- Create the War Dir and War file -->
+
+<target name="buildWar" depends="init,build">
+
+<!--  <echo message="creating war file...."/>
+
+<copy todir="${warDir}/WEB-INF/classes">
+
+<fileset dir="${classdir}" includes="**/*.class" />
+
+</copy> -->
+
+<copy todir="${webinf}">   <!-- FALTA -->
+
+<fileset dir="${basedir}" includes="web.xml" />
+
+</copy>
+
+<copy todir="${src}">
+
+<fileset dir="${basedir}" includes="**/*.jsp" />
+
+</copy> 
+ 
+
+<!-- Create war file and place in dist directory -->
+
+<jar jarfile="${warDir}/${warFile}" basedir="${src}" />
+
+ 
+
+ <copy todir="${tomcat.webapps}">
+
+    <fileset dir="${warDir}" />
+
+  </copy>        
+
+</target>
+</project>

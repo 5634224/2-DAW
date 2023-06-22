@@ -1,0 +1,37 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+table {
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc; */
+    border-collapse: collapse;
+}
+
+table thead th {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    margin: 0;
+    padding: 0.5em;
+
+    background-color: #f0f8ff;
+}
+
+table td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    padding: 0.5em;
+}
+
+table tr:nth-child(odd) {
+    /* https://www.w3schools.com/CSSref/sel_nth-child.php */
+    background-color: #f0f8ff;
+}
+
+.error {
+    color: red;
+}

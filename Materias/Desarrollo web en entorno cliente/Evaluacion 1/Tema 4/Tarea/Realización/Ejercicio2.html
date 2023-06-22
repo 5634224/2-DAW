@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWEC 04 - Ejercicio 2 - Palabras (arrays)</title>
+</head>
+
+<script>
+    let palabritas = [];
+
+    function writeln(cadena) {
+            document.writeln("" + cadena);
+            document.writeln("<br>")
+    }
+
+    function comprobar() {
+        let palabra = document.getElementById("word").value;
+        if (typeof(palabra) == "string" && palabra.length > 0) {
+            //let patron = /^[A-ZÑ][A-Za-zÑñ]*$/;
+            let patron = /^[A-ZÑ]\w*$/;
+            if (patron.test(palabra)) {
+                palabritas.push(palabra);
+                document.getElementById("word").value = "";
+            } else {
+                alert("Introduce una palabra que empiece por mayúscula.")
+            }
+        } else {
+            document.getElementById("save").setAttribute("disabled", "disabled");
+            writeln("Primera palabra introducida por el usuario: " + palabritas[0]);
+            writeln("Última palabra introducida por el usuario: " + palabritas[palabritas.length - 1]);
+
+            /*-- Averiguar palabra de mayor longitud y media aritmética de longitudes --*/
+            let j = [];
+            let media = 0;
+            for (let i = 0; i < palabritas.length; i++) {
+                if (j.length == 0) {
+                    j.push(i);
+                } else {
+                    if (palabritas[i].length > palabritas[j[0]].length) {
+                        j = [i];
+                    } else if(palabritas[i].length == palabritas[j[0]].length) {
+                        j.push(i);
+                    }
+                }
+                
+                /*-- Suma la longitud de las palabras para luego poder hacer la media --*/
+                media += palabritas[i].length
+            }
+            document.write("Palabra(s) de mayor longitud introducida(s) por el usuario: " );
+            for (let k = 0; k < j.length; k++) {
+                if (k == 0) {
+                    document.write("" + palabritas[j[k]]);
+                } else {
+                    document.write(", " + palabritas[j[k]]);
+                }
+            }
+            writeln("");
+            /*-- Media aritmética de las longitudes de las palabras, redondeada al entero menor --*/
+
+            media = Math.floor(media / palabritas.length);
+            writeln("Media aritmética de las longitudes de las palabras, redondeada al entero menor: " + media);
+
+            /*-- Proporciona un método para volver a ejecutar el ejercicio --*/
+            writeln('<a href="javascript:location.reload();">Reiniciar ejercicio</a>');
+        }
+    }
+
+    function reset() {
+        //palabritas = [];
+        document.getElementById("word").value = "";
+    }
+
+    function inicializar() {
+        document.getElementById("save").onclick = comprobar;
+        document.getElementById("reset").onclick = reset;
+    }
+</script>
+<body onLoad="inicializar()">
+    <label>Introduce una palabra</label>
+    <input type="text" id="word" required>
+    <input type="button" id="save" value="Guardar">
+    <input type="button" id="reset" value="Resetear formulario">
+
+    <script>
+        //console.dir(document.querySelector("#word"));
+    </script>
+
+</body>
+</html>

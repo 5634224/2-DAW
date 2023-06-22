@@ -1,0 +1,17 @@
+<!ELEMENT root-element ANY>
+<!ELEMENT vacio EMPTY>
+<!ELEMENT not-any (vacio-con-atributos, con-hijos-y-atributos, con-contenido-y-atributos)>
+<!ELEMENT vacio-con-atributos EMPTY>
+<!ATTLIST vacio-con-atributos
+    id ID #REQUIRED
+    idref IDREF #REQUIRED
+    anyo CDATA #REQUIRED
+    rol (director|actriz|actor) #REQUIRED
+    valor_fijo CDATA #FIXED "valor"
+    sin_caracteres_especiales NMTOKEN #REQUIRED
+    opcional CDATA #IMPLIED
+>
+
+<!ELEMENT con-hijos-y-atributos (vacio*, not-any+, vacio-con-atributos?)>
+
+<!ELEMENT any ANY>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador para el examen</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <H1 id="contador">00:00:00</H1>
+    <script>
+        let contador = document.querySelector("#contador");
+        let examen = new Date(2022, 11, 12, 15, 30, 0, 0);
+
+        /*-- Bucle --*/
+        let elIntervalo;
+        function intervalo() {
+            let ahora = new Date();
+            let diferencia = Math.max(examen - ahora, 0)
+            if (diferencia == 0) {
+                clearInterval(elIntervalo);
+            } else {
+                let segundos, minutos, horas;
+                horas = diferencia / 1000 / 60 / 60
+                minutos = (horas - Math.trunc(horas)) * 60;
+                segundos = (minutos - Math.trunc(minutos)) * 60;
+                contador.textContent = Math.trunc(horas) + ":" + Math.trunc(minutos) + ":" + Math.trunc(segundos);
+                
+            }
+        }
+        
+        elIntervalo = setInterval(intervalo, 1000);
+        
+    </script>
+</body>
+</html>

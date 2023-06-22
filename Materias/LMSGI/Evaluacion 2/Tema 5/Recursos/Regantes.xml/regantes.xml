@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<datos tabla="regantes">
+  <regantes>
+    <id>1</id>
+    <nombre>Mariano Iglesias</nombre>
+    <dni>12345678Z</dni>
+    <alta>02/05/2008</alta>
+    <baja>31/12/2014</baja>
+  </regantes>
+  <regantes>
+    <id>2</id>
+    <nombre>Sebastian Alonso</nombre>
+    <dni>45678912A</dni>
+    <alta>03/07/2008</alta>
+  </regantes>
+  <regantes>
+    <id>3</id>
+    <nombre>Amancio Gasset</nombre>
+    <dni>78945612D</dni>
+    <alta>15/09/2008</alta>
+  </regantes>
+</datos>

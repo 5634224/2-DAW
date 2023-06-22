@@ -1,0 +1,22 @@
+.warpper {
+    width: 100%;
+    padding: 20px;
+}
+
+.cuadrado {
+    width: 150px;
+    height: 150px;
+    margin: 1rem 0 2rem 1rem;
+    background: blue;
+}
+
+#opt01 .cuadrado {
+    /* transition-property: background;
+    transition-duration: 2s; */
+    /* transition: background 2s; */
+    transition: cubic-bezier(1, 0, 0, 1) 2s;
+}
+
+#opt01 .cuadrado:hover {
+    background: red;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Actividad 3</title>
+    </head>
+    <body>
+        <script>
+            let numero;
+
+            while (numero == null) {
+                numero = parseInt(prompt("Introduce un número:"));
+
+                if (isNaN(numero)) { // La funcion isNaN comprueba si la variable contiene un número o si se han introducido letras
+                    window.alert("Por favor, introduce un número, no introduzcas letras.");
+                    numero = null;
+                }
+            }
+
+            /*-- Escribe por pantalla la suma de los números del 1 al numero especificado --*/
+            let suma = 0;
+            for (let i = 1; i <= numero; i++) {
+                suma += i;
+            }
+
+            document.write("La suma de los números del 1 al " + numero + " es: " + suma);
+        </script>
+
+        <p>Hecho por Santiago Francisco San Pablo Raposo, 2º DAW</p>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <script>
+      window.onload = function() {
+        // Crea el campo para visualizar los caracteres ocultos
+        const passwordField = document.createElement("input");
+        passwordField.type = "password";
+        passwordField.value = "";
+        passwordField.style.width = "50px";
+        document.body.appendChild(passwordField);
+
+        // Crea un array con los números del 0 al 9
+        const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        // Baraja el array de números de forma aleatoria
+        for (let i = numbers.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+        }
+
+        // Crea los botones de números
+        for (let i = 0; i < 10; i++) {
+          const button = document.createElement("button");
+          button.innerText = numbers[i];
+          button.onclick = function() {
+            passwordField.value += button.innerText;
+          };
+          document.body.appendChild(button);
+        }
+
+        // Crea el botón 'C'
+        const clearButton = document.createElement("button");
+        clearButton.innerText = "C";
+        clearButton.onclick = function() {
+          passwordField.value = passwordField.value.slice(0, -1);
+        };
+        document.body.appendChild(clearButton);
+
+        // Crea el botón 'Validar'
+        const validateButton = document.createElement("button");
+        validateButton.innerText = "Validar";
+        validateButton.onclick = function() {
+          // Crea el elemento div para mostrar los mensajes
+          const messageDiv = document.createElement("div");
+          document.body.appendChild(messageDiv);
+
+          // Verifica el número de caracteres introducidos
+          if (passwordField.value.length !== 4) {
+            messageDiv.innerText = "La clave debe tener 4 caracteres.";
+            return;
+          }
+
+          // Verifica si la contraseña es correcta
+          const passwordPattern = /^\d{4}$/;
+          if (!passwordPattern.test(passwordField.value)) {
+            messageDiv.innerText = "La clave debe ser un número de 4 dígitos.";
+            return;
+          }
+          if (passwordField.value === "9999") {
+            messageDiv.innerText = "Clave correcta.";
+          } else {
+            messageDiv.innerText = "Clave incorrecta.";
+          }
+        };
+        document.body.appendChild(validateButton);
+      };
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

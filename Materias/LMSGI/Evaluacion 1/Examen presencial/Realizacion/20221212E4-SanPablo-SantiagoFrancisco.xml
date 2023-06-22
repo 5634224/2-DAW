@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>RFVB- Resultados de los partidos</title>
+        <link>https://www.rfvoleibol.com/partidos</link>
+        <description>
+            Sirve para transmitir resultados sobre lo partidos jugados en la liga RFVB.
+        </description>
+        <language>es-es</language>
+        <item>
+            <title>11/12/2022 &#169; Mazarron (4) / Caravaca (2)</title>
+            <guid>https://www.rfvoleibol.com/partidos/p221211mc</guid>
+            <link>https://www.rfvoleibol.com/partidos/p221211mc</link>
+            <description>
+                El partido de Mazarron contra Caravaca fue vivido con mucha emoción por parte de los aficionados. No se lo creían: su equipo se había llevado 4 sets a 2 frente a Caravaca.
+            </description>
+        </item>
+        <item>
+            <title>12/12/2022 &#169; La Palma (3) / Pozo Estrecho (2)</title>
+            <guid>https://www.rfvoleibol.com/partidos/p221212lppe</guid>
+            <link>https://www.rfvoleibol.com/partidos/p221212lppe</link>
+            <description>
+                En el partido de La Palma contra el Pozo Estrecho, hubo tensión entre ambos equipos, pero el partido fue finalmente para el conjunto de la Palma.
+            </description>
+        </item>
+        <item>
+            <title>12/12/2022 &#169; Cartagena (1) / Aguilas (2)</title>
+            <guid>https://www.rfvoleibol.com/partidos/p221212ca</guid>
+            <link>https://www.rfvoleibol.com/partidos/p221212ca</link>
+            <description>
+                El partido de Cartagena contra el Aguilas, que terminó en 1-2 a favor del conjunto del Aguilas, fue un partido muy emocionante.
+            </description>
+        </item>
+    </channel>
+</rss>

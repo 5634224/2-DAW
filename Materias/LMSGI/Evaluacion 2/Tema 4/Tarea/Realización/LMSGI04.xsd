@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="catalogo">
+        <xs:complexType>
+            <!-- Hijos -->
+            <xs:sequence>
+
+                <xs:element name="elenco">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="miembro" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <!-- Atributos -->
+                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                    <xs:attribute name="rol_principal" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="director"></xs:enumeration>
+                                                <xs:enumeration value="actriz"></xs:enumeration>
+                                                <xs:enumeration value="actor"></xs:enumeration>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="nombre" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="planes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="plan" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <!-- Atributos -->
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:ID">
+                                                <xs:pattern value="P[1-9]" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="nombre" type="xs:string" use="required" />
+                                    <xs:attribute name="mensualidad" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:decimal">
+                                                <xs:minInclusive value="0"></xs:minInclusive>
+                                                <xs:fractionDigits value="2"></xs:fractionDigits>
+                                                <xs:totalDigits value="5"></xs:totalDigits>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="titulos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="genero" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titulo" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <!-- Hijos -->
+                                                <xs:sequence>
+                                                    <xs:element name="reparto" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="miembro" type="xs:IDREF" use="required" />
+                                                            <xs:attribute name="rol">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:string">
+                                                                        <xs:enumeration value="protagonista"></xs:enumeration>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="sinopsis" type="xs:string" minOccurs="0" />
+                                                </xs:sequence>
+
+                                                <!-- Atributos -->
+                                                <xs:attribute name="nombre" type="xs:string" use="required" />
+                                                <xs:attribute name="anyo" type="xs:gYear" use="required" />
+                                                <xs:attribute name="duracion" use="required">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:integer">
+                                                            <xs:minInclusive value="10"></xs:minInclusive>
+                                                            <xs:maxInclusive value="1000"></xs:maxInclusive>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                                <xs:attribute name="alquiler">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:decimal">
+                                                            <xs:minInclusive value="0"></xs:minInclusive>
+                                                            <xs:fractionDigits value="2"></xs:fractionDigits>
+                                                            <xs:totalDigits value="5"></xs:totalDigits>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                                <xs:attribute name="compra">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:decimal">
+                                                            <xs:minInclusive value="0"></xs:minInclusive>
+                                                            <xs:fractionDigits value="2"></xs:fractionDigits>
+                                                            <xs:totalDigits value="5"></xs:totalDigits>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                                <xs:attribute name="plan" type="xs:IDREF" />
+                                                <xs:attribute name="nrm">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:integer">
+                                                            <xs:enumeration value="7"></xs:enumeration>    
+                                                            <xs:enumeration value="12"></xs:enumeration>
+                                                            <xs:enumeration value="16"></xs:enumeration>
+                                                            <xs:enumeration value="18"></xs:enumeration>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+
+                                    <!-- Atributos -->
+                                    <xs:attribute name="nombre" type="xs:ID" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+
+            <!-- Atributos -->
+            <xs:attribute name="inicio" type="xs:date" use="required" />
+            <xs:attribute name="vigencia" type="xs:date" use="required" />
+            
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

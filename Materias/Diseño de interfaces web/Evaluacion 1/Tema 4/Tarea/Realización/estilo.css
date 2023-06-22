@@ -1,0 +1,495 @@
+/*==================================================================================
+            IMPORTACION DE FUENTES
+            https://www.kodetop.com/incluir-fuentes-en-css-con-font-face/
+====================================================================================*/
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('assets/fonts/SourceSansPro-Regular.ttf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('assets/fonts/SourceSansPro-Italic.ttf') format('opentype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('assets/fonts/SourceSansPro-Bold.ttf') format('opentype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('assets/fonts/SourceSansPro-BoldItalic.ttf') format('opentype');
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro Light';
+    src: url('assets/fonts/SourceSansPro-ExtraLight.ttf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro Light';
+    src: url('assets/fonts/SourceSansPro-ExtraLightItalic.ttf') format('opentype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+/*=================================================
+            TIPO MAQUETA:
+            GRID FLUID LAYOUT
+===================================================*/
+
+:root {
+    --base: 1600;
+    --tbase: calc(var(--base) * 1px);
+    --columna: calc(var(--base) / 12);
+    --pcolumna: calc(var(--columna) / var(--base) * 100%);
+}
+
+* {
+    box-sizing: border-box;
+    /*-- Fuente predeterminada --*/
+    font-family: 'Source Sans Pro' !important;
+    /*-- Fuentes alternativas --*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#wrapper {
+    max-width: var(--tbase);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    clear: both;
+}
+
+.ovh {
+    overflow: hidden; /* Hack para que se muestre bien la altura de los contenedores conforme a sus elementos hijo con float */
+}
+
+.pl {
+    padding-left: 0.5em;
+}
+
+.pr {
+    padding-right: 0.5em;
+}
+
+.fl {
+    float: left;
+}
+
+.col-1 {
+    float: left;
+    width: var(--pcolumna);
+}
+
+.col-2 {
+    float: left;
+    width: calc(var(--pcolumna) * 2);
+}
+
+.col-3 {
+    float: left;
+    width: calc(var(--pcolumna) * 3);
+}
+
+.col-4 {
+    float: left;
+    width: calc(var(--pcolumna) * 4);
+}
+
+.col-5 {
+    float: left;
+    width: calc(var(--pcolumna) * 5);
+}
+
+.col-6 {
+    float: left;
+    width: calc(var(--pcolumna) * 6);
+}
+
+.col-7 {
+    float: left;
+    width: calc(var(--pcolumna) * 7);
+}
+
+.col-8 {
+    float: left;
+    width: calc(var(--pcolumna) * 8);
+}
+
+.col-9 {
+    float: left;
+    width: calc(var(--pcolumna) * 9);
+}
+
+.col-10 {
+    float: left;
+    width: calc(var(--pcolumna) * 10);
+}
+
+.col-11 {
+    float: left;
+    width: calc(var(--pcolumna) * 11);
+}
+
+.col-12 {
+    float: left;
+    width: calc(var(--pcolumna) * 12);
+}
+
+.ml-1 {
+    margin-left: calc(var(--pcolumna) * 1);
+}
+
+.ml-2 {
+    margin-left: calc(var(--pcolumna) * 2);
+}
+
+.ml-3 {
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-4 {
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-5 {
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-6 {
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-7 {
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-8 {
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-9 {
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-10 {
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-11 {
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-12 {
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.pegajoso {
+    /*-- Pegajoso --*/
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+/* .pegajosoAbajo {
+    /*-- Pegajoso --
+    position: -webkit-sticky; /* Safari
+    position: sticky;
+    top: 20px;
+} */
+
+
+/*=================================
+            ESTILOS CSS:
+===================================*/
+
+/*-- Refinamiento de primer nivel --*/
+
+body {
+    /*-- Configura los márgenes y paddings de body a cero --*/
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    /* background-color: rgb(102, 194, 247); */
+    
+    /*----------Gradiente de fondo de header
+    ------------https://cssgradient.io/*/
+    /* background: rgb(2,0,36); */
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    /*-- Estilo de fuente --*/
+    color: white;
+    font-size: 24px;
+    /*-- Tamaño --*/
+    height: 150px;
+}
+
+#mainNav {
+    /* background-color: blueviolet; */
+    background-color: #00d4fd;
+}
+
+main {
+    /* background-color: brown; */
+    background-color: rgb(102, 194, 247);
+}
+
+section {
+    /* background-color: rgb(114, 247, 102); */
+    background-color: rgb(179, 227, 255);
+}
+
+article {
+    background-color: rgb(179, 227, 255);
+}
+
+aside {
+    background-color: chocolate;
+}
+
+footer {
+    /* background-color: chartreuse; */
+    /* background-color: rgb(102, 194, 247); */
+    background-color: #00d4fd;
+    font-size: large;
+}
+
+img {
+    width: 100%;
+}
+
+figure {
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+}
+
+a {
+    text-decoration-line: underline;
+    color: #008;
+}
+
+a:hover {
+    color: #26a;
+}
+
+/*-- Refinamiento de segundo nivel --*/
+
+header #titulo {
+    float: left;
+    height: 140px;
+    padding-left: 0.3em;
+}
+
+header #logotipo {
+    float: left;
+}
+
+header #titulo h1 {
+    margin-top: 0.9em;
+    margin-bottom: 1em;
+}
+
+header #logotipo img {
+    /* width: 135px; */
+    /* object-fit: fill; */
+    width: auto;
+    height: 140px;
+}
+
+#mainNav div ul {
+    /* background-color: rgb(233, 200, 119); */
+    margin: 0 auto !important;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* background-color: cyan; */
+    /* background-color: #0de; */
+    /* background-color: #00d4fd; */
+    /*-- Pegajoso --*/
+    /* position: -webkit-sticky; /* Safari */
+    /* position: sticky; */
+}
+
+.hNav ul li {
+    /*-- Orientación horizontal --*/
+    /* display: inline; */
+    float: left;
+    padding: 0 0.2em;
+}
+
+nav ul li a {
+    display: block;
+    /* position: absolute; */
+    padding: 5px;
+    background-color: cyan;
+    /*-- Bordes --*/
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 0.3em;
+    border-color: cyan;
+    text-decoration: none;
+    /*-- Fuente --*/
+    color: darkblue;
+}
+
+nav ul li a:hover {
+    background-color: rgb(42, 187, 187);
+    /*-- Opciones de borde --*/
+    border-left-color: rgb(42, 187, 187);
+    border-right-color: rgb(42, 187, 187);
+    border-top-color: rgb(42, 187, 187);
+}
+
+nav ul li a:active {
+    background-color: deepskyblue;
+    /*-- Opciones de borde --*/
+    border-top-color: deepskyblue;
+    border-left-color: deepskyblue;
+    border-right-color: deepskyblue;
+    border-bottom-color: rgb(0, 139, 185);
+    border-bottom-style: outset;
+}
+
+.active {
+    /* border-bottom-width: 0.3em; */
+    border-bottom-color: rgb(0, 139, 185);
+    border-bottom-style: outset;
+}
+
+figure figcaption {
+    padding-top: 0.1em;
+    padding-bottom: 1em;
+}
+
+/* .publiV {
+    position: relative;
+    bottom: 200;
+} */
+
+.publiV p:first-child {
+    display: block;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.publiV img {
+    max-width: 300px;
+    max-height: 250px;
+    cursor: pointer;
+}
+
+.publiV p:last-child {
+    display: block;
+    margin: 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: right;
+}
+
+footer div {
+    padding: 0.2em 0;
+}
+
+footer div > div {
+    float: left;
+}
+
+footer div:first-child img {
+    width: auto;
+    height: 100px;
+}
+
+footer div div:last-child {
+    padding: 2.35em 1.25em;
+}
+
+footer div div:last-child nav {
+    display: inline;
+}
+
+footer div div:last-child nav ul {
+    display: inline;
+}
+
+footer div div:last-child a {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+
+/*-- Para el formulario de contacto --*/
+
+#formContacto div div:first-child img {
+    padding: 5em 0;
+}
+
+#formContacto form div {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.lbl-width {
+    /* float: left;
+    width: 5.2em; */
+    display: block;
+}
+
+.form-caja-texto {
+    /* float: left; */
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-radius: 0px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    font-size: 15px;
+}
+
+.form-text-area {
+    height: 100px;
+}
+
+.btn-azul {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    /* font-family: "Source Sans Pro"; */
+    font-size: 1em;
+    color: white;
+
+    background-color: #31859c;
+    border-radius: 6px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #215968;
+}
+
+.btn-azul:hover {
+    background-color: #3da5c2;
+}
+
+.btn-azul:active {
+    background-color: #215968;
+}

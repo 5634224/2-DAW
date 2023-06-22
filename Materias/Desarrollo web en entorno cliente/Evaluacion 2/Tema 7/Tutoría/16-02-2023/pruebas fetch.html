@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Registros:<input type="number" id="registros">
+    <div id="contenedor"></div>
+
+    <script>
+        //Solicitamos 5 usuarios al servidor https://random
+
+        
+        let contenedor = document.querySelector("#contenedor");
+        let registros = document.querySelector("#registros");
+        registros.addEventListener('change', fconexion);
+
+        function fconexion() {
+            let direccion = new URL('https://randomuser.me/api');
+            let parametros = new URLSearchParams();
+            parametros.append("results", registros.value)
+            direccion.searchParams = parametros;
+
+            // let url = 'https://randomuser.me/api/?results=' + registros.value;
+            // fetch(url) // El objeto que devuelve fetch es una "promesa"
+            fetch(direccion)
+                .then((resultado) => {
+                    //console.log(resultado);
+                    if (resultado.ok) {
+                        return resultado.json();
+                    } else {
+                        throw new Error('Se ha producido un error');
+                    }
+                }) // Los then son metodos encadenados
+                .then(datos => mostrarDatos(datos))
+                .catch(error => console.log(error));
+        }
+
+        function mostrarDatos(datos) {
+            console.log(datos);
+            contenedor.innerHTML = "";
+            let lista = document.createElement("ol");
+            contenedor.append(lista);
+
+            for (let i of datos.results) {
+                let item = document.createElement('li');
+                lista.append(item);
+
+                item.textContent = "Nombre: " + i.name.first + '. Email: ' + i.email;
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<VirtualHost IP_Servidor_Web:80>
+Alias /carpeta-controlada "/usr/srv/control/carpeta-controlada/"
+<Directory "/usr/srv/control/carpeta-controlada/">
+Order deny,allow
+Deny from all
+Allow from IP_permiso_concedido
+</Directory>
+DocumentRoot /usr/srv/control/carpeta-controlada
+ServerName www.empresa.com.
+ServerAlias empresa.com
+</VirtualHost>

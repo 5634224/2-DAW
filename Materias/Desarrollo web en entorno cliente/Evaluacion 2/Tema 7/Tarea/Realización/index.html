@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Santiago San Pablo Raposo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios DWEC04</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+            /*-- Variables --*/
+            --headerHeightSize: 1em;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial;
+        }
+
+        [hidden] {
+            display: none;
+        }
+
+        .flex-grow {
+            flex-grow: 1;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            /* height: var(--headerHeightSize); */
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-bottom: 1em;
+            /* padding-top: 1em; */
+            background-color: burlywood;
+        }
+
+        header[data-collapse] {
+            height: 90px;
+        }
+
+        header h3 {
+            display: inline-block;
+        }
+
+        header p {
+            display: inline-block;
+        }
+
+        header[data-collapse] p, header[data-collapse] div {
+            display: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 90px);
+            border: 0px;
+        }
+
+        fieldset {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        @media screen and (min-width: 768px) {
+
+            .contenedor {
+                display: flex;
+                flex-direction: row;
+            }
+
+            header {
+                width: 20em;
+                height: 100vh;
+            }
+
+            header[data-collapse] {
+                height: 100vh;
+            }
+
+            header h3 {
+                display: block;
+            }
+
+            header p {
+                display: block;
+            }
+
+            .contenedor div {
+                width: none;
+            }
+
+            /* header[data-collapse] p {
+                /* display: block;
+            } */
+
+            header[data-collapse] div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            header[data-collapse] p {
+                display: block;
+            }
+
+            .contenedor button {
+                display: none;
+            }
+
+            iframe {
+                height: 100vh;
+            }
+        }
+    </style>
+
+    <script>
+        function mostrarVisualizando(ejercicio) {
+            // document.getElementById('visualizando').className = "";
+            document.querySelector("#visualizando").removeAttribute("hidden");
+            document.getElementById('visualizando').innerHTML = "<b>Visualizando</b>: " + ejercicio;
+        }
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <header class="flex-column">
+            <h3 style="text-align: center;">Tabla de contenidos:</h3>
+            <button class="">Menú</button>
+            <p id="visualizando" hidden>Visualizando: </p>
+            <div class="flex-column flex-grow justify-content-center">
+                <fieldset>
+                    <legend>Ejercicio 1</legend>
+                    <a href="ejercicio1.html" target="contenido">Ejercicio 1 - AJAX y JSON - Usuarios</a>
+                </fieldset>
+                <fieldset>
+                    <legend>Ejercicio 2</legend>
+                    <a href="ejercicio2.html" target="contenido">Ejercicio 2 - AJAX y JSON - Bicicletas</a>
+                </fieldset>
+            </div>
+            
+        </header>
+        <div class="flex-column flex-grow" style="background-color:white;">
+            <iframe name="contenido"></iframe>
+        </div>
+    </div>
+    <script>
+        /*-- Controla el boton de menu --*/
+        let header = document.querySelector("header");
+        let btn = document.querySelector("header button");
+        btn.addEventListener("click", () => {
+            if (!header.getAttribute("data-collapse")) {
+                header.setAttribute("data-collapse", "true");
+            } else {
+                header.removeAttribute("data-collapse");
+            }
+        })
+        /*-- Modifica el estado del ejercicio que se está visualizando, y cierra el menú para la versión móvil --*/
+        for (i = 0; i < document.links.length; i++) {
+            document.links[i].addEventListener("click", e=>{
+                mostrarVisualizando(e.target.innerText);
+                
+                /*-- Cierra el menú para la versión móvil --*/
+                if (!header.getAttribute("data-collapse")) {
+                    header.setAttribute("data-collapse", "true");
+                }
+            })
+        }
+    </script>
+</body>
+</html>

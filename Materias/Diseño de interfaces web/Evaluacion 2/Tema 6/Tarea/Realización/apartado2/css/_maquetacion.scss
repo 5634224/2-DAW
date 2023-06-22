@@ -1,0 +1,82 @@
+/*-- Variables para configuración de disposición de los elementos (maquetación) --*/
+$base-ancho: 1400; // Modificable
+$ancho-maximo: $base-ancho * 1px;
+$divisionColumnas: 12; // Modificable
+$columna: calc($base-ancho / $divisionColumnas);
+$pcolumna: calc($columna / $base-ancho * 100%);
+$margen-between-bloques: 1%; // Modificable
+
+/*-- Puntos de ruptura para la maquetación con mediaqueries --*/
+// $sm: 576px;
+$md: 768px;
+$lg: 992px;
+
+/*========================================
+                MAQUETACION
+==========================================*/
+* {
+    box-sizing: border-box;
+}
+
+/*-- Mixins para maquetar --*/
+@mixin wrapper {
+    max-width: $ancho-maximo;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@mixin row($sizeBorder: 0, $colorBorder: white, $border-style: none) {
+    // clear: both;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /*-- Borde --*/
+    border-color: $colorBorder;
+    border-style: $border-style;
+    border-width: $sizeBorder;
+}
+
+@mixin col($span, $sizeBorder: 0, $colorBorder: white, $border-style: none, $nElementosQueAfecta: 1) {
+    /*-- Tamaño ancho de la columna, definido por $i --*/
+    /*-- Código viejo --*/
+    // float: left;
+    // display: inline-block;
+
+    width: calc($pcolumna * $span);
+
+    /*-- Configuración de los bordes --*/
+    @if ($sizeBorder != 0) {
+        /*-- Definimos propiedades generales para todos los elementos que apliquen el mixin --*/
+        border-color: $colorBorder;
+        border-style: $border-style;
+        border-top-width: 0;
+        border-left-width: 0;
+
+        /*-- Personalizamos bordes internos --*/
+        @for $i from 1 through $nElementosQueAfecta { //nColumnas
+            &:nth-child(#{$i}) {
+                $columnas: calc($divisionColumnas / $span); //Define el nº de columnas que se mostraran para el tamaño normal
+                @if ($i % $columnas > 0) {
+                    border-right-width: $sizeBorder;
+                } @else {
+                    border-right-width: 0;
+                }
+
+                @if (floor(calc(($i - 1) / $columnas)) != (calc($nElementosQueAfecta / $columnas - 1))) {
+                    border-bottom-width: $sizeBorder;
+                } @else {
+                    border-bottom-width: 0;
+                }
+            }
+        }
+    } @else {
+        border-style: none;
+        border-width: 0;
+    }
+}
+
+@mixin ml($span) {
+    margin-left: calc($pcolumna * $span);
+}

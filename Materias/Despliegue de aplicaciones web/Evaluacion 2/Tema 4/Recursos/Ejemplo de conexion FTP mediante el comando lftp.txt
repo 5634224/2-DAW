@@ -1,0 +1,44 @@
+1) Actualizar sistema operativo GNU/Linux Debian 6 Squeeze:
+root@debian-servidor-fp:~# apt-get update
+root@debian-servidor-fp:~# apt-get upgrade
+
+2) Instalar cliente ftp en modo texto: lftp
+root@debian-servidor-fp:~# apt-get install lftp
+
+3) Ver ayuda comando lftp
+root@debian-servidor-fp:~# lftp --help
+Uso: lftp [OPCS] <servidor>
+`lftp' es la primera orden ejecutada por lftp después de los archivos
+de configuración.
+ -f <archivo>           ejecuta órdenes del archivo y sale
+ -c <ords>              ejecuta las órdenes y sale
+ --help                 muestra esta ayuda y sale
+ --version              muestra la versión de lftp y sale
+Las demás opciones son las mismas que en la orden `open'
+ -e <ord>               ejecuta la orden justo después de seleccionar
+ -u <usuario>[,<clave>] usa usuario/clave para autenticación
+ -p <puerto>            usa el puerto para una conexión
+ <sitio>                servidor, URL o nombre de señalador
+
+4) Establecer conexión con el servidor ftp: ftp.rediris.es
+root@debian-servidor-fp:~# lftp ftp.rediris.es
+lftp ftp.rediris.es:~> 
+
+Como puedes ver conecta directamente, a difencia del comando ftp, ya que no pide usuario y contraseña. Esto es debido a que automaticamente comprueba si la 
+conexión mediante un usuario anónimo es posible, y si es posible introduce unos valores para establecer la conexión. 
+
+5) Introducir comando help para saber que comandos dispones dentro de la consola ftp:
+lftp ftp.rediris.es:~> help                                     
+    !<orden-de-shell>                    (órdenes)                            alias [<nombre> [<valor>]]           bookmark [SUBORDEN]                  cache [SUBORDEN]
+    cat [-b] <archivos>                  cd <dir_remoto>                      chmod [OPTS] modo archivo...         close [-a]
+    [re]cls [opts] [path/][pattern]      debug [<nivel>|off] [-o <archivo>]   du [options] <dirs>                  exit [<código>|bg]
+    get [OPCS] <arch_r> [-o <arch_l>]    glob [OPTS] <cmd> <args>             help [<ord>]                         history -w file|-r file|-c|-l [cnt]  jobs [-v]
+    kill all|<númtarea>                  lcd <dirlocal>                       lftp [OPCS] <servidor>               ls [<args>]
+    mget [OPCS] <archivos>               mirror [OPCS] [remoto [local]]       mkdir [-p] <dirs>                    module nombre [args]                 more <archivos>
+    mput [OPCS] <archivos>               mrm <archivos>                       mv <archivo1> <archivo2>             [re]nlist [<args>]
+    open [OPCS] <servidor>               pget [OPCS] <arch_r> [-o <arch_l>]   put [OPCS] <arch_l> [-o <arch_r>]    pwd [-p]                             queue [OPTS] [<cmd>]
+    quote <orden>                        repeat [OPTS] [delay] [command]      rm [-r] [-f] <archivos>              rmdir [-f] <dirs>
+    scache [<núm_sesión>]                set [OPT] [<var> [<val>]]            site <orden_directa_al_sitio>        source <archivo>
+    torrent [-O <dir>] <file>            user <usuario|URL> [<clave>]         version                              wait [<númtarea>]                    zcat <archivos>
+    zmore <archivos>
+lftp ftp.rediris.es:~> 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Actividad 1</title>
+    </head>
+    <body>
+        <script>
+            let nombre = "";
+            while (nombre == "" || nombre == null) {
+                nombre = prompt("¿Cómo te llamas?");
+            }
+            
+            let edad;
+            while (edad == null) {
+                edad = parseInt(prompt("¿Cuántos años tienes?"));
+                if (isNaN(edad)) { // La funcion isNaN comprueba si la variable número contiene un número o si se han introducido letras
+                    window.alert("Por favor, introduce un número, no introduzcas letras.");
+                    edad = null;
+                }
+            }
+
+            document.write("Hola " + nombre  + ", tienes " + edad + " años, eres " + (edad >= 18 ? "mayor" : "menor") + " de edad.");
+        </script>
+
+        <p>Hecho por Santiago Francisco San Pablo Raposo, 2º DAW</p>
+    </body>
+</html>

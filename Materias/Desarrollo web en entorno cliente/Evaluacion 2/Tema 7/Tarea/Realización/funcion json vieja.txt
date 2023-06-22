@@ -1,0 +1,50 @@
+function obtenerJSON(url, metodo = "GET", datos = null) {
+    return new Promise((resolve, reject) => {
+        /*-- Verificar datos de los parámetros --*/
+        if (metodo != "GET" && metodo != "POST" && metodo != "PUT" && metodo != "DELETE") {
+            reject("El método especificado no es correcto. Especifica GET, POST, PUT o DELETE");
+        }
+
+        if (datos != null && !(datos instanceof FormData) && !(datos instanceof URLSearchParams)) {
+            reject("Especifica los parámetros de la petición en un objeto FormData o URLSearchParams");
+        }
+
+        /*-- Efectúa la petición al servidor --*/
+        switch (metodo) {
+            case "GET":
+                /*-- Prepara los parámetros en un objeto de tipo URL --*/
+                let direccion = url + "?" + datos;
+                /*-- Realiza la petición al servidor --*/
+                fetch(direccion, {method: metodo})
+                    .then(response => {
+                        if (response.ok) {
+                            return response.text();
+                        } else {
+                            reject("No se ha podido acceder a ese recurso. Status: " + response.status);
+                        }
+                    })
+                    .then(responseText => {
+                        let objJson = JSON.parse(responseText);
+                        resolve(objJson);
+                    })
+                    .catch(err => reject(err));
+                break;
+            case "POST":
+                fetch(url, {method: metodo, body: datos})
+                    .then(response => {
+                        if (response.ok) {
+                            return response.text();
+                        } else {
+                            reject("No se ha podido acceder a ese recurso. Status: " + response.status);
+                        }
+                    })
+                    .then(responseText => {
+                        let objJson = JSON.parse(responseText);
+                        resolve(objJson);
+                    })
+                    .catch(err => reject(err));
+                break;
+        }
+    });
+}
+

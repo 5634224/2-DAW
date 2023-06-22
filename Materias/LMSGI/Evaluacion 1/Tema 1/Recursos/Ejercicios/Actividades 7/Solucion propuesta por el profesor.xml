@@ -1,0 +1,22 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<renting_coches proveedor="RentingC3, S.L." cif="B12345678" fecha="04/10/2022">
+    <categoria nombre="pequeños">
+        <vehiculo marca="Kia" modelo="Picanto" combustible="Gasolina" transmision="Manual" puertas="5"/>
+        <vehiculo marca="Renault" modelo="5 GTL" combustible="Gasolina" transmision="Manual" puertas="5" kilometraje="200000" matriculacion="1985"/>
+    </categoria>
+    <categoria nombre="medianos">
+    </categoria>
+    <categoria nombre="grandes">
+        <vehiculo marca="Mercedes" modelo="GLC 220D" combustible="Diesel" transmision="Automática" puertas="5">
+            <colores>
+                <color nombre="Blanco"/>
+                <color nombre="Rojo" sobrecoste="20"/>
+            </colores>
+            <tarifa>
+                <precio km="10000" meses="48" cuota="450"/>
+                <precio km="15000" meses="48" cuota="510"/>
+            </tarifa>
+        </vehiculo>
+    </categoria>
+</renting_coches>

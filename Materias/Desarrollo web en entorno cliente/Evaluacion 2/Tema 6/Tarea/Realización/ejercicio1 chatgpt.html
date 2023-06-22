@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+      }
+
+      img {
+        max-width: 80%;
+        max-height: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button">Mostrar imagen</button>
+    <div id="image-container"></div>
+
+    <script>
+      /*-- Declaración de variables --*/
+      const images = [
+        "imagen1.jpg",
+        "imagen2.jpg",
+        "imagen3.jpg",
+        // ...
+      ];
+      let currentImageIndex = 0;
+      
+      const imageContainer = document.getElementById("image-container");
+      const button = document.getElementById("button");
+
+      button.addEventListener("click", () => {
+        const image = document.createElement("img");
+        image.src = images[currentImageIndex];
+        imageContainer.appendChild(image);
+        document.addEventListener("keydown", handleKeyDown);
+      });
+
+      function handleKeyDown(event) {
+        if (event.code === "ArrowRight") {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+        } else if (event.code === "ArrowLeft") {
+          currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        }
+        imageContainer.innerHTML = "";
+        const image = document.createElement("img");
+        image.src = images[currentImageIndex];
+        imageContainer.appendChild(image);
+      }
+    </script>
+  </body>
+</html>

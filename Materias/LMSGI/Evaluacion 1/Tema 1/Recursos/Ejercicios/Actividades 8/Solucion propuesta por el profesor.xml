@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<impresiones3d>
+    <colores_disponibles>
+        <color_disponible id="ROJO" rgb="F00" nombre="rojo" />
+        <color_disponible id="VERDE" rgb="0F0" nombre="verde" />
+        <color_disponible id="AZUL" rgb="00F" nombre="azul" />
+        <color_disponible id="BLANCO" rgb="FFF" nombre="blanco" />
+    </colores_disponibles>
+    <materiales>
+        <material nombre="PLA">
+            <calidades>
+                <calidad id="PLA_alta" precio="0.0084" />
+                <calidad id="PLA_baja" precio="0.0038" />
+            </calidades>
+            <colores_material>
+                <color_material color="ROJO" />
+                <color_material color="AZUL" />
+            </colores_material>
+        </material>
+        <material nombre="ABS">
+            <calidades>
+                <calidad id="ABS_alta" precio="0.0125" />
+                <calidad id="ABS_media" precio="0.0068" />
+                <calidad id="ABS_baja" precio="0.0045" />
+            </calidades>
+            <colores_material>
+                <color_material color="VERDE" />
+                <color_material color="AZUL" />
+                <color_material color="BLANCO" />
+            </colores_material>
+        </material>
+    </materiales>
+    <pedidos>
+        <pedido id="P00001" fecha_peticion="01/10/2022" estado="confirmado" fecha_pago="06/10/2022">
+            <componente id="C0000001" descripcion="Dado" calidad="PLA_baja" peso="30" color="AZUL"/>
+            <componente id="C0000002" descripcion="Abrazadera" calidad="PLA_alta" peso="15" color="ROJO"/>
+        </pedido>
+        <pedido id="P00002" fecha_peticion="03/10/2022" estado="rechazado" error="Pago rechazado por su banco">
+            <componente id="C0000003" descripcion="Busto romano" calidad="ABS_alta" peso="320" color="BLANCO"/>
+            <observaciones>
+                Por favor, necesito que esté antes del 1 de noviembre porque es un regalo para esa fecha. Muchas gracias.
+            </observaciones>
+        </pedido>
+    </pedidos>
+</impresiones3d>

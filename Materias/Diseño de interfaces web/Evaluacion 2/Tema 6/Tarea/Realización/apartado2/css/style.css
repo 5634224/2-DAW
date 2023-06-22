@@ -1,0 +1,323 @@
+@charset "UTF-8";
+/*-- Import --*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+/*-- Variables para configuración de disposición de los elementos (maquetación) --*/
+/*-- Puntos de ruptura para la maquetación con mediaqueries --*/
+/*========================================
+                MAQUETACION
+==========================================*/
+* {
+  box-sizing: border-box;
+}
+
+/*-- Mixins para maquetar --*/
+/*=================================
+            VARIABLES
+===================================*/
+/*-- Variables para las fuentes y colores de letra --*/
+/*-- Variables para configurar el contenido --*/
+/*===============================================
+        FUNCIONES Y MIXINS ESPECIFICOS
+================================================*/
+/*-- Funcion para el color de rojo aleatorio de título de la pagina --*/
+/*-- Funcion para el color de verde aleatorio de subtitulo de la pagina --*/
+/*-- Mixin para reglas de estilo de fuentes de los títulos --*/
+/*-- Mixins para agregar espacio entre bloques --*/
+/*-- Barra de navegación --*/
+/*-- Funcion para el color aleatorio de los articles --*/
+/*-- Estilos --*/
+body {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: white;
+}
+body h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+body h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+body h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+header {
+  background-color: rgba(128, 128, 128, 0.368);
+  padding: 1%;
+}
+header img {
+  width: 10%;
+  float: left;
+}
+header h1 {
+  text-align: center;
+  margin: 0;
+  color: rgb(41, 0, 0);
+}
+header h2 {
+  text-align: center;
+  margin: 0;
+  color: rgb(0, 142, 0);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*-- Borde --*/
+  border-color: white;
+  border-style: none;
+  border-width: 0;
+  background-color: rgba(128, 128, 128, 0.368);
+  margin-top: 1%;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    margin-top: 0;
+  }
+}
+nav ul {
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 1%;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+nav ul {
+  /*-- Tamaño ancho de la columna, definido por $i --*/
+  /*-- Código viejo --*/
+  width: 100%;
+  /*-- Configuración de los bordes --*/
+  border-style: none;
+  border-width: 0;
+}
+nav ul li a {
+  font-weight: 400;
+}
+nav ul li a:hover {
+  font-weight: 700;
+  color: red;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*-- Borde --*/
+  border-color: white;
+  border-style: none;
+  border-width: 0;
+  margin-top: 1%;
+  min-height: 20em;
+}
+@media screen and (max-width: 768px) {
+  section {
+    margin-top: 0;
+  }
+}
+section article {
+  /*-- Tamaño ancho de la columna, definido por $i --*/
+  /*-- Código viejo --*/
+  width: 33.3333333333%;
+  /*-- Configuración de los bordes --*/
+  /*-- Definimos propiedades generales para todos los elementos que apliquen el mixin --*/
+  border-color: white;
+  border-style: solid;
+  border-top-width: 0;
+  border-left-width: 0;
+  /*-- Personalizamos bordes internos --*/
+}
+section article:nth-child(1) {
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+}
+section article:nth-child(2) {
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+}
+section article:nth-child(3) {
+  border-right-width: 0;
+  border-bottom-width: 4px;
+}
+section article:nth-child(4) {
+  border-right-width: 4px;
+  border-bottom-width: 0;
+}
+section article:nth-child(5) {
+  border-right-width: 4px;
+  border-bottom-width: 0;
+}
+section article:nth-child(6) {
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+section article:nth-of-type(1) {
+  background-color: rgba(132, 154, 164, 0.5);
+}
+section article:nth-of-type(2) {
+  background-color: rgba(20, 156, 96, 0.5);
+}
+section article:nth-of-type(3) {
+  background-color: rgba(202, 161, 249, 0.5);
+}
+section article:nth-of-type(4) {
+  background-color: rgba(36, 208, 98, 0.5);
+}
+section article:nth-of-type(5) {
+  background-color: rgba(215, 179, 86, 0.5);
+}
+section article:nth-of-type(6) {
+  background-color: rgba(137, 134, 190, 0.5);
+}
+section article a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*-- Borde --*/
+  border-color: white;
+  border-style: none;
+  border-width: 0;
+}
+section article a img {
+  /*-- Tamaño ancho de la columna, definido por $i --*/
+  /*-- Código viejo --*/
+  width: 25%;
+  /*-- Configuración de los bordes --*/
+  border-style: none;
+  border-width: 0;
+}
+section article a div {
+  /*-- Tamaño ancho de la columna, definido por $i --*/
+  /*-- Código viejo --*/
+  width: 75%;
+  /*-- Configuración de los bordes --*/
+  border-style: none;
+  border-width: 0;
+}
+
+footer {
+  text-align: center;
+}
+footer div, footer p {
+  background-color: rgba(128, 128, 128, 0.368);
+  margin-top: 1%;
+}
+@media screen and (max-width: 768px) {
+  footer div, footer p {
+    margin-top: 0;
+  }
+}
+footer div img {
+  width: 3em;
+}
+footer p {
+  margin-bottom: 1%;
+  font-size: 0.8rem;
+}
+@media screen and (max-width: 768px) {
+  footer p {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  section article {
+    /*-- Tamaño ancho de la columna, definido por $i --*/
+    /*-- Código viejo --*/
+    width: 50%;
+    /*-- Configuración de los bordes --*/
+    /*-- Definimos propiedades generales para todos los elementos que apliquen el mixin --*/
+    border-color: white;
+    border-style: solid;
+    border-top-width: 0;
+    border-left-width: 0;
+    /*-- Personalizamos bordes internos --*/
+  }
+  section article:nth-child(1) {
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+  }
+  section article:nth-child(2) {
+    border-right-width: 0;
+    border-bottom-width: 4px;
+  }
+  section article:nth-child(3) {
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+  }
+  section article:nth-child(4) {
+    border-right-width: 0;
+    border-bottom-width: 4px;
+  }
+  section article:nth-child(5) {
+    border-right-width: 4px;
+    border-bottom-width: 0;
+  }
+  section article:nth-child(6) {
+    border-right-width: 0;
+    border-bottom-width: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+  header img {
+    float: none;
+  }
+  section article {
+    /*-- Tamaño ancho de la columna, definido por $i --*/
+    /*-- Código viejo --*/
+    width: 100%;
+    /*-- Configuración de los bordes --*/
+    border-style: none;
+    border-width: 0;
+  }
+  nav {
+    background-color: rgba(128, 128, 128, 0.368);
+    margin-top: 1%;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  nav {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav ul {
+    margin: 0;
+  }
+  nav ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 1%;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav ul li {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

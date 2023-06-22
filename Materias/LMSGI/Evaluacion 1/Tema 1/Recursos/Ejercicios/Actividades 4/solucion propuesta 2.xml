@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<alquiler_vehiculos>
+  <vehiculos>
+    <categoria nombre="mini">
+	  <vehiculo id="V001" marca="Mercedes" modelo="Vito" plazas="8" matricula="1234KCK" />
+	  <vehiculo id="V002" marca="Mercedes" modelo="Vaneo" plazas="9" matricula="1235KCK" />
+	  <vehiculo id="V003" marca="Mercedes" modelo="Vito" plazas="8" matricula="1236KCK" />
+	</categoria>
+    <categoria nombre="compact">
+	</categoria>
+    <categoria nombre="grand">
+	</categoria>
+    <categoria nombre="xlarge">
+	</categoria>
+  </vehiculos>
+  <clientes>
+    <cliente id="JHM001" nombre="José" apellidos="Hernández Martínez" direccion="c/ Mayor, 23" telefono="968123456" dni="12345678Z" />
+  </clientes>
+  <servicios_adicionales>
+    <servicio id="SNG0" descripcion="Silleta para niño de grupo 0" precio="10" />
+    <servicio id="DPLO" descripcion="Deposito lleno en origen" precio="80" />
+    <servicio id="PBEX" descripcion="Portabicletas exterior" precio="20" />
+  </servicios_adicionales>
+  <solicitudes>
+    <solicitud cliente="JHM001" recogida="2/1/2020 10:00" devolucion="3/1/2020 11:30">
+	  <extra id_extra="DPLO" />
+	  <extra id_extra="PBEX" />
+	</solicitud>
+    <solicitud cliente="JHM001" recogida="5/1/2020 10:00" devolucion="6/1/2020 11:30">
+	  Solicita adaptación para silla de ruedas.
+	  <extra id_extra="SNG0" />
+	</solicitud>
+  </solicitudes>
+</alquiler_vehiculos>

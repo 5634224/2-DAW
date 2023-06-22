@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="LMSGI05P2.xsl" type="text/xsl"?>
+<catalogo inicio="2023-01-01" vigencia="2023-01-31">
+    <elenco>
+        <miembro id="PN1" rol_principal="director" nombre="Peter Nolan" />
+        <miembro id="SH1" rol_principal="director" nombre="Steven Hawking" />
+        <miembro id="CC1" rol_principal="actriz" nombre="Cindy Crowe" />
+        <miembro id="HS1" rol_principal="actor" nombre="Harrison Seat" />
+        <miembro id="RT1" rol_principal="actriz" nombre="Ruby Thompson" />
+        <miembro id="JR1" rol_principal="actor" nombre="Jason Renner" />
+        <miembro id="AR1" rol_principal="actriz" nombre="Anya Ramirez" />
+        <miembro id="JS1" rol_principal="actor" nombre="Jeremy Statham" />
+    </elenco>
+    <planes>
+        <plan id="P1" nombre="básico" mensualidad="9.99" />
+        <plan id="P2" nombre="avanzado" mensualidad="19.99" />
+        <plan id="P3" nombre="premium" mensualidad="29.99" />
+    </planes>
+    <titulos>
+        <genero nombre="Acción">
+            <titulo nombre="Pesadilla después de Navidad" anyo="1998" duracion="116" alquiler="4.50" compra="14.90" plan="P2">
+                <reparto miembro="PN1" />
+                <reparto miembro="CC1" rol="protagonista" />    
+                <reparto miembro="JR1" />
+                <reparto miembro="RT1" />
+                <sinopsis>
+                    Tras las vacaciones navideñas, una familia de clase media decide iniciar una dieta.    
+                </sinopsis>
+            </titulo>
+            <titulo nombre="The Rooom" anyo="2003" duracion="124" alquiler="4.50" plan="P2">
+                <reparto miembro="SH1" />
+                <reparto miembro="RT1" rol="protagonista" />    
+                <reparto miembro="HS1" />
+            </titulo>
+            <titulo nombre="Inquilinos cibernéticos" anyo="1995" duracion="107" alquiler="4.50" compra="14.90" plan="P2" nrm="12">
+                <reparto miembro="PN1" />
+                <reparto miembro="HS1" rol="protagonista" />    
+                <reparto miembro="JR1" />
+                <sinopsis>
+                    Se encuentran hospedados en el lugar más inhóspito del mundo.
+                </sinopsis>
+            </titulo>
+            <titulo nombre="Huye, brigada espacial" anyo="1984" duracion="184" alquiler="3.50" compra="9.90" plan="P1">
+                <reparto miembro="SH1" />
+                <reparto miembro="JR1" rol="protagonista" />    
+                <reparto miembro="HS1" />
+                <reparto miembro="RT1" />
+            </titulo>
+            <titulo nombre="Se acabó el juguete" anyo="2007" duracion="130" alquiler="4.50" compra="14.90" plan="P2">
+                <reparto miembro="SH1" />
+                <reparto miembro="JR1" rol="protagonista" />    
+            </titulo>
+            <titulo nombre="Efectos letales" anyo="2001" duracion="155" alquiler="4.50" plan="P2">
+                <reparto miembro="SH1" />
+                <reparto miembro="JS1" rol="protagonista" />    
+                <reparto miembro="JR1" />
+                <sinopsis>
+                    Todo sucede antes de que te des cuenta.    
+                </sinopsis>
+            </titulo>
+            <titulo nombre="Noches de mil gritos" anyo="2009" duracion="204" compra="39.90" nrm="7">
+                <reparto miembro="PN1" />
+                <reparto miembro="HS1" rol="protagonista" />    
+                <reparto miembro="RT1" />
+                <sinopsis>
+                    Ten los tapones para los oidos cerca.    
+                </sinopsis>
+            </titulo>
+        </genero>
+        <genero nombre="Terror">
+            <titulo nombre="Demonis" anyo="2004" duracion="98" alquiler="3.50" compra="9.90" plan="P1" nrm="18">
+                <reparto miembro="PN1" />
+                <reparto miembro="CC1" rol="protagonista" />    
+                <reparto miembro="AR1" />
+            </titulo>
+            <titulo nombre="Funda sangrienta" anyo="1992" duracion="114" alquiler="3.50" compra="9.90" plan="P1" nrm="16">
+                <reparto miembro="PN1" />
+                <reparto miembro="RT1" rol="protagonista" />    
+                <reparto miembro="HS1" />
+            </titulo>
+            <titulo nombre="Máquina mortal" anyo="1991" duracion="129" compra="14.90" plan="P2" nrm="18">
+                <reparto miembro="SH1" />
+                <reparto miembro="HS1" rol="protagonista" />    
+                <reparto miembro="RT1" />
+                <sinopsis>
+                    Ha sido entrenado para este momento durante toda su vida.    
+                </sinopsis>
+            </titulo>
+            <titulo nombre="Curso del 89" anyo="1989" duracion="90" alquiler="4.50" compra="14.90" plan="P2" nrm="18">
+                <reparto miembro="PN1" />
+                <reparto miembro="RT1" rol="protagonista" />    
+                <reparto miembro="JR1" />
+                <reparto miembro="HS1" />
+                <reparto miembro="JS1" />
+                <sinopsis>
+                    La venganza del no promocionado no se hace esperar.
+                </sinopsis>
+            </titulo>
+            <titulo nombre="La partida de los vivos murientes" anyo="1978" duracion="164" compra="39.90" nrm="18">
+                <reparto miembro="SH1" />
+                <reparto miembro="JS1" rol="protagonista" />    
+                <reparto miembro="JR1" />
+                <reparto miembro="AR1" />
+                <sinopsis>
+                    Solo pueden quedar dos, porque juegan por parejas.                
+                </sinopsis>
+            </titulo>
+        </genero>
+        <genero nombre="Comedia">            
+            <titulo nombre="Juego letal" anyo="2014" duracion="112" alquiler="5.50" compra="29.90" plan="P3" nrm="12">
+                <reparto miembro="PN1" />
+                <reparto miembro="AR1" rol="protagonista" />    
+                <reparto miembro="JR1" />
+            </titulo>
+            <titulo nombre="El brujo Lockwar" anyo="1997" duracion="106" alquiler="4.50" compra="14.90" plan="P2" nrm="12">
+                <reparto miembro="SH1" />
+                <reparto miembro="RT1" rol="protagonista" />    
+                <reparto miembro="JR1" />
+            </titulo>
+            <titulo nombre="Masterwish" anyo="1990" duracion="185" alquiler="5.50" compra="29.90" plan="P3">
+                <reparto miembro="PN1" />
+                <reparto miembro="RT1" rol="protagonista" />    
+                <reparto miembro="JR1" />
+                <reparto miembro="JS1" />
+                <sinopsis>
+                    El rey de los deseos desea complacerte.
+                </sinopsis>
+            </titulo>
+            <titulo nombre="La alucinante pandilla" anyo="2003" duracion="142" alquiler="3.50" compra="9.90" plan="P1">
+                <reparto miembro="SH1" />
+                <reparto miembro="JS1" rol="protagonista" />    
+                <reparto miembro="AR1" />
+            </titulo>
+            <titulo nombre="Razas de día" anyo="1997" duracion="150" alquiler="4.50" plan="P2" nrm="7">
+                <reparto miembro="SH1" />
+                <reparto miembro="RT1" rol="protagonista" />    
+                <reparto miembro="HS1" />
+            </titulo>
+            <titulo nombre="Calles de hielo" anyo="2012" duracion="112" alquiler="3.50" compra="9.90" plan="P1">
+                <reparto miembro="SH1" />
+                <reparto miembro="AR1" rol="protagonista" />    
+                <reparto miembro="JR1" />
+                <sinopsis>
+                    La vida en la ciudad es difícil para un grupo de adolescentes.
+                </sinopsis>
+            </titulo>
+            <titulo nombre="El señor de las pulseras" anyo="2000" duracion="212" compra="39.90">
+                <reparto miembro="PN1" />
+                <reparto miembro="AR1" rol="protagonista" />    
+                <reparto miembro="JS1" />
+                <sinopsis>
+                    El nuevo hijo nonato del rey vende sus creaciones en el mercado ambulante.
+                </sinopsis>
+            </titulo>
+        </genero>
+    </titulos>
+</catalogo>

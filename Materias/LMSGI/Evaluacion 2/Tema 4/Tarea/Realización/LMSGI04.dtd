@@ -1,0 +1,47 @@
+<!ELEMENT catalogo (elenco, planes, titulos)>
+<!ATTLIST catalogo
+    inicio CDATA #REQUIRED
+    vigencia CDATA #REQUIRED
+>
+
+<!ELEMENT elenco (miembro*)>
+
+<!ELEMENT miembro EMPTY>
+<!ATTLIST miembro
+    id ID #REQUIRED
+    rol_principal (director|actriz|actor) #REQUIRED
+    nombre CDATA #REQUIRED
+>
+
+<!ELEMENT planes (plan+)>
+<!ELEMENT plan EMPTY>
+<!ATTLIST plan
+    id ID #REQUIRED
+    nombre CDATA #REQUIRED
+    mensualidad NMTOKEN #REQUIRED
+>
+
+<!ELEMENT titulos (genero*)>
+<!ELEMENT genero (titulo+)>
+<!ATTLIST genero
+    nombre ID #REQUIRED
+>
+
+<!ELEMENT titulo (reparto*, sinopsis?)>
+<!ATTLIST titulo
+    nombre CDATA #REQUIRED
+    anyo CDATA #REQUIRED
+    duracion CDATA #REQUIRED
+    alquiler CDATA #IMPLIED
+    compra CDATA #IMPLIED
+    plan IDREF #IMPLIED
+    nrm CDATA #IMPLIED
+>
+
+<!ELEMENT reparto EMPTY>
+<!ATTLIST reparto
+    miembro IDREF #REQUIRED
+    rol (protagonista) #IMPLIED
+>
+
+<!ELEMENT sinopsis (#PCDATA)>

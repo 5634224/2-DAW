@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OBJETO WINDOW</title>
+    <script>
+
+        /* 
+            window es el objeto global cuando ejecutamos javascript en un navegador web,
+            siempre lo tendremos disponible, y por tanto sus métodos y atributos. No hace
+            falta que lo nombremos expresamente a la hora de acceder a sus métodos o atributos.
+
+            De entre sus atributos destacamos el objeto document, ya que es que que tiene
+            todo el contenido de la aplicación, lo estudiaremos con detenimiento posteriormente
+            aunque ya hemos utilizado en ejercicios uno de sus métodos document.write.
+        */
+
+        //  Veamos algunos métodos de window.
+
+        //  Mostrar una ventana con información
+            window.alert('EJEMPLO DE USO DE ALERT');
+
+        //  Obtener información del usuario, devuelve la cadena introducida.
+            let nombre = prompt('Introduzca su nombre');
+
+        //  Solicitar confirmación o calcelar, devuelve true o false.
+            let respuesta = confirm('¿Está de acuerdo');
+        
+        //  setInterval, ejecuta una función cada x milisegundos
+
+            function prueba(){
+                fecha = new Date()
+                document.writeln(fecha.getSeconds()+'<br>');
+            }
+
+            setInterval(prueba,1000)
+
+         //   setTimeout, ejecuta una función transcurridos x milisegundos.
+
+            setTimeout(prueba,1000)
+
+        // open, abrir una nueva ventana o pestaña (ya desaconsejado)
+
+            let nuevaVentana = window.open("nueva.html","nueva","height=800,width=600");
+
+        // ATRIBUTOS: location, history, navigator, localStorage
+
+        //location.href="http://www.cifpcarlos3.es";
+
+            document.write('<br>Protocolo de acceso al archivo:' + location.protocol)
+
+            document.writeln('<br>Lenguaje del navegador'+navigator.languages+'\n');
+
+        // Acceso a la geolocalización
+
+            navigator.geolocation.getCurrentPosition(exito);
+
+            function exito(posicion){
+                 console.log(posicion);
+            }
+        
+       // Almacenamiento de información en el cliente "antiguas cookies"
+    
+
+
+            localStorage.idioma = "ingles";
+            //localStorage.setItem('idioma','ingles')
+            //localStorage.removeItem("key"); //Eliminar el elemento
+            //sessionStorage.setItem('idioma','ingles'); almacena temporalmente durante esta sesion
+
+            if( localStorage.idioma == "ingles") alert("HELLO")
+
+       //Acceso al historial
+       
+        //  history.back()
+
+            //Acceso a propiedades de la pantalla.
+
+            console.log(screen)
+        
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

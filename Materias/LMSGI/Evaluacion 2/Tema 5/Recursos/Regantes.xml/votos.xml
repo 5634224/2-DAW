@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<datos tabla="votos">
+  <votos>
+    <num_votos>1</num_votos>
+    <sup_minima>0.0001</sup_minima>
+  </votos>
+  <votos>
+    <num_votos>2</num_votos>
+    <sup_minima>1</sup_minima>
+  </votos>
+  <votos>
+    <num_votos>3</num_votos>
+    <sup_minima>5</sup_minima>
+  </votos>
+  <votos>
+    <num_votos>4</num_votos>
+    <sup_minima>10</sup_minima>
+  </votos>
+  <votos>
+    <num_votos>5</num_votos>
+    <sup_minima>20</sup_minima>
+  </votos>
+</datos>

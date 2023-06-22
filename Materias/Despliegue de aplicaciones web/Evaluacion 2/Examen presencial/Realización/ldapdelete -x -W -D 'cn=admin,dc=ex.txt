@@ -1,0 +1,1 @@
+ldapdelete -x -W -D 'cn=admin,dc=examen,dc=local' "ou=grupos,dc=examen,dc=local"

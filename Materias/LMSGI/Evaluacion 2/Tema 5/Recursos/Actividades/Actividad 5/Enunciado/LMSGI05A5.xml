@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modulo id="LM" titulo="Lenguajes de Marcas y SGI">
+    <unidades>
+        <unidad id="UT1" nombre="XML" >
+            <test id="T01001" orden="1">
+                <enunciado>
+                    ¿Qué partes componen un elemento XML?
+                </enunciado>
+                <opciones>
+                    <opcion rotulo="a" descripcion="Etiqueta, contenido de apertura y clausura y entidad" />
+                    <opcion rotulo="b" descripcion="Etiquetas de apertura y clausura, contenido y atributos" correcta="true" />
+                    <opcion rotulo="c" descripcion="Atributos, entidad de apertura y clausura y contenido" />
+                    <opcion rotulo="d" descripcion="Entidades, relaciones y atributos de apertura y clausura" />
+                </opciones>
+            </test>
+            <test id="T01002" orden="2">
+                <enunciado>
+                    ¿Qué significa que un documento XML es válido?
+                </enunciado>
+                <opciones>
+                    <opcion rotulo="a" descripcion="Que su sintaxis es correcta y puede leerse con un parser XML estándar" />
+                    <opcion rotulo="b" descripcion="Que su contenido responde a unas especificaciones, aunque posea errores sintácticos" />
+                    <opcion rotulo="c" descripcion="Que es sintácticamente correcto y además cumple unos requisitos respecto a su estructura y semántica" correcta="true" />
+                    <opcion rotulo="d" descripcion="Todo lo del punto c y además una autoridad certificadora lo ha verificado y firmado digitalmente" />
+                </opciones>
+            </test>
+        </unidad>
+        <unidad id="UT2" nombre="HTML+CSS">
+            <test id="T02001" orden="1">
+                <enunciado>
+                    ¿Para qué sirve la etiqueta strong?
+                </enunciado>
+                <opciones>
+                    <opcion rotulo="a" descripcion="Para resaltar el texto como cursiva" />
+                    <opcion rotulo="b" descripcion="Para resaltar el texto como negrita" correcta="true"/>
+                    <opcion rotulo="c" descripcion="Para resaltar el texto como subrayada" />
+                    <opcion rotulo="d" descripcion="Para resaltar el texto como punteada" />
+                </opciones>
+            </test>
+            <test id="T02002" orden="2">
+                <enunciado>
+                    ¿Cómo puede aplicarse estilos CSS a un documento HTML?
+                </enunciado>
+                <opciones>
+                    <opcion rotulo="a" descripcion="Vinculando con un archivo CSS" />
+                    <opcion rotulo="b" descripcion="Incrustando el código CSS en el documento" />
+                    <opcion rotulo="c" descripcion="Definiendo atributos style en los elementos contenedores" />
+                    <opcion rotulo="d" descripcion="Cualquiera de las anteriores" correcta="true" />
+                </opciones>
+            </test>
+        </unidad>
+        <unidad id="UT4" nombre="Validación" />
+        <unidad id="UT5" nombre="XPath+XSLT" />
+        <unidad id="UT6" nombre="XQuery" />
+        <unidad id="UT7" nombre="SGI" />
+    </unidades>
+    <prueba id="P20220301" titulo="Final de marzo de 2022" fecha="2022-03-01">
+        <parte id="P1" titulo="Recuperación 1"  tarea="https://ead.murciaeduca.es/mod/assign/view.php?id=699629" puntos_totales="10.0">
+            <ejercicio id="P1E1" puntos="3.0" unidad="UT1">
+                <enunciado>
+                    Diseña un archivo XML que cumpla con las siguientes especificaciones: ...
+                </enunciado>                    
+                <items>
+                    <item descripcion="El XML está bien formado" peso="30" />
+                    <item descripcion="Estructura de nodos" peso="30" />
+                    <item descripcion="Uso de atributos/valores" peso="20" />
+                    <item descripcion="Datos de ejemplo" peso="20" />
+                    <item descripcion="Claridad" oculto="true" />
+                    <item descripcion="Comentarios" oculto="true" />
+                </items>
+            </ejercicio>
+            <ejercicio id="P1E2" puntos="2.5" unidad="UT2">
+                <enunciado>
+                    Diseña una página HTML como la que puede verse en la captura: ...
+                </enunciado>                    
+                <items>
+                    <item descripcion="Corrección sintáctica" peso="20" />
+                    <item descripcion="Estructura de capas" peso="30" />
+                    <item descripcion="Etiquetas HTML5" peso="20" />
+                    <item descripcion="Metadatos" peso="20" />
+                    <item descripcion="Uso de entidades" peso="10" />
+                    <item descripcion="Claridad" oculto="true" />
+                    <item descripcion="Comentarios" oculto="true" />
+                </items>
+                <anexos>
+                    <anexo src="captura_p1e2.png"/>
+                </anexos>
+            </ejercicio>
+            <ejercicio id="P1E3" puntos="2.5" unidad="UT2">
+                <enunciado>
+                    Desarrolla las reglas CSS para: ...
+                </enunciado>                    
+                <items>
+                    <item descripcion="Regla 1"/>
+                    <item descripcion="Regla 2"/>
+                    <item descripcion="Regla 3"/>
+                    <item descripcion="Regla 4"/>
+                    <item descripcion="Regla 5"/>
+                    <item descripcion="Claridad" oculto="true" />
+                    <item descripcion="Comentarios" oculto="true" />
+                </items>
+            </ejercicio>
+            <ejercicio id="P1E4" puntos="2.0" unidad="UT3">
+                <enunciado>
+                    Crea un archivo RSS que responda a estos requisitos: ...
+                </enunciado>                    
+                <items>
+                    <item descripcion="Requisito 1" />
+                    <item descripcion="Requisito 2" />
+                    <item descripcion="Requisito 3" />
+                    <item descripcion="Requisito 4" />
+                    <item descripcion="Claridad" oculto="true" />
+                    <item descripcion="Comentarios" oculto="true" />
+                </items>
+            </ejercicio>
+        </parte>
+        <parte id="P2" titulo="Final evaluación 2"  tarea="https://ead.murciaeduca.es/mod/assign/view.php?id=699629" puntos_totales="10.0">
+            <ejercicio id="P2E1" puntos="4.0" unidad="UT4">
+                <enunciado>
+                    Crea dos documentos de validación (DTD y XSD) para validar estos requerimientos:
+                </enunciado>                    
+                <items>
+                    <item descripcion="La raiz debe llamarse 'cambios'" peso="20"/>
+                    <item descripcion="Los hijos de la raiz serán 'divisas' e 'historial'" peso="20" />
+                    <item descripcion="'divisas' se compondrá de una o más 'divisa'" peso="30" />
+                    <item descripcion="Cada 'divisa' tendrá como atributos 'id', 'nombre' y 'num_decimales'" peso="30" />
+                    <item descripcion="Claridad" oculto="true" />
+                    <item descripcion="Comentarios" oculto="true" />
+                </items>
+            </ejercicio>
+            <ejercicio id="P2E2" puntos="3" unidad="UT5">
+                <enunciado>
+                    Dado el XML de ejemplo, crea una hoja de estilo XSLT que muestre los datos de los históricos de cambio en forma de tabla.
+                </enunciado>                    
+                <items>
+                    <item descripcion="Se muestra un título h1 con el nombre del listado" peso="5" />
+                    <item descripcion="Se muestra un título h2 con el rango de fechas, consultando sus valores en el XML" peso="10" />
+                    <item descripcion="Se muestran los encabezados de la tabla" peso="5" />
+                    <item descripcion="Se plantea correctamente el bucle que itera los registros" peso="30" />
+                    <item descripcion="Se consultan los valores del registro recorrido en cada iteración" peso="30" />
+                    <item descripcion="Claridad" oculto="true" />
+                    <item descripcion="Comentarios" oculto="true" />
+                </items>
+                <anexos>
+                    <anexo src="P20220301P2E2.xml"/>
+                </anexos>
+            </ejercicio>
+        </parte>
+    </prueba>
+</modulo>

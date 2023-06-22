@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --base: 1600;
+            --tbase: calc(var(--base) * 1px);
+            --columna: calc(var(--base) / 12);
+            --pcolumna: calc(var(--columna)/ var(--base) * 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: var(--tbase);
+            margin: 0 auto;
+            /*padding-right: var(--tcanaleta);*/
+        }
+
+        .row {
+            clear: both;
+        }
+
+        .col {
+            float: left;
+            /*margin-left: var(--pcanaleta);*/
+            /* width: var(--tcolumna); */
+            width: var(--pcolumna);
+            background: rgb(255,150,150);
+        }
+
+        .col.span2 {
+            width: calc(var(--pcolumna) * 2);
+        }
+
+        .col.span3 {
+            width: calc(var(--pcolumna) * 3);
+        }
+
+        .col.span4 {
+            width: calc(var(--pcolumna) * 4);
+        }
+
+        .col.span5 {
+            width: calc(var(--pcolumna) * 5);
+        }
+
+        .col.span6 {
+            width: calc(var(--pcolumna) * 6);
+        }
+
+        /* @for $tamano from 1 to 12 {
+            .col.span{$tamano} {
+                width: (60 * $tamano + 20 * $tamano) * 1px;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+            <div class="col">5</div>
+            <div class="col">6</div>
+            <div class="col">7</div>
+            <div class="col">8</div>
+            <div class="col">9</div>
+            <div class="col">10</div>
+            <div class="col">11</div>
+            <div class="col">12</div>
+        </div>
+        <div class="row">
+            <div class="col span1">13</div>
+            <div class="col span6">14</div>
+            <div class="col span3">15</div>
+            <div class="col span2">16</div>
+        </div>
+    </div>
+</body>
+</html>

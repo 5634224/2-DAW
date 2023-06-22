@@ -1,0 +1,12 @@
+/* ANIMACIONES: */
+Además de las animaciones que presenta ya de por sí la plantilla de la tabla de precios, he añadido mis propias animaciones custom:
+1) Nueva animacion de entrada para las tarjetas de las ofertas, con distintos delays.
+2) Nueva animación de sombra en el evento hover sobre las tarjetas.
+3) Nueva animación en el evento hover sobre cada una tarjeta de la oferta, para animar el botón con el efecto del latido del corazón.
+4) Nueva en el evento hover del propio botón, donde incorporo una animación con degradado del color de fondo.
+
+/* MODIFICACIONES sobre el CSS original: */
+1) Ampliación de tamaño del header para que quepan dos líneas de texto en vez de una. Esto se ha hecho dentro de la clase ".head_bg", modificando la propiedad border-width que traía de "stock".
+2) Establecido tamaño height estático al contenedor del precio, mediante la clase ".blur-out-expand" de las animaciones de los precios.
+3) .generic_feature_list ul li:hover span añadida, para que el color del resaltado de características se aplique en el evneto hover. Además, se le ha aplicado también el mismo efecto de "fade-in" que el resto de animaciones "stock"
+4) Cambios en los puntos de ruptura utilizados en algunas mediaqueries y en las clases "col" aplicadas en el HTML. Este cambio se ha realizado con el objetivo de que las columnas se muestren igual para todos los años, con el mismo "height".

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<teatro>
+    <miembros>
+        <miembro id="PGG1" apellidos="Gómez García" nombre="Pascual" nombre_artistico="Pascualo" telefono="968123456" nacimiento="25/11/1980"></miembro>
+        <miembro id="PGG2" apellidos="García Gómez" nombre="Pedro" nombre_artistico="Pedrolo" telefono="968123457" nacimiento="24/12/1978"></miembro>
+        <miembro id="MMF1" apellidos="Martínez Fernández" nombre="María" nombre_artistico="Mariola" telefono="968123457" nacimiento="15/01/1992"></miembro>
+    </miembros>
+    <obras>
+        <obra titulo="Hamlet" autor="W. Shakespeare" genero="drama" inicio="2015">
+            <reparto actor="PGG2" rol="protagonista"></reparto>
+            <reparto actor="PGG1" rol="secundario"></reparto>
+        </obra>
+        <obra titulo="Los tres etcéteras de D. Simón" autor="J.M.Penán" genero="comedia" inicio="2015">
+            <reparto actor="MMF1" rol="protagonista"></reparto>
+            <reparto actor="PGG2" rol="secundario"></reparto>
+        </obra>
+    </obras>
+    <representaciones>
+        <representacion fecha_y_hora="15/09/2021 22:00" lugar="Batel" obra="Los tres etcéteras de D. Simón">
+            Hubo un lleno absoluto y el público estaba completamente entregado.
+        </representacion>
+        <representacion fecha_y_hora="15/11/2021 23:00" lugar="Batel" obra="Hamlet"></representacion>
+    </representaciones>
+</teatro>

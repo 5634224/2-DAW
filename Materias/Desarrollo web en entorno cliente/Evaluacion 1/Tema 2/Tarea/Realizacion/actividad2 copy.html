@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Actividad 2</title>
+    </head>
+    <body>
+        <script>
+            let n1, n2, n3;
+
+            /*-- Pide al usuario los números --*/
+            while (n1 == null) {
+                n1 = parseInt(prompt("Introduce un número (1):"));
+
+                if (isNaN(n1)) { // La funcion isNaN comprueba si la variable contiene un número o si se han introducido letras
+                    window.alert("Por favor, introduce un número, no introduzcas letras.");
+                    n1 = null;
+                }
+            }
+            
+            while (n2 == null) {
+                n2 = parseInt(prompt("Introduce un número (2):"));
+
+                if (isNaN(n2)) { // La funcion isNaN comprueba si la variable contiene un número o si se han introducido letras
+                    window.alert("Por favor, introduce un número, no introduzcas letras.");
+                    n2 = null;
+                }
+            }
+
+            while (n3 == null) {
+                n3 = parseInt(prompt("Introduce un número (3):"));
+
+                if (isNaN(n3)) { // La funcion isNaN comprueba si la variable contiene un número o si se han introducido letras
+                    window.alert("Por favor, introduce un número, no introduzcas letras.");
+                    n3 = null;
+                }
+            }
+            
+            document.write("n1=" + n1 + " n2=" + n2 + " n3=" + n3);
+            document.write(" Tipo de la variable n1= " + typeof(n1));
+            document.write("<br>");
+            
+
+            /*-- Devuelve el mayor de los números introducidos --*/
+            if (n1 != n2 || n1 != n3 || n2 != n3) {
+                document.write("El mayor de los números es ")
+                let sol = n1 > n2 ? n1 : n2;
+                sol = sol > n3 ? sol : n3;
+                document.write("" + sol);
+            } else {
+                document.write("Todos los números son iguales.");
+            }
+
+        </script>
+
+        <p>Hecho por Santiago Francisco San Pablo Raposo, 2º DAW</p>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+body {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    width: 33%;
+}
+
+#botonera {
+    text-align: center;
+}

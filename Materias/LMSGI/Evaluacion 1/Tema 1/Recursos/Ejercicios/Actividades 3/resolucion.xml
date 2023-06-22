@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<club_tercera_edad>
+    <tipos_de_juego>
+        <juego id="DOM" nombre="dominó" numero_jugadores_minimo="2" numero_jugadores_maximo="4">
+            Descripción:
+            El dominó es un juego de mesa en el que se juegan y emplean unas fichas (baldosas) rectangulares, generalmente blancas por la cara y negras por el envés.
+            Una de sus caras está dividida por dos cuadrados, cada uno de los cuales está numerado normalmente mediante disposiciones de puntos como los dados.
+            La puntuación habitual es de cero a seis puntos, lo que compone un total de 28 piezas de dominó siendo la ficha más grande la del seis doble.
+            El objetivo del juego es alcanzar una determinada puntuación previamente fijada, jugando para ello las manos o rondas que sean precisas.
+
+            El jugador que gana una ronda, suma los puntos de las fichas de sus adversarios y/o pareja, solo si este es mayor, por ejemplo si el jugador suma 8 puntos
+            y el adversario 12, el adversario se lleva los puntos del contrario. El primer jugador o pareja que alcanza la puntuación fijada al principio de la partida, gana.
+        </juego>
+        <juego id="BRI" nombre="brisca" numero_jugadores_minimo="2" numero_jugadores_maximo="6">
+            Descripción:
+            La brisca es un juego de naipes que se juega con la baraja española. Se puede jugar de dos, de a tres, de cuatro (dos parejas enfrentadas) o
+            de seis (dos equipos de tres jugadores enfrentados), pero el juego de cuatro es el más habitual. Si se juega de a dos o de a cuatro se utilizará
+            una baraja española de 40 cartas (se excluyen las cartas 8 y 9), si se juega de 3 se utilizan 36 cartas (se excluyen los 2) y si se juega de a seis
+            se utilizará una baraja española de 48 cartas.
+        </juego>
+        <juego id="JUL" nombre="julepe" numero_jugadores_minimo="3" numero_jugadores_maximo="9">
+            Descripción:
+            El julepe es un juego de naipe español (baraja española), variante de la brisca, pero con apuesta de dinero.
+            Se puede jugar de a tres a nueve jugadores. Para este juego se utiliza la baraja española sin los ochos y nueves.
+        </juego>
+    </tipos_de_juego>
+    <socios>
+        <socio id="SSP1" nombre="Santiago San Pablo Raposo" fecha_nac="2002-03-28" apodo="Santi"></socio>
+        <socio id="JLC2" nombre="José Luis Cruz" fecha_nac="2001-01-01" apodo="José"></socio>
+    </socios>
+    
+    
+    <partida juego="DOM" fecha="2022-10-03" ganador="SSP1">
+        <participantes>
+            <participante id="SSP1" />
+            <participante id="JLC2" />
+        </participantes>
+    </partida>
+</club_tercera_edad>

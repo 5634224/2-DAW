@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PRUEBA ARRAYS</title>
+    <script>
+        /* Diferentes declaraciones de Arrais */
+        
+        let arr = new Array();
+        let arr2 = [];
+
+        /* Añadir elementos al final push*/
+        arr.push(2);
+        arr.push(4);
+        arr.push(6);
+        arr.push(8);
+
+        /* Quitar elementos del final pop*/
+        arr.pop();
+        
+        /* Modificar valor de una posición concreta */
+        arr2[0]=2;
+        arr2[1]=4;
+        arr2[2]=6;
+
+        /* Recorrer Arrays */
+
+        //for con la condición length
+        document.write('<h2>Bucle for</h2>')
+        for ( let i=0 ; i<arr.length ; i++){   
+            document.write(arr[i])
+        }
+         
+
+        // for of : Recorre los valores de los atributos de un objeto
+        // en particular lo podemos aplicar a un array.
+        document.write('<h2>Bucle for of</h2>')
+        for ( let item of arr){
+            document.write(i)
+        }
+        // for in : Recorre los atributos de un objeto, en particular al 
+        // aplicarlo arrays recorrer los indices.
+
+        document.write('<h2>Bucle for in</h2>')
+        for ( let i in arr){
+            document.write(arr[i])
+        }
+
+        //Recorrer array con forEach
+
+        document.write('<h2>Bucle forEach</h2>')
+        arr.forEach((item)=>document.write(item));
+
+        //Eliminar/añadir elementos intermedios
+        //arr.splice(inicio[, num_elem_a_borrar, inserta_elem1, ..., inserta_elemN])
+
+        arr.splice(1,1) //Elimina la posición 1
+        console.log(arr);[2,6]
+        arr.splice(1,0,4,5);//¿Que hace?
+        console.log(arr)
+
+        //Extraer posicines desde inicio hasta fin (sin incluirlo)
+        //arr.slice(inicio[,fin])
+        arr.slice(1,2)
+
+        //Comprobar si está un elemento en el array
+        //includes: devuelve true o false si se encuentra
+        //indexOf: devuelve el índice en el que lo encuentra o -1
+        arr.includes(4)
+        arr.indexOf(4)
+
+        //split/join. Convierte cadena en array y viceversa.
+        arr=["a","b","c"]
+        let cad = arr.join()//"a,b,c"
+        cad.split(",")//["a", "b", "c"]
+
+
+       
+        //Vamos a crear un array grande para comprobar el rendimiento
+        //de cada uno de los bucles.
+
+        //Creamos un array grande
+        for (let i=0;i<500000;i++) arr.push(i);
+
+        //Calculamos el tiempo en recorrerlo
+        let time1=new Date();
+        for ( let i=0 ; i<arr.length ; i++){
+          //  document.write(arr[i]+'<br>')
+        }
+        let time2=new Date();
+
+        document.write('<br>Tiempo for: '+(time1-time2))
+        //Calculamos el tiempo en recorrerlo for in
+        time1=new Date();
+        for ( let i in arr){
+           // document.write(arr[i]+'<br>')
+        }
+        time2=new Date();
+
+        document.write('<br>Tiempo for in: '+(time1-time2))
+        //Calculamos el tiempo en recorrerlo for of
+        time1=new Date();
+        for ( let i of arr){
+           // document.write(i+'<br>')
+        }
+        time2=new Date();
+
+        document.write('<br>Tiempo for of: '+(time1-time2))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+

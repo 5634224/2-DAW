@@ -1,0 +1,200 @@
+:root{
+    --base:1600;
+    --tbase: calc(var(--base) * 1px);
+    --tcolumna: calc(var(--base) / 12);
+    --pcolumna: calc(var(--tcolumna)/ var(--base) * 100); 
+}
+
+* { box-sizing: border-box;}
+
+.wrapper{
+    width: 100%;
+    max-width: var(--tbase);
+    margin: 0 auto;
+}
+
+.row {
+    clear:both;
+}
+
+.col-1{
+    float: left;
+    width: var(--pcolumna);
+}
+
+.col-2{
+    float: left;
+    width: calc( var(--pcolumna) * 2);
+}
+
+.col-3{
+    float: left;
+    width: calc( var(--pcolumna) * 3);
+}
+
+.col-4{
+    float: left;
+    width: calc( var(--pcolumna) * 4);
+}
+
+.col-5{
+    float: left;
+    width: calc( var(--pcolumna) * 5);
+}
+
+.col-6{
+    float: left;
+    width: calc( var(--pcolumna) * 6);
+}
+
+.col-7{
+    float: left;
+    width: calc( var(--pcolumna) * 7);
+}
+
+.col-8{
+    float: left;
+    width: calc( var(--pcolumna) * 8);
+}
+
+.col-9{
+    float: left;
+    width: calc( var(--pcolumna) * 9);
+}
+
+.col-10{
+    float: left;
+    width: calc( var(--pcolumna) * 10);
+}
+
+.col-11{
+    float: left;
+    width: calc( var(--pcolumna) * 11);
+}
+
+.col-12{
+    float: left;
+    width: calc( var(--pcolumna) * 12);
+}
+
+.ml-1{
+    margin-left: calc(var(--pcolumna) * 1);
+}
+
+.ml-2{
+    margin-left: calc(var(--pcolumna) * 2);
+}
+
+.ml-3{
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-4{
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-5{
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-6{
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-7{
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-8{
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-9{
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-10{
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-11{
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+.ml-12{
+    margin-left: calc(var(--pcolumna) * 3);
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li{
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active){
+    background-color: #ddd;
+}
+
+li a.active{
+    color: white;
+    background-color: #04AA6D;
+}
+
+.casa{
+    width: 100%;
+}
+
+.portada{
+    width: 100%;
+}
+
+.pegajoso{
+    position: sticky;
+    top: 0;
+}
+
+.borde{
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

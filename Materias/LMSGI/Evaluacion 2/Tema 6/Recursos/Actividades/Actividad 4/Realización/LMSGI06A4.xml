@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidencias>
+    <cabecera>
+        <proveedor id="PR001" nombre="Reparaciones eléctricas Pepe Vatios" />
+        <fechas desde="2021-01-01T00:00:00Z" hasta="2021-01-02T00:00:00Z" transmision="2021-01-02T00:00:05Z" />
+    </cabecera>
+    <siniestros>
+            <encurso>
+                <siniestro id="S21000089">
+                    <cliente nombre="Sonia Murillo Gómez" direccion="c/ Mayor, 1 30201" localidad="Cartagena" movil="634567891" />
+                    <descripcion>
+                        Fogonazo en el enchufe donde tiene una estufa encendida.
+                    </descripcion>
+                    <presupuesto horas="1.0" desplazamiento="30" importe="36.00" />
+                </siniestro>
+                <siniestro id="S21000153" nuevo="true">
+                    <cliente nombre="Manuel Sánchez Sánchez" direccion="c/ Mediana, 1 30201" localidad="Cartagena" movil="612345678" />
+                    <descripcion>
+                        Le salta el diferencial continuamente y no puede rearmarlo.
+                    </descripcion>
+                    <presupuesto horas="1.0" importe="30.00" />
+                </siniestro>
+                <siniestro id="S21000168" nuevo="true">
+                    <cliente nombre="Gabriel Méndez Lorente" direccion="c/ Menor, 1 30201" localidad="Cartagena" movil="623456789" />
+                    <descripcion>
+                        Mal contacto en interruptor de luz de la cocina, hay que revisar todo el circuito para ver donde está el fallo.
+                    </descripcion>
+                </siniestro>
+            </encurso>
+            <actualizaciones>
+                <actualizacion siniestro="S21000089" fecha="2021-01-01T12:30:00Z" estado="atendido" />
+                <actualizacion siniestro="S21000089" fecha="2021-01-01T13:45:00Z" estado="resuelto">
+                    El enchufe está bien. Se recomienda al cliente que no conecte la estufa hasta comprobar cable en servicio técnico.
+                </actualizacion>
+                <actualizacion siniestro="S21000153" fecha="2021-01-01T16:30:00Z" estado="alta" />
+                <actualizacion siniestro="S21000168" fecha="2021-01-01T21:15:00Z" estado="alta" />
+            </actualizaciones>
+    </siniestros>
+</incidencias>

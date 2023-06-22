@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWEC 04 - Ejercicio 1 - Fecha</title>
+</head>
+<body>
+    <script>
+        let meses = Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+
+        let fechaHoy = new Date();
+        let fechaFinCurso = new Date(2023, 2, 10);
+        document.write("Estamos a " + fechaHoy.getDate() + " de " + meses[fechaHoy.getMonth()] + " del " + fechaHoy.getFullYear());
+
+        //https://es.stackoverflow.com/questions/22073/c%C3%B3mo-obtener-la-diferencia-de-d%C3%ADas-entre-dos-fechas-en-javascript
+        let diferenciaDias = Math.ceil((fechaFinCurso - fechaHoy) / (1000 * 60 * 60 * 24));
+
+        document.write(", faltan " + diferenciaDias + " días para fin de curso.")
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Desarrollo de aplicación para proyecto final</title>
+        <link>https://www.practicasenempresa.es</link>
+        <description>
+            La finalidad del canal es mostrar el progreso de un proyecto de desarrollo de una aplicación destinada a introducir las tareas diarias realizadas durante la formación en centros de trabajo.
+        </description>
+        <language>es-es</language>
+        <item>
+            <title>Diseño de la BD</title>
+            <guid>https://www.practicasenempresa.es/disenoBD</guid>
+			<link>https://www.practicasenempresa.es/disenoBD</link>
+            <description>
+                Hoy anunciamos el diseño que tendrá la BB.DD de nuestra aplicación para introducir las tareas diarias durante las FCT.
+                Está diseñada para que profesores, alumnos y empresas mantengan la comunicación y estén al tanto sobre las tareas encomendadas al alumno, y su progreso en ellas.
+            </description>
+            <pubDate>Mon, 28 Nov 2022 12:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Desarrollo de back-end</title>
+            <guid>https://www.practicasenempresa.es/back-end</guid>
+			<link>https://www.practicasenempresa.es/back-end</link>
+            <description>
+                Hoy anunciamos la finalización de la parte de back-end del proyecto de aplicación para introducir las tareas diarias durante las FCT.
+                Se trata de un gran avance puesto que ya tenemos toda la infraestructura del servidor montada y lista para servir los contenidos de la aplicación.
+            </description>
+            <pubDate>Mon, 28 Nov 2022 14:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Desarrollo de front-end</title>
+            <guid>https://www.practicasenempresa.es/front-end</guid>
+			<link>https://www.practicasenempresa.es/front-end</link>
+            <description>
+                Hoy anunciamos la finalización de la parte de front-end del proyecto de aplicación para introducir las tareas diarias durante las FCT.
+                Se trata de un gran avance puesto que la aplicación ya tiene desarrollada toda la parte del lado del cliente, lo que significa que se libera una versión beta del proyecto.
+            </description>
+            <pubDate>Mon, 28 Nov 2022 16:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Pruebas finales</title>
+            <guid>https://www.practicasenempresa.es/pruebasFinales</guid>
+			<link>https://www.practicasenempresa.es/pruebasFinales</link>
+            <description>
+                Hoy anunciamos la apertura del plazo para las pruebas finales para la liberación de una versión final del proyecto.
+                Tendréis hasta el día 10 de enero de 2023 para realizar cumplir con el programa de beta-testing.
+            </description>
+            <pubDate>Mon, 28 Nov 2022 18:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

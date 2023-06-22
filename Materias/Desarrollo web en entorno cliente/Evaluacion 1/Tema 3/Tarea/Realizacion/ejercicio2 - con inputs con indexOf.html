@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+
+    <script>
+        // https://elcodigoascii.com.ar/
+        let abc = 'abcdefghijklmnopqrstuvwxyz';
+
+        /*=================================================
+                        FUNCIONES NATIVAS
+        ==================================================*/
+        function encriptar(cadena) {
+            if (typeof(cadena) == 'string') {
+                let convertida = "";
+                for (i = 0; i < cadena.length; i++) {
+                    convertida += abc[(abc.indexOf(cadena.charAt(i)) + 2) % abc.length];
+                }
+                return convertida;
+            }
+        }
+
+        function desencriptar(cadena) {
+            if (typeof(cadena) == 'string') {
+                let convertida = "";
+                for (i = 0; i < cadena.length; i++) {
+                    let numCaracter = abc.indexOf(cadena.charAt(i)) - 2;
+                    if (numCaracter < 0) { // Si es negativo, lo convierte a numero de caracter positivo
+                        numCaracter = abc.length + numCaracter;
+                    }
+                    convertida += abc[numCaracter % abc.length];
+                }
+                return convertida;
+            }
+        }
+
+        /*=========================================================
+                Funciones que van a ser asignadas a los botones
+        ===========================================================*/
+        function codificar() {
+            let textoAConvertir = document.getElementById("textA").value;
+            document.getElementById('textAconvertido').value = encriptar(textoAConvertir);
+        }
+
+        function decodificar() {
+            document.getElementById('textBconvertido').value = desencriptar(document.getElementById("textB").value);
+        }
+
+        
+        function inicializar() {
+        /*-- Asignamos las funciones a los botones de los formularios --*/
+            document.getElementById("codificar").onclick = codificar;
+            document.getElementById("decodificar").onclick = decodificar;
+        }
+    </script>
+</head>
+<body onLoad="inicializar()">
+    <form>
+        <label>Introduce el mensaje a encriptar</label>
+        <input id="textA"></input>
+        <input type="text" id="textAconvertido" disabled></input>
+        <input type="button" id="codificar" value="Codificar">
+    </form>
+    <form>
+        <label>Introduce el mensaje a desencriptar</label>
+        <input type="text" id="textB"></input>
+        <input type="text" id="textBconvertido" disabled></input>
+        <input type="button" id="decodificar" value="Decodificar">
+    </form>
+</body>
+</html>

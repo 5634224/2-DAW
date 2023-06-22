@@ -1,0 +1,95 @@
+/*=================================
+            VARIABLES
+===================================*/
+/*-- Variables para las fuentes y colores de letra --*/
+$letra: 'Nunito', sans-serif;
+$t-letra: 1rem;
+$peso-cuerpo: 400;
+$peso-negrita: 700;
+$color-fondo-pagina: white; // Explicar en la memoria
+$color-fondo: rgba(128, 128, 128, 0.368);
+// $color-enlaces-nav: black;
+$color-enlaces: black;
+$color-enlaces-nav-hover: red;
+
+/*-- Variables para configurar el contenido --*/
+$numArticulos: 6;
+
+/*===============================================
+        FUNCIONES Y MIXINS ESPECIFICOS
+================================================*/
+
+/*-- Funcion para el color de rojo aleatorio de título de la pagina --*/
+@function colorRojoRandom() {
+    @return rgb(floor(random(256)), 0, 0);
+}
+
+/*-- Funcion para el color de verde aleatorio de subtitulo de la pagina --*/
+@function colorVerdeRandom() {
+    @return rgb(0, floor(random(256)), 0);
+}
+
+/*-- Mixin para reglas de estilo de fuentes de los títulos --*/
+@mixin titulos($nivel) {
+    font-weight: $peso-negrita;
+
+    @if ($nivel == "h1") {
+        font-size: calc($t-letra * 3);
+    } @else if ($nivel == "h2") {
+        font-size: calc($t-letra * 2);
+    } @else if ($nivel == "h3") {
+        font-size: calc($t-letra * 1.5);
+    }
+}
+
+/*-- Mixins para agregar espacio entre bloques --*/
+@mixin margin-top-bloques {
+    margin-top: $margen-between-bloques;
+
+    @media screen and (max-width: $md) {
+        margin-top: 0;
+    }
+}
+
+@mixin margin-bottom-bloques {
+    margin-bottom: $margen-between-bloques;
+
+    @media screen and (max-width: $md) {
+        margin-bottom: 0;
+    }
+}
+
+/*-- Barra de navegación --*/
+@mixin navHorizontal {
+    background-color: $color-fondo;
+    @include margin-top-bloques;
+    width: 100%;
+    
+    text-align: center;
+    ul { 
+        margin: 0;
+        
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 1%;
+            text-transform: uppercase;
+            font-size: calc($t-letra * 1.1);
+            font-weight: $peso-negrita;
+        }
+    }
+}
+
+@mixin navVertical {
+    @include navHorizontal;
+    ul { 
+        li {
+            display: block;
+        }
+    }
+}
+
+/*-- Funcion para el color aleatorio de los articles --*/
+@function colorRandom() {
+    @return rgba(floor(random(256)), floor(random(256)), floor(random(256)), 0.5);
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alquiFurgo>
+	<vehiculos>
+		<furgoneta categoria="mini"    id="FS01" plazas="5" marca="Fiat"     modelo="Scudo"  />
+		<furgoneta categoria="compact" id="RK01" plazas="7" marca="Renault"  modelo="Kangoo" />
+		<furgoneta categoria="grand"   id="FG01" plazas="8" marca="Ford"     modelo="Galaxy" />
+		<furgoneta categoria="xlarge"  id="MV01" plazas="9" marca="Mercedes" modelo="Vito"   />
+	</vehiculos>
+	<clientes>
+		<cliente id="CL001" nombre="Antonio" apellidos="Fernandez Garcia" direccion="C/Juan nº3 C.P.:30202 Cartagena" telefono="968323232" DNI="22909090H" />
+		<cliente id="CL002" nombre="Maria" apellidos="Sanchez Carrion" direccion="C/Pirata nº2 C.P.:30201 Cartagena" telefono="968303030" DNI="21000000D" />
+		<cliente id="CL003" nombre="Jose" apellidos="Gomez Perez" direccion="C/Valentin nº5 C.P.:30202 Cartagena" telefono="968202020" DNI="23002030F" />
+		<cliente id="CL004" nombre="Isabel" apellidos="Marin Moreno" direccion="C/Rio Segura nº1 C.P.:303019 Santa Ana" telefono="968502030" DNI="22121515Q" />
+	</clientes>
+	<servicios_extra>
+		<servicio id="SX001" nombre="Silleta para bebe" precio="5.12" />
+		<servicio id="SX002" nombre="Deposito lleno" precio="6.15" />
+		<servicio id="SX003" nombre="Portabicicletas exterior" precio="8.20" />
+	</servicios_extra>
+	<alquileres>
+		<solicitud id="S000001" id_cliente="CL001" id_furgoneta="FS01" fecha_hora_recogida="12/01/2018 12:30" fecha_hora_devolucion="29/01/2018 13:00">
+			<extra id_servicio="SX001" />
+		</solicitud>	
+		<solicitud id="S000002" id_cliente="CL002" id_furgoneta="FG01" fecha_hora_recogida="15/02/2018 18:00" fecha_hora_devolucion="20/02/2018 19:00">
+			La ventanilla del conductor no sube del todo.
+			<extra id_servicio="SX001" />
+			<extra id_servicio="SX003" />
+		</solicitud>
+		<solicitud id="S000003" id_cliente="CL004" id_furgoneta="MV01" fecha_hora_recogida="30/04/2018 10:00" fecha_hora_devolucion="01/05/2018 13:30">
+			El motor se ha calentado demasiado y no estaba cargada a tope.
+			<extra id_servicio="SX002" />
+		</solicitud>
+		<solicitud id="S000004" id_cliente="CL003" id_furgoneta="RK01" fecha_hora_recogida="26/03/2018 11:30">
+			<extra id_servicio="SX001" />
+			<extra id_servicio="SX003" />
+			<extra id_servicio="SX002" />
+		</solicitud>
+	</alquileres>
+</alquiFurgo>

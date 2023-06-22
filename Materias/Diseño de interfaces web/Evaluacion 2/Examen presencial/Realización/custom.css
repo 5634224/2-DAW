@@ -1,0 +1,125 @@
+/*-- Variables para las fuentes y colores de letra y fondo --*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&display=swap");
+body {
+  font-family: "Raleway";
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: colorFondoPagina();
+}
+body h1 {
+  color: rgb(0, 146, 0);
+  font-weight: 900;
+  font-size: 4rem; /* 200% mayor */
+}
+body h2 {
+  color: rgb(0, 145, 0);
+  font-weight: 700;
+  font-size: 2rem; /* 100% mayor */
+}
+body h3 {
+  color: rgb(0, 251, 0);
+  font-weight: 500;
+  font-size: 1.5rem; /* 50% mayor */
+}
+
+.navbar.navbar-colors {
+  background-color: #296045;
+  color: #2e933c;
+}
+.navbar.navbar-colors a.navbar-brand {
+  padding: 0;
+}
+.navbar.navbar-colors a.navbar-brand img {
+  width: 30px;
+  height: 30px;
+}
+.navbar.navbar-colors .nav-link {
+  color: #2e933c;
+}
+
+main .bienvenida {
+  background-image: url("paralax.jpg");
+  min-height: 300px;
+  /* Create the parallax scrolling effect */
+  /*https://www.w3schools.com/howto/howto_css_parallax.asp*/
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .bienvenida .texto-bienvenida {
+  padding-top: 150px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+main .bienvenida .texto-bienvenida h1 {
+  background-color: rgba(239, 246, 238, 0.5);
+  color: #204e4a;
+}
+main .bienvenida .texto-bienvenida p {
+  background-color: rgba(32, 78, 74, 0.5);
+  color: #eff6ee;
+}
+main div.container {
+  margin-top: 1em;
+}
+main div.container section {
+  padding: 1em;
+}
+main div.container section:nth-child(n) {
+  background-color: rgba(239, 246, 238, 0.5);
+}
+main div.container section:nth-child(2n) {
+  background-color: rgba(46, 147, 60, 0.5);
+}
+main div.container section figure img {
+  width: 100%;
+}
+@media screen and (min-width: 576px) {
+  main div.container section figure img { /* sm */
+    width: 90%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  main div.container section figure img { /* lg */
+    max-height: 300px;
+    width: 100%;
+  }
+}
+main div.container section#nuestroequipo .ficha-persona {
+  height: 300x;
+}
+main div.container section#nuestroequipo .ficha-persona div img {
+  width: 50%;
+  height: 50%;
+}
+
+footer {
+  background-color: #e55934;
+}
+footer img {
+  width: 100%;
+}
+
+/* ANIMACIONES */
+.rotate-scale-up:hover {
+  animation: rotate-scale-up 0.65s linear both;
+}
+
+/**
+ * ----------------------------------------
+ * animation rotate-scale-up
+ * ----------------------------------------
+ */
+@keyframes rotate-scale-up {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}/*# sourceMappingURL=custom.css.map */

@@ -1,0 +1,1 @@
+/catalogo/elenco/miembro[@rol_principal='director']/@nombre/data()

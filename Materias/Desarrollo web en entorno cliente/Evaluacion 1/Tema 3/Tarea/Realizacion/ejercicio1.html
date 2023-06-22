@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <button id="boton">Hoy</button>
+    <script>
+        let meses = Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+        /*-- Haciéndolo como en los apuntes --*/
+        
+        document.getElementById("boton").onclick = crearNueva;
+
+        function crearNueva() {
+            let subVentana  = window.open("", "Hoy", "height=400, width=600");
+            let fechaHoy = new Date();
+            subVentana.document.write("Hoy es " + fechaHoy.getDate() + " de " + meses[fechaHoy.getMonth()] + " del " + fechaHoy.getFullYear());
+        }
+        
+
+        
+        /*-- Otra forma de hacerlo: https://youtu.be/8frJ_4n3s-A?t=686 --*/
+        /*
+        document.getElementById("boton").addEventListener("click", e=>{
+            let subVentana  = window.open("", "Hoy", "height=400, width=600");
+            let fechaHoy = new Date();
+            subVentana.document.write("Hoy es " + fechaHoy.getDate() + " de " + meses[fechaHoy.getMonth()] + " del " + fechaHoy.getFullYear());
+        })
+        */
+    </script>
+</body>
+</html>

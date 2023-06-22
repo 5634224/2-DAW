@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es-es">
+    <title>CIFP Carlos III – Novedades</title>
+    <id>http://www.cifpcarlos3.es/novedades</id>
+    <link rel="self" type="application/atom+xml" href="http://www.cifpcarlos3.es/novedades/lmsgi03-A2-atom.xml" />
+    <link rel="alternate" type="text/html" href="http://www.cifpcarlos3.es/novedades" />
+    <updated>2020-11-24T16:44:00Z</updated>
+    <author>
+        <name>Jose Luis Cruz</name>
+        <email>joseluis.cruz@murciaeduca.es</email>
+    </author>
+    <entry>
+        <title>Plazo abierto para curso ocupacional</title>
+        <id>http://www.cifpcarlos3.es/novedades/plazo_ocupacional</id>
+        <link rel="alternate" type="text/html" href="http://www.cifpcarlos3.es/novedades/plazo_ocupacional" />
+        <updated>2020-11-24T16:44:01Z</updated>
+        <author>
+            <name>Jose Luis Cruz</name>
+            <email>joseluis.cruz@murciaeduca.es</email>
+        </author>
+        <summary>
+            Plazo de inscripción abierto para curso de formación ocupacional.
+        </summary>
+    </entry>
+    <entry>
+        <title>>Carrera solidaria en marcha</title>
+        <id>http://www.cifpcarlos3.es/novedades/carrera</id>
+        <link rel="alternate" type="text/html" href="http://www.cifpcarlos3.es/novedades/carrera" />
+        <updated>2020-11-24T16:44:02Z</updated>
+        <author>
+            <name>Jose Luis Cruz</name>
+            <email>joseluis.cruz@murciaeduca.es</email>
+        </author>
+        <summary>
+            Nuestro proyecto para organizar la carrera solidaria sigue adelante.
+        </summary>
+    </entry>
+    <entry>
+        <title>Notas de la primera evaluación publicadas</title>
+        <id>http://www.cifpcarlos3.es/novedades/notas</id>
+        <link rel="alternate" type="text/html" href="http://www.cifpcarlos3.es/novedades/notas" />
+        <updated>2020-11-24T16:44:03Z</updated>
+        <author>
+            <name>Jose Luis Cruz</name>
+            <email>joseluis.cruz@murciaeduca.es</email>
+        </author>
+        <summary>
+            Novedades respecto a la publicación de notas de la primera evaluación.
+        </summary>
+    </entry>
+</feed>

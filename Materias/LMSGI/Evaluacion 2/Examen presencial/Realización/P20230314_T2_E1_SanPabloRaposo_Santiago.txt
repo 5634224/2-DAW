@@ -1,0 +1,25 @@
+<!ELEMENT prevision (climas, ciudades)>
+<!ELEMENT climas (clima+)>
+<!ELEMENT clima ANY>
+<!ATTLIST clima
+    id ID #REQUIRED
+>
+
+<!ELEMENT ciudades (ciudad*)>
+<!ELEMENT ciudad ANY>
+<!ELEMENT dia ANY>
+<!ATTLIST dia
+    clima IDREF #REQUIRED
+>
+
+<!ELEMENT lluvia EMPTY>
+<!ATTLIST lluvia
+    probabilidad CDATA #IMPLIED
+    cantidad CDATA #REQUIRED
+>   
+
+<!ELEMENT viento EMPTY>
+<!ATTLIST viento
+    direccion (N|S|E|O|NE|SE|NO|SO) #REQUIRED
+>
+<!ELEMENT observaciones (#PCDATA)

@@ -1,0 +1,6 @@
+Vamos a realizar un programa que permita gestionar la actividades deportivas que realizan una serie de usuarios.
+1. En primer lugar debemos crear la clase Actividad que tendrá como atributos la fecha, hora y duración en segundos de la actividad. Como métodos tendremos, constructor, getters y setters, todos estos métodos se darán por supuesto en las siguientes clases y subclases, deben hacerse aunque no lo exija explícitamente el ejercicio. Además debemos añadir otro getter para duración que nos devuelva un array con la duración en horas, minutos y segundos.
+2. Sobre Actividad creamos las clases Ciclismo, Carrera y Elíptica.
+3. Ciclismo tendrá los atributos distancia, en metros, y subida acumulada, también en metros. Añadiremos además el método velocidad media que será calculada en kilómetros por hora.
+4. Carrera tendrá el atributo distancia y el método ritmo que devolverá un array con los minutos y segundos que se han gastado por kilómetro.
+5. Elíptica llevará los atributos pasos y dureza, que será un entero entre 1 y 10. Como método añadiremos uno que se llame esfuerzo, que se obtendrá de multiplicar los pasos por la dureza.

@@ -1,0 +1,1 @@
+/catalogo/titulos/genero/titulo[not(@nrm)]/@nombre/data()

@@ -1,0 +1,4 @@
+SELECT lin_cabecera, COUNT(lin_articulo)
+FROM lineas_ventas
+WHERE lin_cabecera = 1
+GROUP BY lin_cabecera;

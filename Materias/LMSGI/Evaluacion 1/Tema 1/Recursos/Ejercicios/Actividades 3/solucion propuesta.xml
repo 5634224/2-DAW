@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<club>
+	<tipos_de_juego>
+		<tipo_juego id="DOM" nombre="Domino" min_jugadores="2" max_jugadores="4">
+		El dominó es un juego en el que...
+		</tipo_juego>
+	</tipos_de_juego>
+	<socios>
+		<socio id="JLC1" nombre="José Luis Cruz" nacimiento="2001-01-01" apodo="x"></socio>
+		<socio id="ABC2" nombre="José Luis Pérez" nacimiento="2001-01-01" apodo="x"></socio>
+		<socio id="ABC3" nombre="José Luis López" nacimiento="2001-01-01" apodo="x"></socio>
+		<socio id="ABC3" nombre="José Luis Martínez" nacimiento="2001-01-01" apodo="x"></socio>
+	</socios>
+	<campeonatos>
+		<campeonato id="LG1" nombre="Liga 1"></campeonato>
+	</campeonatos>
+	<partidas>
+		<partida juego="DOM" fecha="2017-11-01" ganador="JLC1" campeonato="LG1">
+			<participantes>
+				<grupo>
+					<jugador id="JLC1"></jugador>
+					<jugador id="ABC2"></jugador>
+				</grupo>
+				<grupo>
+					<jugador id="ABC3"></jugador>
+					<jugador id="ABC4"></jugador>
+				</grupo>
+			</participantes>
+		</partida>
+	</partidas>
+</club>

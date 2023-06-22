@@ -1,0 +1,17 @@
+- 9 ejemplares REC01, 3 con fecha prevista de envío, 3 con fecha prevista de envío, pero con estado cancelado y 3 sin fecha prevista de envío (es decir, enviadas según se generan) -hecho
+- 3 ejemplares de CAN02 -hecho
+- 3 ejemplares de REQ03 -hecho
+- 3 ejemplares de ENC04 -hecho
+
+- 3 ejemplares con la totalidad medios de comunicación posibles asociados al tipo de comunicación de que se trate. - hecho
+- 3 ejemplares con solo alguno de los medios de comunicación posibles asociados al tipo de comunicación de que se trate. - hecho
+- 3 ejemplares con solo la app como medio de comunicación posible (aprovecharé para que coincidan con los ENC04) -hecho
+
+- 3 ejemplares en los que se modifiquen las variables del mensaje predeterminado del tipo de comunicación de que se trate. -hecho
+- 3 ejemplares en los que se sustituya el mensaje predeterminado por un mensaje personalizado. -hecho
+
+- 3 ejemplares de SUCURSALES distintas. -hecho
+
+- 3 ejemplares de notificaciones modificadas. -hecho
+
+- 3 ejemplares de SERVICIOS distintos. -hecho

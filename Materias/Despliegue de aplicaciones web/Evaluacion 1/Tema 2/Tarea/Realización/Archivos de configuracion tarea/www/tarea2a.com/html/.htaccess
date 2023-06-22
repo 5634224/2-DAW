@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Nombre y contraseña"
+AuthUserFile "/var/www/tarea2a.com/.usuarios"
+AuthGroupFile "/var/www/tarea2a.com/.grupos"
+Require group administradores

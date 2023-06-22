@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restaurante>
+    <menu_diario horario="Mediodía" precio="7.75" numero_minimo_comensales="1">
+        <primeros_platos>
+            <plato nombre="Rollo de primavera"/>
+            <plato nombre="Ensalada china"/>
+            <plato nombre="Sopa de pollo"/>
+            <plato nombre="Sopa agripicante"/>
+        </primeros_platos>
+        <segundos_platos>
+            <plato nombre="Arroz blanco o frito con huevo"/>
+            <plato nombre="Arroz frito tres delicias"/>
+            <plato nombre="Tallarines fritos"/>
+            <plato nombre="Patatas fritas"/>
+            <plato nombre="Pan chino"/>
+        </segundos_platos>
+        <postres>
+            <plato nombre="Helado"/>
+            <plato nombre="Flan"/>
+            <plato nombre="Café"/>
+            <plato nombre="Té"/>
+        </postres>
+    </menu_diario>
+    <menu_diario horario="Noche" precio="8.95" numero_minimo_comensales="1">
+        <primeros_platos>
+            <plato nombre="Mini rollo de primavera"/>
+            <plato nombre="Sopa de maíz con carne de cangrejo"/>
+            <plato nombre="Sopa de mariscos"/>
+            <plato nombre="Sopa de aleta de tiburón"/>
+            <plato nombre="Ensalada especial"/>
+        </primeros_platos>
+        <segundos_platos>
+            <plato nombre="Arroz frito tres delicias"/>
+            <plato nombre="Tallarines fritos con tres delicias"/>
+            <plato nombre="Tallarines fritos con pollo"/>
+            <plato nombre="Fideos de arroz con tres delicias"/>
+        </segundos_platos>
+        <postres>
+            <plato nombre="Helado"/>
+            <plato nombre="Flan"/>
+            <plato nombre="Café"/>
+            <plato nombre="Té"/>
+        </postres>
+    </menu_diario>
+</restaurante>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<distribuidora_electronica>
+	<almacenes>
+		<almacen id="A01" nombre="Almacén 1" localidad="Cartagena" />
+		<almacen id="A02" nombre="Almacén 2" localidad="Murcia" />
+	</almacenes>    
+	<categorias>
+		<categoria id="CMP" nombre="Componentes" />
+		<categoria id="HRM" nombre="Herramientas" />
+	</categorias>
+	<productos>
+		<producto categoria="CMP" id="R100K" nombre="Resistencia 100Kohm" precio="0.02" stock="100000" almacen="A02" pedido_minimo="100">
+			<precio_especial cantidad_minima="1000" precio="0.015" />
+			<precio_especial cantidad_minima="5000" precio="0.012" />
+		</producto>
+		<producto categoria="CMP" id="R200K" nombre="Resistencia 200Kohm" precio="0.02" stock="150000" almacen="A02" pedido_minimo="100">
+			<precio_especial cantidad_minima="2000" precio="0.016" />
+			<precio_especial cantidad_minima="4000" precio="0.013" />
+		</producto>
+		<producto categoria="HRM" id="V2015" nombre="Voltímetro modelo 2015" precio="15.50" stock="23" almacen="A02" />
+		<producto categoria="HRM" id="SE25W" nombre="Soldador de estaño 25W" precio="7.99"  stock="47" almacen="A01" >
+			<precio_especial cantidad_minima="10" precio="6.99" />
+		</producto>
+	</productos>
+	<kits>
+		<kit nombre="Voltímetro con resistencias" >
+			<producto_contenido producto="V2015" cantidad="1" />
+			<producto_contenido producto="R100K" cantidad="100" />
+			<producto_contenido producto="R200K" cantidad="100" />
+		</kit>
+	</kits>
+</distribuidora_electronica>

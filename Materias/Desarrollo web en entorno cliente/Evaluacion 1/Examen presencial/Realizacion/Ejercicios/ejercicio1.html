@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1. Cadenas y almacenamiento local</title>
+</head>
+<body>
+    <h1>Ejercicio 1. Cadenas y almacenamiento local</h1>
+    <p>
+        <script>
+            function writeln(texto) {
+                document.writeln(texto + "<br>");
+            }
+
+            let regular = /^([A-Z]*)\s([A-Z]*)\s([A-Z]*)$/;
+            let nombre = "";
+            if (localStorage.getItem("nombre") != null) {
+                nombre = localStorage.getItem("nombre");
+                writeln("Bienvenido " + nombre.toUpperCase());
+                let inicioPrimerApellido = nombre.indexOf(" ") + 1;
+                let finPrimerApellido = nombre.indexOf(" ", inicioPrimerApellido);
+                writeln("Tu primer apellido es: " + nombre.substring(inicioPrimerApellido, finPrimerApellido));
+                /*-- Para reconocer la mayor letra alfabéticamente, recorremos la cadena --*/
+                let letraMayor = "";
+                for (let i = 0; i < nombre.length; i++) {
+                    if (nombre[i] > letraMayor) {
+                        letraMayor = nombre[i];
+                    }
+                }
+                writeln("Alfabéticamente la mayor letra es: " + letraMayor);
+            } else {
+                while (nombre == "" || nombre == null || !nombre.match(regular)) {
+                    nombre = prompt("Introduzca Nombre Apellido1 Apellido2");
+                }
+                localStorage.setItem("nombre", nombre);
+                location.reload();
+            }
+        </script>
+    </p>
+    <p>
+        <script>
+            if (localStorage.getItem("nombre") != null) {
+                let boton = document.createElement("button");
+                boton.textContent = "Borrar datos";
+                boton.onclick = () => {
+                    localStorage.removeItem("nombre");
+                    location.reload();
+                }
+                document.body.append(boton);
+            }
+        </script>
+    </p>
+
+</body>
+</html>

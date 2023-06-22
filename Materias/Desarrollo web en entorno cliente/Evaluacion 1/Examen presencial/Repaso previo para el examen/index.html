@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*-- Variables: let y var --*/
+        if (true) {
+            var edad = 20; // Pueden ser vistas fuera del ámbito del bloque en el que se encuentran
+        }
+        writeln(edad); // Imprime por consola el valor de edad: es visible.
+        
+        edad2 = 21; // Esta tambien es declarada internamente como var
+        
+        if (true) {
+            let edad3 = 22; // No pueden ser vistas fuera del ámbito del bloque en el que se encuentran
+            // A día de hoy, es recomendable el uso de let, todos los navegadores ya lo soportan.
+        }
+
+        /*-- Variables: tipos --*/
+        let nombre = "'Santiago' \"Francisco\""; // string (comillas dobles)
+        let apellidos = 'San "Pablo" \'Raposo\'' // string (comillas simples)
+        let altura = 1.75; // number
+        let nota = 10; // number
+        let residente = true; // boolean
+        let miArray = new Array(1, 2, 3); // object
+        let miObjetoLiteral = {"nombre":"Santiago", "nota":"10"}; // object
+        let miFuncion = function() {
+            writeln("Esta es mi funcion almacenada en variable.")
+        };
+
+        /*-- typeof --*/
+        if (typeof(nota) == 'number') {
+            writeln("El tipo de nota es number: " + nota);
+        }
+
+        /*-- Casting --*/
+        // De un tipo cualquiera a string:
+        let mediaNotas = ((nota + 9) / 2).toString();  // toString()
+        let mediaNotasComillas = "" + ((nota + 9) / 2); // concatenando con la cadena vacia
+
+        // De un string a un numero:
+        let mediaNotas2 = parseFloat(mediaNotas);
+        let nota2 = parseInt(nota);
+        let nota3 = Number.parseInt(mediaNotas);
+        writeln("Medianotas2: " + mediaNotas2);
+        writeln("Nota 2: " + nota2);
+        writeln("Nota 3: " + nota3);
+
+        /*-- Visibilidad de las variables globales desde funciones --*/
+        let variableGlobal = true;
+        function testVariableGlobal() {
+            writeln("Test variable global desde funcion: " + variableGlobal);
+        }
+        testVariableGlobal(); // La funcion tiene acceso a la variable global
+
+        /*-- Constantes --*/
+        const testConstante = 10;
+        writeln("Test constante: " + testConstante);
+        //testConstante = 11; // Error
+
+        /*-- Operaciones mas importantes con numeros --*/
+        Math.abs(-10); // Absoluto de -10 = 10
+        Math.ceil(10.01) // Devuelve el mayor entero más próximo del numero introducido, devolvería 11
+        Math.ceil(10) // Devuelve el mayor entero más próximo del numero introducido, devolvería 10
+        Math.ceil(-10.01) // Devuelve el mayor entero más próximo del numero introducido, devolvería -10
+        Math.floor(5.05) // Redondea hacia abajo siempre, devolvería 5
+        Math.floor(-5.9) // Trunca el numero, devolveria -6.
+        Math.max(1, 2, 3);
+        Math.min(1, 2, 3);
+        Math.pow(5, 0); // 5 elevado a 0
+        Math.random(); // Nº aleatorio entre 0 y 1
+        Math.round(3.1415); // Redondea al numero entero mas cercano
+        Math.sqrt(4) // Raiz cuadrada de 4
+        Math.trunc(5.9) // Trunca el numero, devolveria 5.
+        Math.trunc(-5.9) // Trunca el numero, devolveria -5.
+
+        /*-- Funciones --*/
+        function writeln(texto) {
+            document.writeln("" + texto + "<br>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="comunidad">
+        <xs:complexType>            
+            <xs:sequence>
+                <xs:element name="propietarios">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="propietario" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="id" use="required" type="xs:ID"></xs:attribute>
+                                    <xs:attribute name="apellidos" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:maxLength value="80"></xs:maxLength>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="nombre" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:maxLength value="50"></xs:maxLength>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="alcorriente">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="true" />
+                                            </xs:restriction>                                            
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>                        
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="propiedades">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="propiedad" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="participacion" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="propietario" use="required" type="xs:IDREF"></xs:attribute>
+                                                <xs:attribute name="porcentaje" use="required">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:positiveInteger">
+                                                            <xs:maxInclusive value="100"></xs:maxInclusive>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:ID">
+                                                <xs:pattern value="(C|G)[0-0]{2}"></xs:pattern>
+                                                <!-- (C|G)[0-0]{2} -->
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="tipo" use="required" type="xs:IDREF"></xs:attribute>
+                                    <xs:attribute name="contacto" type="xs:IDREF"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>        
+                <xs:element name="cuotas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cuota" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="tipo" type="xs:ID" use="required"></xs:attribute>
+                                    <xs:attribute name="valor" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:decimal">
+                                                <xs:fractionDigits value="2"></xs:fractionDigits>
+                                                <xs:totalDigits value="5"></xs:totalDigits>
+                                                <xs:minInclusive value="10"></xs:minInclusive>
+                                                <xs:maxInclusive value="500"></xs:maxInclusive>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>        
+                <xs:element name="derramas" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="derrama" maxOccurs="unbounded">
+                                <xs:complexType mixed="true">
+                                    <xs:attribute name="id" type="xs:ID" use="required"></xs:attribute>
+                                    <xs:attribute name="valor" use="required"></xs:attribute>
+                                    <xs:attribute name="asunto" use="required"></xs:attribute>
+                                    <xs:attribute name="desde" use="required" type="xs:date"></xs:attribute>
+                                    <xs:attribute name="hasta" use="required" type="xs:date"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>        
+            </xs:sequence>
+            <xs:attribute name="fecha_actualizacion" use="required" type="xs:dateTime"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

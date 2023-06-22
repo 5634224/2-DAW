@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWEC 04 - Ejercicio 3 - Cuenta atrás</title>
+
+    <script>
+        let tiempo;
+
+        function writeln(cadena) {
+            document.writeln("" + cadena);
+            document.writeln("<br>")
+        }
+
+        function getTiempo() {
+            // switch (unidades) {
+            //     case "H":
+            //         //return Math.ceil(tiempo / 3600);
+            //         return "Faltan " + tiempo + " segundos";
+            //         break;
+            //     case "M":
+            //         //return Math.ceil(tiempo / 60);
+            //         return "Faltan " + tiempo + " segundos";
+            //         break;
+            //     case "S":
+            //         //return tiempo;
+            //         return "Faltan " + tiempo + " segundos";
+            //         break;
+            // }
+            return "Faltan " + tiempo + " segundos";
+        }
+
+        function restarTiempo() {
+            if (typeof(tiempo) == "number") {
+                tiempo--;
+                if (tiempo > 0) {
+                    writeln(getTiempo());
+
+                    //https://es.stackoverflow.com/questions/214503/c%C3%B3mo-mantener-el-scroll-abajo-al-abrir-un-chat
+                    document.body.scrollTop = document.body.scrollHeight;
+                } else if (tiempo == 0) {
+                    writeln(getTiempo());
+                    writeln('<a href="javascript:location.reload();">Reiniciar contador</a>');
+                }
+            }
+        }
+
+        function cuentaAtras(duracion, unidad) {
+            switch (unidad) {
+                case "H":
+                    tiempo = duracion * 3600;
+                    break;
+                case "M":
+                    tiempo = duracion * 60;
+                    break;
+                case "S":
+                    tiempo = duracion * 1;
+                    break;
+            }
+
+            writeln(getTiempo());
+            setInterval(restarTiempo, 1000);
+        }
+
+        //setInterval(cuentaAtras, 1000);
+        function inicializar() {
+            document.getElementById("empezar").addEventListener("click", (e)=>{
+                cuentaAtras(document.getElementById("duracion").value, document.getElementById("unidad").value)
+            });
+        }
+        /*===================================
+                EJECUCION DEL SCRIPT
+        =====================================*/
+        
+    </script>
+</head>
+<body onLoad="inicializar()" >
+    
+
+    <input type="number" min="0" id="duracion">
+    <select id="unidad">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="H">H</option>
+    </select>
+    <input type="button" id="empezar" value="Empezar la cuenta atras">
+</body>
+</html>

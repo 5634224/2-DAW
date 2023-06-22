@@ -1,0 +1,1 @@
+/catalogo/titulos/genero/titulo[@anyo >= 2000 and @anyo <= 2009 and @duracion > 120]/@nombre/data()

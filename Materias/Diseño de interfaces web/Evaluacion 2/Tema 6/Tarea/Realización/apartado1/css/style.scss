@@ -1,0 +1,113 @@
+/*-- Import --*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+/*-- Variables --*/
+$t-letra: 1rem;
+$peso-cuerpo: 400;
+$peso-negrita: 700;
+$color-fondo: rgba(128, 128, 128, 0.368);
+$color-titulo: black;
+
+/*-- Estilos --*/
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    font-size: $t-letra;
+    font-weight: $peso-cuerpo;
+
+    h1 { 
+        // font-weight: calc($peso-titulos * 3);
+        font-weight: $peso-negrita;
+        font-size: calc($t-letra * 3);
+    }
+
+    h2 {
+        // font-weight: calc($peso-titulos * 2);
+        font-weight: $peso-negrita;
+        font-size: calc($t-letra * 2);
+    }
+
+    h3 {
+        // font-weight: calc($peso-titulos * 1.5);
+        font-weight: $peso-negrita;
+        font-size: calc($t-letra * 1.5);
+    }
+}
+
+header {
+    a {
+        img {
+            width: 10%;
+            float: left;
+        }
+
+        h1 { 
+            text-align: center;
+            margin: 0;
+            color: $color-titulo;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0;
+    }
+
+    background-color: $color-fondo;
+    padding: 1%;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: $color-fondo;
+    margin-top: 1%;
+    width: 100%;
+
+    ul { 
+        text-align: center;
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 1%;
+            text-transform: uppercase;
+            font-size: calc($t-letra * 1.1);
+            font-weight: $peso-negrita;
+
+            a {
+                color: black;
+                font-weight: $peso-cuerpo;
+
+                &:hover {
+                    font-weight: $peso-negrita;
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+section {
+    min-height: 20em;
+}
+
+footer {
+    text-align: center;
+    div, p {
+        background-color: $color-fondo;
+        margin-top: 1%;
+    }
+
+    div {
+        img {
+            width: 3em;
+        }
+    }
+
+    p {
+        font-size: calc($t-letra * 0.8);
+    }
+}

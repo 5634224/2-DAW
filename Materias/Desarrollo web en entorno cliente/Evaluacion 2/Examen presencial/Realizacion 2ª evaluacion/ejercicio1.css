@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box; /* Esto es costumbre mia ponerlo ya siempre */
+}
+
+#container {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    /* text-align: center; */
+    /* max-width: 30vh; */
+    margin: 0 auto;
+}
+
+ul li {
+    cursor: pointer;
+    user-select: none; /* Esto es para evitar que se seleccione el texto de un li al seleccionar y desseleccionar un mismo elemento */
+    border-top-style: solid;
+    border-color: black;
+    border-top-width: 1px;
+}
+
+.selected-item {
+    background-color: #5100FD;
+    color: white;
+}

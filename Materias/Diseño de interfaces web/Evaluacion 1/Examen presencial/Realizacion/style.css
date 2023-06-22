@@ -1,0 +1,442 @@
+/*-- Maquetacion para grid responsive --*/
+:root {
+    --base: 1600;
+    --tbase: calc(var(--base) * 1px);
+    --tcolumna: calc(var(--base) / 12);
+    --pcolumna: calc(var(--tcolumna) / var(--base) * 100%);
+}
+
+   .wrapper {
+        width: 100%;
+        max-width: var(--tbase);
+        margin: 0 auto;
+   }
+
+   .row {
+        clear: both;
+   }
+
+   .col-1 {
+        float: left;
+        width: var(--pcolumna);
+   }
+
+   .col-2 {
+        float: left;
+        width: calc(var(--pcolumna) * 2);
+   }
+
+   .col-3 {
+        float: left;
+        width: calc(var(--pcolumna) * 3);
+   }
+
+   .col-4 {
+        float: left;
+        width: calc(var(--pcolumna) * 4);
+   }
+
+   .col-5 {
+        float: left;
+        width: calc(var(--pcolumna) * 5);
+   }
+
+   .col-6 {
+        float: left;
+        width: calc(var(--pcolumna) * 6);
+   }
+
+   .col-7 {
+        float: left;
+        width: calc(var(--pcolumna) * 7);
+   }
+
+   .col-8 {
+        float: left;
+        width: calc(var(--pcolumna) * 8);
+   }
+
+   .col-9 {
+        float: left;
+        width: calc(var(--pcolumna) * 9);
+   }
+
+   .col-10 {
+        float: left;
+        width: calc(var(--pcolumna) * 10);
+   }
+
+   .col-11 {
+        float: left;
+        width: calc(var(--pcolumna) * 11);
+   }
+
+   .col-12 {
+        float: left;
+        width: calc(var(--pcolumna) * 12);
+   }
+ 
+   .ml-1 {
+        margin-left: calc(var(--pcolumna) * 1);
+   }
+
+   .ml-2 {
+        margin-left: calc(var(--pcolumna) * 2);
+   }
+
+   .ml-3 {
+        margin-left: calc(var(--pcolumna) * 3);
+   }
+
+   .ml-4 {
+        margin-left: calc(var(--pcolumna) * 4);
+   }
+
+   .ml-5 {
+        margin-left: calc(var(--pcolumna) * 5);
+   }
+
+   .ml-6 {
+        margin-left: calc(var(--pcolumna) * 6);
+   }
+
+   .ml-7 {
+        margin-left: calc(var(--pcolumna) * 7);
+   }
+
+   .ml-8 {
+        margin-left: calc(var(--pcolumna) * 8);
+   }
+
+   .ml-9 {
+        margin-left: calc(var(--pcolumna) * 9);
+   }
+
+   .ml-10 {
+        margin-left: calc(var(--pcolumna) * 10);
+   }
+
+   .ml-11 {
+        margin-left: calc(var(--pcolumna) * 11);
+   }
+
+   .ml-12 {
+        margin-left: calc(var(--pcolumna) * 12);
+   }
+
+   .ver {
+        display: block;
+   }
+
+   .nover {
+        display: none;
+   }
+
+   @media screen and (min-width: 576px) {
+        .col-sm-1 {
+            float: left;
+            width: var(--pcolumna);
+        }
+
+        .col-sm-2 {
+            float: left;
+            width: calc(var(--pcolumna) * 2);
+        }
+
+        .col-sm-3 {
+            float: left;
+            width: calc(var(--pcolumna) * 3);
+        }
+
+        .col-sm-4 {
+            float: left;
+            width: calc(var(--pcolumna) * 4);
+        }
+
+        .col-sm-5 {
+            float: left;
+            width: calc(var(--pcolumna) * 5);
+        }
+
+        .col-sm-6 {
+            float: left;
+            width: calc(var(--pcolumna) * 6);
+        }
+
+        .col-sm-7 {
+            float: left;
+            width: calc(var(--pcolumna) * 7);
+        }
+
+        .col-sm-8 {
+            float: left;
+            width: calc(var(--pcolumna) * 8);
+        }
+
+        .col-sm-9 {
+            float: left;
+            width: calc(var(--pcolumna) * 9);
+        }
+
+        .col-sm-10 {
+            float: left;
+            width: calc(var(--pcolumna) * 10);
+        }
+
+        .col-sm-11 {
+            float: left;
+            width: calc(var(--pcolumna) * 11);
+        }
+
+        .col-sm-12 {
+            float: left;
+            width: calc(var(--pcolumna) * 12);
+        }
+        
+        .ml-sm-1 {
+            margin-left: calc(var(--pcolumna) * 1);
+        }
+
+        .ml-sm-2 {
+            margin-left: calc(var(--pcolumna) * 2);
+        }
+
+        .ml-sm-3 {
+            margin-left: calc(var(--pcolumna) * 3);
+        }
+
+        .ml-sm-4 {
+            margin-left: calc(var(--pcolumna) * 4);
+        }
+
+        .ml-sm-5 {
+            margin-left: calc(var(--pcolumna) * 5);
+        }
+
+        .ml-sm-6 {
+            margin-left: calc(var(--pcolumna) * 6);
+        }
+
+        .ml-sm-7 {
+            margin-left: calc(var(--pcolumna) * 7);
+        }
+
+        .ml-sm-8 {
+            margin-left: calc(var(--pcolumna) * 8);
+        }
+
+        .ml-sm-9 {
+            margin-left: calc(var(--pcolumna) * 9);
+        }
+
+        .ml-sm-10 {
+            margin-left: calc(var(--pcolumna) * 10);
+        }
+
+        .ml-sm-11 {
+            margin-left: calc(var(--pcolumna) * 11);
+        }
+
+        .ml-sm-12 {
+            margin-left: calc(var(--pcolumna) * 12);
+        }
+
+        .ver-sm {
+            display: block;
+        }
+
+        .nover-sm {
+            display: none;
+        }
+   }
+
+   @media screen and (min-width: 980px) {
+
+        .col-md-1 {
+            float: left;
+            width: var(--pcolumna);
+        }
+
+        .col-md-2 {
+            float: left;
+            width: calc(var(--pcolumna) * 2);
+        }
+
+        .col-md-3 {
+            float: left;
+            width: calc(var(--pcolumna) * 3);
+        }
+
+        .col-md-4 {
+            float: left;
+            width: calc(var(--pcolumna) * 4);
+        }
+
+        .col-md-5 {
+            float: left;
+            width: calc(var(--pcolumna) * 5);
+        }
+
+        .col-md-6 {
+            float: left;
+            width: calc(var(--pcolumna) * 6);
+        }
+
+        .col-md-7 {
+            float: left;
+            width: calc(var(--pcolumna) * 7);
+        }
+
+        .col-md-8 {
+            float: left;
+            width: calc(var(--pcolumna) * 8);
+        }
+
+        .col-md-9 {
+            float: left;
+            width: calc(var(--pcolumna) * 9);
+        }
+
+        .col-md-10 {
+            float: left;
+            width: calc(var(--pcolumna) * 10);
+        }
+
+        .col-md-11 {
+            float: left;
+            width: calc(var(--pcolumna) * 11);
+        }
+
+        .col-md-12 {
+            float: left;
+            width: calc(var(--pcolumna) * 12);
+        }
+        
+        .ml-md-1 {
+            margin-left: calc(var(--pcolumna) * 1);
+        }
+
+        .ml-md-2 {
+            margin-left: calc(var(--pcolumna) * 2);
+        }
+
+        .ml-md-3 {
+            margin-left: calc(var(--pcolumna) * 3);
+        }
+
+        .ml-md-4 {
+            margin-left: calc(var(--pcolumna) * 4);
+        }
+
+        .ml-md-5 {
+            margin-left: calc(var(--pcolumna) * 5);
+        }
+
+        .ml-md-6 {
+            margin-left: calc(var(--pcolumna) * 6);
+        }
+
+        .ml-md-7 {
+            margin-left: calc(var(--pcolumna) * 7);
+        }
+
+        .ml-md-8 {
+            margin-left: calc(var(--pcolumna) * 8);
+        }
+
+        .ml-md-9 {
+            margin-left: calc(var(--pcolumna) * 9);
+        }
+
+        .ml-md-10 {
+            margin-left: calc(var(--pcolumna) * 10);
+        }
+
+        .ml-md-11 {
+            margin-left: calc(var(--pcolumna) * 11);
+        }
+
+        .ml-md-12 {
+            margin-left: calc(var(--pcolumna) * 12);
+        }
+
+        .ver-md {
+            display: block;
+        }
+
+        .nover-md {
+            display: none;
+        }
+}
+
+.ovh {
+    overflow: hidden;
+}
+
+/*-- Estilos CSS generales --*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: 2a2a2a;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #fdf5dd;
+}
+
+nav {
+    background-color: #ffcc00;
+}
+
+main {
+    background-color: #ffffff;
+}
+
+footer {
+    background-color: #aa0000;
+    color: #ffffff;
+}
+
+
+/*-- Header --*/
+header img {
+    height: 100px;
+    width: auto;
+}
+
+/*-- Barra de navegacion --*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+    background-color: #ffcc00;
+    padding: 1em;
+}
+
+nav ul li:hover {
+    background-color: #fdf5dd;
+}
+
+nav ul li a {
+    /* padding-left: 1em; */
+    text-decoration: none;
+}
+
+/* Dentro del main --*/
+/*-- Seccion quienes somos --*/
+
+/*-- Seccion productos --*/
+#productos img {
+    object-fit: cover;
+    height: 170px;
+}
+

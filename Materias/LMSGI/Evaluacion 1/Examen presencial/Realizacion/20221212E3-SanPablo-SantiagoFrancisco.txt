@@ -1,0 +1,57 @@
+[1]
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+[2]
+body {
+    font-family: Calibri, Sans;
+    
+}
+
+[3]
+h2 {
+    font-size: x-large;
+}
+
+[4]
+background-image: url("fondo-encabezado.jpg");
+
+[5]
+.lista_tantos {
+    border-color: aquamarine;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 8px;
+}
+
+[6]
+.descartado {
+    color: red;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+[7]
+h1, h2 {
+    color: #48e;
+}
+
+[8]
+main {
+    width: 50vw;
+}
+
+[9]
+footer {
+    padding: 0.5em 1em;
+}
+
+[10]
+.flxrc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

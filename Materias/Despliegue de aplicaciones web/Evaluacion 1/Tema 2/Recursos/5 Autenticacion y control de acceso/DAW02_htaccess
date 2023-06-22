@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName "Web con Autenticacion Basic"
+AuthUserFile /etc/apache2/web.htpasswd
+##Require valid-user 
+Require user user1
+

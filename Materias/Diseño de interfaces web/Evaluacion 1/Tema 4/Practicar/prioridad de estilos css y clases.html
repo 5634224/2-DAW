@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .backblue {
+            background-color: royalblue;
+        }
+
+        .backgreen {
+            background-color: green;
+        }
+
+        .fl {
+            float: inline-start;
+        }
+
+        body div:first-child {
+            /* list-style-type: none; */
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+        }
+
+        /* #li1 {
+            float: left;
+        }
+
+        #li2 {
+            clear: both;
+        }
+
+        #li3 {
+            float: right;
+        } */
+
+        ul:first-child > li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        ul:first-child > li a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        main {
+            width: 900px;
+        }
+
+        .caja {
+            width: 300px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <p class="backblue backgreen fl">Prueba</p>
+
+    <div>
+        <ul>
+            <li id="li1">
+                <a>Elemento1</a>
+            </li>
+            <li id="li2">
+                <a>Elemento22</a>
+            </li>
+            <li id="li3">
+                <a>Elemento333</a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="position: absolute; top: 10px; left: 100px;">
+        Este div tiene posicionamiento absoluto
+    </div>
+
+    <details>
+        <div class="caja">caja 300px 1</div>
+        <div class="caja">caja 300px 2</div>
+        <div class="caja">caja 300px 3</div>
+    </details>
+
+    <div>
+        <ul>
+            <li>
+                <a>Elemento1</a>
+            </li>
+            <li id="li2">
+                <a>Elemento22</a>
+            </li>
+            <li id="li3">
+                <a>Elemento333</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- <footer>
+        </span>
+    </footer> -->
+</body>
+</html>

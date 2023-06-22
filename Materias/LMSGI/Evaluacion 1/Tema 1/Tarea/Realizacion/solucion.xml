@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clinica_privada>
+    <medios_comunicacion>
+        <medio_comunicacion id="EM01" nombre="email" />
+        <medio_comunicacion id="SM02" nombre="sms" />
+        <medio_comunicacion id="CL03" nombre="call" />
+        <medio_comunicacion id="AP04" nombre="app" />
+    </medios_comunicacion>
+
+    <tipos_comunicacion>
+        <tipo_comunicacion id="REC01" titulo="recordatorio de cita">
+            <medios_comunicacion_admitidos>
+                <medio_comunicacion_admitido id="EM01" />
+                <medio_comunicacion_admitido id="SM02" />
+            </medios_comunicacion_admitidos>
+            Le recordamos su próxima cita en clínica #SUCURSAL, en el servicio de
+            #SERVICIO, el próximo día #FECHA. En caso de no poder asistir, le rogamos
+            nos informe en el teléfono 968 555 555 o a través de nuestra app.
+        </tipo_comunicacion>
+        <tipo_comunicacion id="CAN02" titulo="cancelación de cita">
+            <medios_comunicacion_admitidos>
+                <medio_comunicacion_admitido id="SM02" />
+                <medio_comunicacion_admitido id="CL03" />
+            </medios_comunicacion_admitidos>
+            Le informamos de que su cita para #SERVICIO que estaba prevista para el día
+            #FECHA en clínica #SUCURSAL ha sido cancelada.
+        </tipo_comunicacion>
+        <tipo_comunicacion id="REQ03" titulo="requerimiento de documentación">
+            <medios_comunicacion_admitidos>
+                <medio_comunicacion_admitido id="SM02" />
+            </medios_comunicacion_admitidos>
+            Le informamos de que es necesario que entregue la documentación "#DOCUMENTACION"
+            que se le requiere.
+        </tipo_comunicacion>
+        <tipo_comunicacion id="ENC04" titulo="encuesta de satisfacción">
+            Le rogamos por favor, dedique unos minutos a la siguiente encuesta de satisfacción a través de nuestra app.
+            Solo le ocupará unos pocos minutos y ayudará a mejorar nuestros servicios.
+        </tipo_comunicacion>
+    </tipos_comunicacion>
+
+    <notificaciones>
+        <notificacion id="NOT000001" tipo_notificacion="REC01" fecha_generada="2022-10-10 11:01:27 AM" estado="creada" fecha_prevista_envio="2022-10-13 11:00:00 AM">
+            <medios_transmision>
+                <medio_transmision medio="EM01" direccion="micorreoelectronico@gmail.com" />
+                <medio_transmision medio="SM02" direccion="600 000 000" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40001226" />
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-14 18:45:00 PM" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000002" tipo_notificacion="REC01" fecha_generada="2022-10-14 14:05:41 PM" estado="eliminada" fecha_prevista_envio="2022-10-17 09:00:00 AM">
+            <medios_transmision>
+                <medio_transmision medio="EM01" direccion="micorreoelectronico@yahoo.com" />
+                <medio_transmision medio="SM02" direccion="600 000 001" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40001226" />
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-18 17:45:00 PM" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000003" tipo_notificacion="CAN02" fecha_generada="2022-10-16 17:05:28 PM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="SM02" direccion="600 000 001" />
+            </medios_transmision>
+            <mensaje>
+                Su cita programada el día 18 de octubre a las 17:45 de la tarde en la Clínica Dental ProtegeTuBoca con sucursal PTB40001226 ha sido cancelada.
+                <!-- En esta notificación, he decidido presentar la información de otra manera, utilizando un mensaje personalizado en lugar del de la plantilla.
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40001226" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-18 17:45:00 PM" />
+                -->
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000004" tipo_notificacion="REC01" fecha_generada="2022-10-17 09:55:34 AM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="SM02" direccion="600 000 002" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40003542" />
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-18 18:00:00 PM" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000005" tipo_notificacion="REC01" fecha_generada="2022-10-17 13:59:22 PM" estado="eliminada" fecha_prevista_envio="2022-10-17 09:00:00 AM">
+            <medios_transmision>
+                <medio_transmision medio="EM01" direccion="micorreoelectronico@hotmail.com" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40003542" />
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-18 18:00:00 PM" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000006" tipo_notificacion="CAN02" fecha_generada="2022-10-16 18:05:28 PM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="SM02" direccion="600 000 003" />
+            </medios_transmision>
+            <mensaje>
+                Su cita programada el día 18 de octubre a las 18:00 de la tarde en la Clínica Dental ProtegeTuBoca con sucursal PTB40003542 ha sido cancelada.
+                <!-- En esta notificación, he decidido presentar la información de otra manera, utilizando un mensaje personalizado en lugar del de la plantilla.
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40003542" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-18 18:00:00 PM" />
+                -->
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000007" tipo_notificacion="REC01" fecha_generada="2022-10-10 11:01:27 AM" estado="enviada" fecha_prevista_envio="2022-10-13 09:00:00 AM">
+            <medios_transmision>
+                <medio_transmision medio="SM02" direccion="600 000 004" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40003542" />
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-14 18:45:00 PM" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000008" tipo_notificacion="REC01" fecha_generada="2022-10-17 12:05:41 PM" estado="eliminada" fecha_prevista_envio="2022-10-19 09:00:00 AM">
+            <medios_transmision>
+                <medio_transmision medio="EM01" direccion="micorreoelectronico@yopmail.com" />
+                <medio_transmision medio="SM02" direccion="600 000 005" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40002080" />
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-20 17:45:00 PM" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000009" tipo_notificacion="CAN02" fecha_generada="2022-10-18 19:05:28 PM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="CL03" direccion="600 000 005" />
+                <medio_transmision medio="SM02" direccion="600 000 005" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40002080" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-18 18:00:00 PM" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000010" tipo_notificacion="REC01" fecha_generada="2022-10-17 12:23:34 PM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="SM02" direccion="600 000 006" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40002080" />
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-18 18:15:00 PM" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000011" tipo_notificacion="REC01" fecha_generada="2022-10-18 11:01:27 AM" estado="creada" fecha_prevista_envio="2022-10-20 09:00:00 AM">
+            <medios_transmision>
+                <medio_transmision medio="SM02" direccion="600 000 007" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40001226" />
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-21 11:30:00 AM" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000012" tipo_notificacion="REC01" fecha_generada="2022-10-19 12:35:34 PM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="EM01" direccion="micorreoelectronico@company.com" />
+                <medio_transmision medio="SM02" direccion="600 000 008" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#SUCURSAL" valor="PTB40001226" />
+                <variable_mensaje nombre="#SERVICIO" valor="Clínica Dental ProtegeTuBoca" />
+                <variable_mensaje nombre="#FECHA" valor="2022-10-21 12:15:00 AM" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000013" tipo_notificacion="REQ03" fecha_generada="2022-10-19 13:33:33 PM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="EM01" direccion="micorreoelectronico@msn.com" />
+                <medio_transmision medio="SM02" direccion="600 000 009" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#DOCUMENTACION" valor="Autorización para extracción de pieza dental" />
+            </mensaje>
+        </notificacion>
+        
+        <notificacion id="NOT000014" tipo_notificacion="REQ03" fecha_generada="2022-10-19 13:33:33 PM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="EM01" direccion="micorreoelectronico@msn.com" />
+                <medio_transmision medio="SM02" direccion="600 000 009" />
+            </medios_transmision>
+            <mensaje>
+                <variable_mensaje nombre="#DOCUMENTACION" valor="Autorización para procedimiento de implantes" />
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000015" tipo_notificacion="REQ03" fecha_generada="2022-10-19 13:33:33 PM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="EM01" direccion="micorreoelectronico@outlook.com" />
+                <medio_transmision medio="SM02" direccion="600 000 010" />
+            </medios_transmision>
+            <mensaje>
+                <!-- En lugar de modificar la variable del mensaje predeterminado, vamos a enviar uno personalizado
+                <variable_mensaje nombre="#DOCUMENTACION" valor="Autorización para extracción de pieza dental" />
+                -->
+                Le informarmos de que debe firmar el documento de autorización para la extracción de la pieza dental.
+            </mensaje>
+        </notificacion>
+
+        <notificacion id="NOT000016" tipo_notificacion="ENC04" fecha_generada="2022-10-20 13:20:19 PM" estado="creada" fecha_prevista_envio="2022-10-20 19:00:00 PM">
+            <medios_transmision>
+                <medio_transmision medio="EM01" direccion="micorreoelectronico@icloud.com" />
+                <medio_transmision medio="SM02" direccion="600 000 011" />
+            </medios_transmision>
+        </notificacion>
+
+        <notificacion id="NOT000017" tipo_notificacion="ENC04" fecha_generada="2022-10-21 12:05:59 PM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="AP04" />
+            </medios_transmision>
+        </notificacion>
+
+        <notificacion id="NOT000018" tipo_notificacion="ENC04" fecha_generada="2022-10-24 11:07:21 AM" estado="enviada">
+            <medios_transmision>
+                <medio_transmision medio="AP04" />
+            </medios_transmision>
+        </notificacion>
+
+    </notificaciones>
+</clinica_privada>

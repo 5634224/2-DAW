@@ -1,0 +1,26 @@
+#generic_price_table .generic_content:hover .boton_hover a {
+    background-image: linear-gradient(315deg, #7b4397 0%, #dc2430 75%);
+    color: white;
+}
+
+#generic_price_table .generic_content:hover .boton_hover:hover a {
+    -webkit-animation: boton-especial 2s ease-in alternate both;
+    animation: boton-especial 2s ease-in alternate both;
+}
+
+@keyframes boton-especial {
+    0% {
+        border: 1px solid #e3004f;
+        background-image: linear-gradient(315deg, #7b4397 0%, #dc2430 75%);
+        background-size: 120% auto;
+        background-position: left top;
+        /* color: #e3004f; */
+    }
+
+    100% {
+        /* background-color: #e3004f; */
+        background-size: 120% auto;
+        /* background-image: linear-gradient(45deg, #7b4397 0%, #dc2430 75%); */
+        background-position: right center;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTICIAS</title>
+    <style>
+        .cabecera{
+            font-family:'Courier New', Courier, monospace;
+            font-weight: 900;
+        }
+        #noticias {
+            display: table;
+        }
+        .fila{
+            display: table-row;
+        }
+        article {
+            width: 25%;
+            display: table-cell;
+            margin: 1em;
+            padding: 1em;
+        }
+        img {
+            width: 60%;
+            margin: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Ut5 acceso al DOM ejercicio1</h1>
+    <section id="noticias">
+        <div class="fila">
+            <article>
+                <div>Hospitalizado un anciano tras ser atropellado por un patinete en Cartagena</div>
+                <div class="cuerpo">Los sanitarios lo han trasladado al Hospital Santa Lucía</div>
+                <img src="noticia1.jpg">
+            </article>
+            <article>
+                <div>El Real Murcia aparta a Carlos Palazón tras participar en una macrofiesta de Nochebuena</div>
+                <div class="cuerpo">El centrocampista grana, que aparece en un vídeo colgado en redes sociales, acude con decenas de jóvenes a una fiesta en Abarán en la que no se toma ninguna medida</div>
+                <img src="noticia2.jpg">
+            </article>
+            <article>
+                <div>El cantante Flavio, 'Murciano del año 2020'</div>
+                <div class="cuerpo">El reconocimiento lo ha concedido la plataforma virtual Gente de Murcia, después de realizar una votación popular en redes sociales</div>
+                <img src="noticia3.jpg">
+            </article>
+        </div>
+        <div class="fila">
+        <article>
+            <div>Los bomberos del CEIS podrán desinfectar residencias si se produce un brote</div>
+            <div class="cuerpo">Será de forma coordinada con el Servicio Murciano de Salud a través de una instancia asistencial creada a tal efecto llamada Coordinación Regional para la Cronicidad Avanzada y la Atención Sociosanitaria</div>
+            <img src="noticia4.jpg">
+        </article>
+        <article>
+            <div>La borrasca 'Bella' trae el frío a la Región</div>
+            <div class="cuerpo">Desde hoy sábado hará que bajen más las temperaturas en el tercio sur peninsular y Baleares</div>
+            <img src="noticia5.jpg">
+        </article>
+        <article>
+            <div>Los Caballos del Vino, a disfrute del planeta</div>
+            <div class="cuerpo">Tras diez años de trabajo, la UNESCO reconoce los Caballos del Vino como Patrimonio de la Humanidad</div>
+            <img src="noticia6.jpg">
+        </article>
+        </div>
+    </div>
+    </section>
+    <footer id="pie"></footer>
+    <script src='ejercicio1.js'></script>
+    
+</body>
+</html>

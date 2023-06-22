@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gastos_empresa>
+	<conceptos>
+		<concepto id="km" descripcion="Kilometraje" />
+		<concepto id="dd" descripcion="Dieta diaria" />
+		<concepto id="dc" descripcion="Dieta comida" />
+		<concepto id="dn" descripcion="Dieta cena" />
+		<concepto id="ot" descripcion="Otros" />
+	</conceptos>
+	<empleado dni="ES22123456F" nombre="Gregorio Alsina">
+		<gastos_empleado>
+			<gasto id="G17011201" fecha="2017-01-12" concepto="km" cantidad="105" precio="0.30"/>
+			<gasto id="G17011202" fecha="2017-01-12" concepto="dc" precio="15"/>
+			<gasto id="G17011203" fecha="2017-01-12" concepto="ot" precio="12">
+				Paso a la vuelta por la Roda por Miguelitos
+			</gasto>
+		</gastos_empleado>
+	</empleado>
+	<empleado dni="ES77456789K" nombre="Carla Egea" departamento="Marketing">
+		<gastos_empleado>
+			<gasto id="G17011301" fecha="2017-01-13" concepto="dd" precio="25"/>
+			<gasto id="G17011302" fecha="2017-01-13" concepto="dc" precio="15">
+				Invito a cliente a comer conmigo, por eso figuran dos comidas en la misma fecha
+			</gasto>
+		</gastos_empleado>
+		<observaciones>No hay kilometraje porque fue junto a mi residencia</observaciones>		
+	</empleado>
+</gastos_empresa>
+

@@ -1,0 +1,88 @@
+/*-- Import --*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+/*-- Variables --*/
+/*-- Estilos --*/
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+body h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+body h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+body h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+header {
+  background-color: rgba(128, 128, 128, 0.368);
+  padding: 1%;
+}
+header a img {
+  width: 10%;
+  float: left;
+}
+header a h1 {
+  text-align: center;
+  margin: 0;
+  color: black;
+}
+header h2 {
+  text-align: center;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: rgba(128, 128, 128, 0.368);
+  margin-top: 1%;
+  width: 100%;
+}
+nav ul {
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 1%;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+nav ul li a {
+  color: black;
+  font-weight: 400;
+}
+nav ul li a:hover {
+  font-weight: 700;
+  color: red;
+}
+
+section {
+  min-height: 20em;
+}
+
+footer {
+  text-align: center;
+}
+footer div, footer p {
+  background-color: rgba(128, 128, 128, 0.368);
+  margin-top: 1%;
+}
+footer div img {
+  width: 3em;
+}
+footer p {
+  font-size: 0.8rem;
+}/*# sourceMappingURL=style.css.map */

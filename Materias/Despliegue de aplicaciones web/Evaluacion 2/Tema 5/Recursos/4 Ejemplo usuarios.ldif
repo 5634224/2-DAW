@@ -1,0 +1,30 @@
+#alumnos
+dn: cn=alumnos,ou=grupos,dc=empresa,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: alumnos
+gidNumber: 501
+
+#alumno1
+dn: uid=antonio,ou=usuarios,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+cn: antonio
+sn:lopez
+loginShell: /bin/bash
+uidNumber: 1001
+gidNumber: 501
+homeDirectory: /home/antonio
+userPassword: alumno
+
+#alumno2
+dn: uid=pepe,ou=usuarios,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+cn: pepe
+sn:perez
+loginShell: /bin/bash
+uidNumber: 1002
+gidNumber: 501
+homeDirectory: /home/pepe
+userPassword: alumno

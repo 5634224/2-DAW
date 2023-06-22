@@ -1,0 +1,19 @@
+COMANDO PARA BUSCAR ARCHIVOS
+find [location] [opciones]
+find / -type [f|d|l] -> busca archivos (type f), directorios (d) o enlaces simbólicos (l)
+find / -name prueba.txt -> busca archivos cuyo nombre coincida con el dado
+find / -iname prueba.txt -> igual que name, pero no es case sensitive.
+
+COMANDO PARA BUSCAR EN EL CONTENIDO DE LOS ARCHIVOS:
+grep [opciones][patron][fichero(s)]
+
+Opciones:
+grep -r -> Busca de forma recursiva dentro de los ficheros de un directorio.
+grep -i -> desactiva case sensitive.
+grep -v -> muestra las líneas que no se corresponden con el patrón
+
+Patrones:
+grep 1001 /etc/passwd: líneas que contengan la palabra "1001" dentro del fichero /etc/passwd
+grep ^texto /etc/passwd: líneas que empiecen por la palabra "texto".
+grep ^[^texto] /etc/passwd: líneas que no comiencen por la palabra "texto".
+grep texto$ /etc/passwd: líneas que terminen por la palabra "texto

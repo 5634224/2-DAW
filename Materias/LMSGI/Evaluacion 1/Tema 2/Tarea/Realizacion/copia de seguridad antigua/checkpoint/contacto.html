@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="dentista,online,salud">
+    <title>LMSGI02 - DENTONLINE</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reglas.css">
+</head>
+<body>
+    <div id="pagina">
+        <header class="flex-row flex-ai-end flex-wrap">
+            <div id="logotipo" class="flex-grow">
+                <span style="font-weight: bolder;">DENT</span>ONLINE
+            </div>
+            <nav>
+                <a href="index.html" class="links flex-grow">inicio</a>
+                <a href="servicios.html" class="links flex-grow">servicios</a>
+                <a href="clinicas.html" class="links flex-grow">cl&iacutenicas</a>
+                <a href="noticias.html" class="links flex-grow">noticias</a>
+            </nav>
+            <input type="button" id="btnAreaClientes" class="btn-azul" value="Área de clientes">
+        </header>
+        <div id="cuerpo" class="flex-row">
+            <div class="flex-ai-start">
+                <img alt="Silla dentista" src="assets/img/silladentista.jpg">
+            </div>
+            <section id="formulario" class="flex-grow">
+                <h4 id="titulo-formulario" style="font-weight:bold;">Formulario de contacto</h4>
+                <form action="requestcontactform.php" method="post">
+                    <div class="campo-formulario flex-row flex-ai-center flex-jc-spaceb">
+                        <label class="lbl-width">Nombre</label>
+                        <input type="text" id="nombre" class="form-caja-texto flex-grow">
+                    </div>
+                    <div class="campo-formulario flex-row flex-ai-center flex-jc-spaceb">
+                        <label class="lbl-width">Email</label>
+                        <input type="email" id="email" class="form-caja-texto flex-grow">
+                    </div>
+                    <div class="campo-formulario flex-row flex-ai-center flex-jc-spaceb">
+                        <label class="lbl-width">Tel&eacutefono</label>
+                        <input type="tel" id="telefono" class="form-caja-texto flex-grow">
+                    </div>
+                    <div class="campo-formulario flex-row flex-ai-center flex-jc-spaceb">
+                        <label class="lbl-width">Mensaje</label>
+                        <textarea id="mensaje" rows="4" class="form-caja-texto flex-grow"></textarea>
+                    </div>
+                    <div class="campo-formulario form-checkbox flex-row flex-ai-center flex-wrap">
+                        <input type="checkbox" id="checkbox-infoComercial">
+                        <label for="checkbox-infoComercial" style="font-size: 0.88em;">Acepto recibir informaci&oacuten comercial</label>
+                    </div>
+                    <div class="submit-formulario flex-row flex-jc-end">
+                        <input type="submit" class="btn-naranja" value="Enviar">
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <footer class="color-grey">
+            <!-- Copyright: https://www.solvetic.com/tutoriales/article/2747-como-insertar-simbolos-copyright-en-nuestros-equipos/#:~:text=S%C3%ADmbolo%20Copyright%20en%20HTML,el%20s%C3%ADmbolo%20est%C3%A1ndar%20de%20Copyright.
+            Guion largo: https://www.google.com/search?q=guion+largo+en+html&sxsrf=ALiCzsYx3KZsJbjH5zPEkv6dQEtdZ4Ppew%3A1668421924338&ei=JBlyY62ZFJK79u8Ph-Kt2As&ved=0ahUKEwitu4qBvK37AhWSnf0HHQdxC7sQ4dUDCA8&uact=5&oq=guion+largo+en+html&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIGCAAQFhAeOgQIIxAnOgoIABCxAxCDARBDOhAILhCxAxCDARDHARDRAxBDOgoILhDHARDRAxBDOgsIABCABBCxAxCDAToECAAQQzoLCC4QgAQQsQMQgwE6EQguEIAEELEDEIMBEMcBENEDOggIABCxAxCDAToQCAAQgAQQhwIQsQMQgwEQFDoFCAAQgAQ6CggAEIAEEIcCEBRKBAhBGABKBAhGGABQAFi_D2DQEWgAcAF4AIABdogBxA6SAQQxMC45mAEAoAEBwAEB&sclient=gws-wiz-serp-->
+            <span style="font-weight: bold;">&#169 2022 CIFP Carlos III</span> &ndash; 
+            <a href="avisoLegal.html" class="links">Aviso legal</a>
+        </footer>
+    </div>
+</body>
+</html>

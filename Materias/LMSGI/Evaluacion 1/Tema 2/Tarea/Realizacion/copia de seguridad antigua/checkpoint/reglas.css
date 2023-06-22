@@ -1,0 +1,213 @@
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+#pagina {
+    background-color: white;
+    margin: 0px 64px 0px 64px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family: Calibri;
+    font-size: 1.1em;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-grow-66 {
+    flex-grow: 0.66;
+}
+
+.flex-grow-33 {
+    flex-grow: 0.33;
+}
+
+.flex-grow-80 {
+    flex-grow: 0.80;
+}
+
+.flex-grow-20 {
+    flex-grow: 0.20;
+}
+
+.flex-ai-center {
+    align-items: center;
+}
+
+.flex-ai-baseline {
+    align-items: baseline;
+}
+
+.flex-ai-start {
+    align-items: start;
+}
+
+.flex-ai-end {
+    align-items: end;
+}
+
+.flex-jc-spaceb {
+    justify-content: space-between;
+}
+
+.flex-jc-start {
+    justify-content: flex-start;
+}
+
+.flex-jc-end {
+    justify-content: flex-end;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.color-grey {
+    color: #808080;
+}
+
+.links {
+    text-decoration-line: underline;
+    color: #808080;
+}
+
+.links:hover {
+    /*color: #505050;*/
+    color: black;
+}
+
+header {
+    margin-bottom: 0.8em;
+    padding-left: 0.5em;
+}
+
+#logotipo {
+    margin: 0px 0px 0px 0px;
+    font-size: x-large;
+}
+
+nav {
+    padding-right: 2.5em;
+}
+
+nav a {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+#cuerpo {
+    padding-left: 0.5em;
+}
+
+#cuerpo img {
+    min-width: 300px;
+    /*min-height: auto;*/
+    width: 100%;
+    /*height: auto;*/
+    max-width: 640px;
+    max-height: 427px;
+}
+
+#formulario {
+    padding-left: 1em;
+}
+
+#titulo-formulario {
+    margin: 0.4em 0px 0.5em 0px;
+}
+
+.campo-formulario {
+    font-size: 17px;
+    padding-top: 0.12em;
+    padding-bottom: 0.12em;
+}
+
+.lbl-width {
+    width: 5.2em;
+}
+
+.form-caja-texto {
+    border-radius: 0px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    font-size: 15px;
+}
+
+.form-checkbox {
+    padding-top: 0.4em;
+    padding-bottom: 0.5em;
+}
+
+#checkbox-infoComercial {
+    height: 15px;
+    width: 15px;
+}
+
+footer {
+    padding-top: 0.55em;
+    margin-top: 8px;
+    background-color: #dbe5f1;
+    padding-bottom: 0.55em;
+    text-align: center;
+}
+
+.btn-azul {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    font-family: Calibri;
+    font-size: 1em;
+    color: white;
+
+    background-color: #31859c;
+    border-radius: 6px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #215968;
+}
+
+.btn-azul:hover {
+    background-color: #3da5c2;
+}
+
+.btn-azul:active {
+    background-color: #215968;
+}
+
+.btn-naranja {
+    
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    font-family: Calibri;
+    font-size: 1em;
+    color: white;
+
+    background-color: #e46c0a;
+    border-radius: 6px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #984807;
+}
+
+.btn-naranja:hover {
+    background-color: #ff890b;
+}
+
+.btn-naranja:active {
+    background-color: #984807;
+}

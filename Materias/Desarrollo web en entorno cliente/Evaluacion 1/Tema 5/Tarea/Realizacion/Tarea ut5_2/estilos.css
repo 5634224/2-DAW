@@ -1,0 +1,52 @@
+.fl-row {
+    display: flex;
+    flex-direction: row
+}
+
+.fl-col {
+    display: flex;
+    flex-direction: column
+}
+
+.fl-grow {
+    flex-grow: 1;
+}
+
+.fl-ai {
+    align-items: center;
+}
+
+.fl-sb {
+    justify-content: space-between;
+}
+
+.tb {
+    display: table;
+}
+
+.fila {
+    display: table-row;
+    
+}
+
+.celda {
+    padding-top: 5em;
+    padding-bottom: 2.5em;
+    width: 30%;
+    display: table-cell;
+}
+
+section {
+    /*margin-top: 10em;*/
+}
+
+article div {
+    text-align: center;
+}
+
+img {
+    display: block;
+    height: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+}

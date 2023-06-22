@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE examenes_distancia SYSTEM "lmsgi04%20dtd%20para%20el%20ejemplo.dtd">
+<examenes_distancia centro="CIFP Carlos III">
+    <aulas>
+        <aula id="A01" capacidad="20" equipos="5"></aula>
+        <aula id="A02" capacidad="20"></aula>
+        <aula id="A21" capacidad="20" equipos="20"></aula>
+        <aula id="Ateca" capacidad="80" equipos="30"></aula>
+    </aulas>
+    <grupo id="DAW2">
+        <modulo id="LLMM" fecha="2022-12-12T19:00">
+            <ubicacion aula="Ateca"></ubicacion>
+            <ubicacion aula="21">
+                Se ocupará sólo si es necesario, siendo el profesor de guardia el vigilante
+            </ubicacion>
+            <asistentes portatil="si" alumnos="20"></asistentes>
+            <asistentes portatil="no" alumnos="10"></asistentes>
+        </modulo>
+        <modulo id="PWEC" fecha="2022-12-12T15:30"></modulo>
+    </grupo>
+</examenes_distancia>

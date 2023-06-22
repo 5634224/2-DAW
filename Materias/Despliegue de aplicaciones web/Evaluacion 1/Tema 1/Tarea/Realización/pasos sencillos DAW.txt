@@ -1,0 +1,37 @@
+#Instalamos y configuramos la arquitectura LAMP
+sudo apt install apache2
+sudo apt install php8.1
+sudo a2enmod php8.1
+sudo apt install mysql-server mysql-client
+#Instalamos PHPMyAdmin
+sudo mysql -u root -p
+CREATE USER 'super'@'localhost' IDENTIFIED BY 's';
+GRANT ALL PRIVILEGES ON * . * TO 'super'@'localhost';
+exit
+sudo apt install phpmyadmin
+sudo service apache2 restart
+#Instalamos Tomcat
+sudo apt install default-jdk
+sudo gedit ~/.bashrc
+
+export JAVA_HOME=/usr/lib/jvm/default-java
+export CATALINA_HOME=/var/lib/tomcat9
+
+source ~/.bashrc
+sudo apt install tomcat9 tomcat9-admin
+sudo gedit /var/lib/tomcat9/conf/tomcat-users.xml
+
+<tomcat-users>
+<role rolename="admin-gui"/>
+<role rolename="admin-script"/>
+<role rolename="manager-gui"/>
+<role rolename="manager-status"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<user username="administrador" 
+      password="123456" 
+      roles="standard,manager-gui,manager-status,managerscript,manager-jmx,admin-gui,admin-script" />
+</tomcat-users>
+
+sudo service apache2 restart
+sudo service tomcat9 restart

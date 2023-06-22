@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<rss version="2.0">
+
+  <!--Se define el canal-->
+
+  <channel>
+      <title>Ejemplo de RSS</title>
+      <link>http://www.infoalisal.com</link>
+      <description>Este es un ejemplo de web basada en la sindicacion de contenidos</description>
+      <language>es</language>
+
+      <!--Se definen los distintos items del canal-->
+
+      <item>
+          <title>Item01</title>
+          <link>http://www.infoalisal.com/seccion01</link>
+          <description>Este es un ejemplo01 de web basada en la  sindicacion de contenidos movido</description>
+      </item>   
+
+      <item>
+          <title>Item02</title>
+          <link>http://www.infoalisal.com/seccion02</link>
+          <description>Este es un ejemplo02 de web basada en la  sindicacion de contenidos</description>
+      </item>   
+  </channel>
+</rss>

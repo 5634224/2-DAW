@@ -1,0 +1,28 @@
+<section class="row" id="tribus">
+                        <h1 class="col-12">Tribus</h1>
+                        <div class="col-12">
+                            <article class="row align-items-center">
+                                <h3 class="col-12">Turkana</h3>
+                                <div class="col-12 col-md-6">
+                                    <p>Los Turkana son un pueblo nómada dedicado sobre todo al pastoreo. Son un pueblo de origen guerrero formado por unas 340.000 personas. Lo que más llama la atención de los Turkana son sus ropas de colores y grandes collares y decoración de cuentas.</p>
+                                    <p class="text-right">
+                                        <button type="button" class="btn btn-link">Ver m&aacute;s ></button>
+                                    </p>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-center order-4">
+                                    <img src="./images/tribus/african-woman-634230_1920.jpg">
+                                </div>
+                                <div class="w-100 py-2 order-4"></div>
+                                <h3 class="col-12 order-5">Surma</h3>
+                                <div class="col-12 col-md-6 d-flex justify-content-center order-7 order-md-6">
+                                    <img src="./images/tribus/papua-670646_1920.jpg">
+                                </div>
+                                <div class="col-12 col-md-6 order-6 order-md-7">
+                                    <p>También llamados Suri, esta tribu la forman unas 45.000 personas y son muy características y reconocibles ya que su estilismo es muy peculiar. Suelen incrustarse platos en los labios y orejas y consideran que cuanto más grande es el plato más belleza transmite la persona. Además suelen hacerse escarificaciones, los hombres simbolizando su fuerza y las mujeres por estética.</p>
+                                    <p class="text-right">
+                                        <button type="button" class="btn btn-link">Ver m&aacute;s ></button>
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>

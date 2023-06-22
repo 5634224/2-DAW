@@ -1,0 +1,31 @@
+@function colorBodyBg() {
+    @return white;
+}
+@mixin bg-alternate-section {
+    &:nth-child(n) {
+        background-color: rgba($cream, 50%);
+    }
+
+    &:nth-child(2n) {
+        background-color: rgba($maygreen, 50%);
+    }
+}
+
+@function colorVerdeRandom() {
+    // @return $verdes(floor(random(3)));
+    @return rgb(0, floor(random(256)), 0);
+}
+
+@mixin titulo($nivel) {
+    @if ($nivel == "h1") {
+        font-weight: 900;
+        font-size: calc($t-letra * 4); /* 200% mayor */
+    } @else if ($nivel == "h2") {
+        font-weight: 700;
+        font-size: calc($t-letra * 2); /* 100% mayor */
+    } @else if ($nivel == "h3") {
+        font-weight: 500;
+        font-size: calc($t-letra * 1.5); /* 50% mayor */
+    }
+
+}

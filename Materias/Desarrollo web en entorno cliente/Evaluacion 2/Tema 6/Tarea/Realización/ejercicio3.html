@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+
+    <style>
+        .d-inline-block {
+            display: inline-block;
+        }
+
+        .f-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .f-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .f-align-items-center {
+            align-items: center;
+        }
+
+        .f-justify-content-center {
+            justify-content: center;
+        }
+
+        .t-align-center {
+            text-align: center;
+        }
+
+        .verde {
+            color: green;
+        }
+
+        .rojo {
+            color: red;
+        }
+
+        div {
+            padding-bottom: 0.5em;
+        }
+
+        button {
+            border-style: outset;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            border-style: outset;
+            cursor: pointer;
+        }
+
+        table {
+            border-style: solid;
+            border-width: 1px;
+            border-color: #ffc4c4;
+        }
+
+        table td {
+            border-style: solid;
+            border-width: 1px;
+            border-color: #ffc4c4;
+            padding: 0.3em;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 992px) { /* Esto es para que sea más fácil de pulsar los botones en pantallas táctiles de móviles y tablets */
+            table td {
+                padding: 1em;
+            }
+
+            button {
+                padding: 0.5em;
+            }
+
+            input {
+                padding: 0.5em;
+            }
+        }
+
+        table td:hover {
+            background-color: #ccc;
+        }
+
+        table td:active {
+            background-color: #a9a9a9;
+        }
+
+        .seleccionada {
+            background-color: #a9a9a9;
+        }
+    </style>
+    <script src="ejercicio3.js"></script> <!-- Vinculacion con el fichero .js -->
+</head>
+<body>
+    <!-- Todo es creado mediante manipulación del DOM desde JavaScript -->
+</body>
+</html>

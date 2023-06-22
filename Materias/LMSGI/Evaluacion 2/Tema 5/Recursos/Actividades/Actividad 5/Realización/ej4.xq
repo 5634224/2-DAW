@@ -1,0 +1,1 @@
+/modulo/unidades/unidad[@id="UT2"]/test/opciones/opcion[@correcta]/@descripcion/data()

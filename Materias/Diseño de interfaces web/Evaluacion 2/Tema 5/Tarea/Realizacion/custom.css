@@ -1,0 +1,136 @@
+/*-- Estilos generales --*/
+h1 {
+    margin-top: 0.5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+section img {
+    max-height: 300px;
+}
+
+/*-- Barra de navegación --*/
+
+.navbar {
+    width: 100vw;
+}
+
+.navbar-brand {
+    padding-top: 0px;
+}
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-brand span {
+    vertical-align: middle;
+}
+
+/*-- Foto puesta de sol principal --*/
+.bienvenida {
+    background: url(./images/fondo-bienvenidos-optimizado.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    /* 100vh es 100% de la pantalla del usuario*/
+    overflow: hidden;
+    color: black;
+}
+
+/*-- Formulario para registrarse --*/
+.form-group {
+    margin-bottom: 0px;
+}
+
+/*-- Carrusel de viajes --*/
+.carousel {
+    max-width: 100%;
+    width: auto;
+}
+
+.carousel-item img {
+    object-fit: cover;
+
+    /* max-width: 100%; */
+    max-height: 100%;
+    width: 100%;
+    /* max-height: 400px; */
+    /* height: 60vh; */
+    /* height: 40vh; */
+    height: 270px;
+}
+
+@media screen and (min-width: 576px) {
+    .carousel-item img {
+        min-height: 320px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .carousel-item img {
+        min-height: 400px;
+        height: calc(40vw - 20vh);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .carousel-item img {
+        min-height: 520px;
+        height: calc(40vw - 20vh);
+    }
+}
+
+.carousel-caption {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel-item figure figcaption {
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: auto;
+    padding-right: auto;
+    background-color: white;
+    color: black;
+    opacity: 0.8;
+}
+
+/*-- Tabla responsive --*/
+.table-responsive {
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+.icon {
+    width: 50%;
+}
+
+/*-- Elementos mas especificos --*/
+
+#animales figure img {
+    width: 100%;
+    height: 250px;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+
+@media screen and (min-width: 1200px) {
+    #safaris figure img {
+        max-height: none;
+    }
+}
+
+/*-- Footer --*/
+.nav-link {
+    color: rgba(0,0,0,.7);
+}
+
+.nav-link:hover {
+    color: black;
+}

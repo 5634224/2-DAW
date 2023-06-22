@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplos capturas eventos formularios</title>
+    <style>
+
+        #contenedor {
+            width: 50%;
+            margin: auto;
+        }
+
+        fieldset {
+            border-radius: 5px;
+            margin-top: 0.5em;
+            padding: 1em;
+            background-color: rgb(236, 236, 236);
+        }
+
+        legend {
+            border: 1px solid black;
+            background-color: rgb(215, 215, 215);
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', iniciar);
+
+        function iniciar() {
+            let resultado = document.querySelector('#resultado');
+
+            //Capturamos el evento blur de un campo de texto 
+            //y mostramos su valor.
+            let nombre = document.querySelector('#nombre')
+            nombre.addEventListener('blur', fvalor)
+
+            //Capturamos el evento change de un select
+            //y mostramos su valor
+            let prov = document.querySelector('#prov')
+            prov.addEventListener('change', fvalor)
+
+            //Capturamos el evento change de los echecked
+            //y mostramos su valor
+            let deportes = document.querySelector('#deportes')
+            deportes.addEventListener('change', faficiones)
+            let cine = document.querySelector('#cine')
+            cine.addEventListener('change', faficiones)
+
+            //Capturamos el evento click del botón de radio
+            //y mostramos su valor
+            let hombre = document.querySelector('#hombre')
+            hombre.addEventListener('change', fsexo)
+            let mujer = document.querySelector('#mujer')
+            mujer.addEventListener('change', fsexo)
+
+            //Creamos una funcion que muestra el atributo valor
+            //de el elemento que recibe el evento
+            function fvalor(e) {
+                resultado.textContent = e.target.value
+            }
+
+            function faficiones(){
+                let aficiones = document.querySelectorAll('input[type=checkbox')
+                resultado.textContent='';
+                for (let i of aficiones){
+                    console.dir(i.checked + ' ' + i.value);
+                    if(i.checked){
+                        resultado.textContent+=i.value+' '
+                    }
+                   
+                }
+
+            }
+
+            function fsexo(){
+                if(this.checked){
+                    resultado.textContent=this.value
+                }
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div id="contenedor">
+        <form action="">
+
+            <fieldset>
+                <legend>Capturamos evento blur y mostramos su valor</legend>
+                <label for="nombre">Nombre:</label>
+                <input id='nombre' type="text">
+            </fieldset>
+
+            <fieldset>
+                <legend>Capturamos evento change y mostramos su valor</legend>
+                <label for="prov">Provincia:</label>
+                <select id="prov">
+                    <option value="MU">MURCIA</option>
+                    <option value="MA">MALAGA</option>
+                    <option value="SE">SEVILLA</option>
+                    <option value="LU">LUGO</option>
+                    <option value="GA">GALICIA</option>
+                </select>
+            </fieldset>
+
+            <fieldset><legend>Aficiones: (Obtener valor de botones checkbox)</legend>
+                <label for="Deportes">Deportes:</label>
+                <input id="deportes" type="checkbox" value="deportes">
+                <label for="Cine">Cine:</label>
+                <input id="cine" type="checkbox" value="cine">
+            </fieldset>
+
+            <fieldset><legend>Sexo: (Obtener valor de botones radio)</legend>
+                <label for="hombre">hombre:</label>
+                <input id="hombre" type="radio" value="hombre" name="sexo">
+                <label for="mujer">mujer:</label>
+                <input id="mujer" type="radio" value="mujer" name="sexo">
+            </fieldset>
+
+            <fieldset>
+                <legend>Resultado</legend>
+                <div id="resultado"></div>
+            </fieldset>
+
+        </form>
+
+
+    </div>
+
+</body>
+
+</html>

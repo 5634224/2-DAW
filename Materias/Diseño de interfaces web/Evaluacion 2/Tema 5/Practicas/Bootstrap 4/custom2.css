@@ -1,0 +1,69 @@
+.borde {
+    border: 5px solid white;
+}
+
+.cabecera {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 15px;
+}
+
+.verde {
+    background-color: greenyellow;
+    min-height: 50px;
+}
+
+.rojo {
+    background-color: red;
+    min-height: 50px;
+}
+
+.rosa {
+    background-color: palevioletred;
+    min-height: 50px;
+}
+
+.naranja {
+    background-color: orange;
+    min-height: 50px;
+}
+
+.azul {
+    background-color: blue;
+    min-height: 50px;
+}
+
+.azulclaro {
+    background-color: lightskyblue;
+    min-height: 100px;
+    text-align: center;
+    padding-top: 30px;
+    border: 1px solid grey;
+}
+
+.turquesa {
+    background-color: rgb(135, 250, 244);
+    min-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 15px;
+    border: 1px solid grey;
+}
+
+.gris {
+    background-color: lightgrey;
+    min-height: 100px;
+    text-align: center;
+    padding-top: 30px;
+    border: 1px solid grey;
+}
+
+.naranja2 {
+    background-color: orange;
+    min-height: 100px;
+    text-align: center;
+    padding-top: 30px;
+    border: 1px solid grey;
+}

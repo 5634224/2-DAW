@@ -1,0 +1,12 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.error {
+    border-color: red;
+    border-style: solid;
+}
+
+.rojo {
+    color: red;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<media_maraton>
+    <participante dorsal="1" nombre="Santiago San Pablo">
+        <tiempo_invertido horas="2" minutos="30" segundos="25"/>
+    </participante>
+    <participante dorsal="2" nombre="José Luis Cruz">
+        <tiempo_invertido horas="2" minutos="29" segundos="42"/>
+    </participante>
+</media_maraton>

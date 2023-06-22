@@ -1,0 +1,1 @@
+/catalogo/titulos/genero[titulo/reparto[@miembro='JS1' and @rol='protagonista']]/@nombre/data()

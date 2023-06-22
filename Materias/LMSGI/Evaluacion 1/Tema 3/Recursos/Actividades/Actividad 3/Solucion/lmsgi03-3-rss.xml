@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Novedades Club Ciclista Sobre Ruedas</title>
+        <link>https://www.clubciclistasobreruedas.com</link>
+        <description>
+            Este canal sirve para concretar las "quedadas", es decir, las veces que quedan para salir juntos en bicicleta.
+        </description>
+        <language>es-es</language>
+        <atom:link href="https://clubciclistasobreruedas.com/rss.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Salida por Sierra Espuña</title>
+            <link>https://www.clubciclistasobreruedas.com/salidas/20221120</link>
+            <guid>https://www.clubciclistasobreruedas.com/salidas/20221120</guid>
+            <description>
+                Se espera buen tiempo aunque será duro porque vamos a subir hasta lo alto del Collado Bermejo.
+            </description>
+        </item>
+        <item>
+            <title>Salida por Mazarrón</title>
+            <link>https://www.clubciclistasobreruedas.com/salidas/20221127</link>
+            <guid>https://www.clubciclistasobreruedas.com/salidas/20221127</guid>
+            <description>
+                En total recorreremos 120Km con un desnivel acumulado de 2000m+.
+            </description>
+        </item>
+        <item>
+            <title>Fotos de la semana pasada ya disponibles</title>
+            <link>https://www.clubciclistasobreruedas.com/fotos/20221030</link>
+            <guid>https://www.clubciclistasobreruedas.com/fotos/20221030</guid>
+            <description>
+                Si quieres pedir una copia indica el número de foto en un email a gestion@clubcliclistasobreruedas.com
+            </description>            
+        </item>
+    </channel>
+</rss>

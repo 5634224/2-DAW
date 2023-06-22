@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select" multiple>
+        <option value="apple">Apple</option>
+        <option value="pear">Pear</option>
+        <option value="banana">Banana</option>
+      </select>
+      
+      <script>
+        // las tres líneas hacen lo mismo
+        select.options[2].selected = true;
+        select.selectedIndex = 2;
+        select.value = 'banana';
+        // Recuerda que las opciones comienzan en cero, así que index 2 significa la tercera opción.
+      </script>
+</body>
+</html>

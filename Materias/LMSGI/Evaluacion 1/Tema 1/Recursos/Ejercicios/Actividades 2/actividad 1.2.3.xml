@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inventario_hw_empresa>
+    <departamento nombre="administración">
+        <puesto id="0" tipo="usuario">
+            <grupo_hardware tipo="pc">
+                <hardware numserie="HP23H2" marca="HP" modelo="HP Omen" compra="2022-10-03"/>
+            </grupo_hardware>
+            <grupo_hardware tipo="periférico">
+                <hardware numserie="LG2065" marca="Logitech" modelo="Mouse" compra="2022-09-05" />
+            </grupo_hardware>
+            <grupo_hardware tipo="red">
+                <hardware numserie="TPLSW-SG105" marca="TP-Link" modelo="TL-SG105" compra="2022-08-27" />
+            </grupo_hardware>
+        </puesto>
+        <puesto id="1" tipo="instalación">
+            <grupo_hardware tipo="pc">
+                <hardware numserie="HP23H2" marca="HP" modelo="HP Omen" compra="2022-10-03"/>
+            </grupo_hardware>
+            <grupo_hardware tipo="periférico">
+                <hardware numserie="LG2065" marca="Logitech" modelo="Mouse" compra="2022-09-05" />
+            </grupo_hardware>
+            <grupo_hardware tipo="red">
+                <hardware numserie="TPLSW-SG105" marca="TP-Link" modelo="TL-SG105" compra="2022-08-27" />
+            </grupo_hardware>
+        </puesto>
+    </departamento>
+
+    <departamento nombre="ventas">
+
+    </departamento>
+    <departamento nombre="contabilidad">
+
+    </departamento>
+
+
+</inventario_hw_empresa>

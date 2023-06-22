@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Se crea el canal, se determina el estándar a utilizar y el idioma del documento -->
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es-es"> <!-- Canal -->
+	<title type="text"></title>
+	<updated>2011-01-14T19:17:46Z</updated> <!-- Fecha de actualizacion del canal -->
+	<link rel="self" type="application/atom+xml" href="http://www.infoalisal.com/feed/atom" /> <!-- Hace referencia a sí mismo -->
+	<link rel="alternate" type="text/html" href="http://www.infoalisal.com" /> <!-- Hace referencia a la web -->
+	<id>http://www.infoalisal.com/feed/atom</id> <!-- Hace referencia a la fuente web -->
+
+	<!-- Se definen las secciones (entradas que forman el canal -->
+
+	<entry>
+		<title></title>
+		<link rel="alternate" type="text/html" href="http://www.infoalisal.com/seccion01" />
+		<updated>2011-01-14T19:19:46Z</updated>
+		<id>http://www.infoalisal.com/seccion01</id>
+		<author>
+			<name></name>
+			<email></email>
+		</author>
+		<summary></summary>
+	</entry>
+
+	<entry>
+		<title></title>
+		<link rel="alternate" type="text/html" href="http://www.infoalisal.com/seccion01" />
+		<updated>2010-12-14T19:17:55Z</updated>
+		<id>http://www.infoalisal.com/seccion02</id>
+		<author>
+			<name></name>
+		</author>
+		<summary></summary>
+	</entry>
+</feed>
