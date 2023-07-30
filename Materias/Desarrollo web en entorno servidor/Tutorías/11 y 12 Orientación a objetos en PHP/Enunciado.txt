@@ -1,6 +1,0 @@
-Vamos a continuar con la aplicación de las tutorías anteriores y la enlazaremos con la base de datos que se muestra a continuación.
-
-Al arrancar el programa nos saldrá una lista para elegir el usuario con el que vamos a trabajar.
-
-Una vez seleccionado se deben cargar sus actividades y trabajar con ellas tal como lo habíamos dejado en la anterior tutoría. Además debemos añadir un botón que permita salir de la página, guardando los cambios que se han producido en las actividades del usuario.
-

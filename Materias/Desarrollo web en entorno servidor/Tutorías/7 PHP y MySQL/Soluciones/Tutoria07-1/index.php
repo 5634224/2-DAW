@@ -10,42 +10,34 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     </head>
     <body>
         <?php
-        require_once 'conexion.php';
+        function conecta_bd() {
+            $link = mysqli_connect('localhost', 'super', '123456', 'tienda');
 
-        if (isset($_POST["listaarticulo"])) {
-            echo $_POST["listaarticulo"];
+            if (!$link) {
+                echo "Error: no se puede conectar con la base de datos";
+                exit;
+            } else {
+                return $link;
+            }
         }
-        
-        
+
         $link = conecta_bd();
 
         $consulta = "SELECT generos.gen_nombre,proveedores.pro_nombre,generos.gen_id FROM generos LEFT JOIN proveedores ON proveedores.pro_id=generos.gen_proveedor";
         $resultado = mysqli_query($link, $consulta);
-        ?>                
-        <form action="./prueba/genero2.php" method="post">
-        
-        <table border="1">
-        <tr><td>Géneros</td><td>Proveedores</td><td>Seleccionar</td></tr>        
-        
-        <?php
+                        
+        echo '<table border="1">';
+        echo "<tr><td>Géneros</td><td>Proveedores</td><td></td></tr>";
         while ($fila = mysqli_fetch_row($resultado)) {
             echo "<tr><td>".$fila[0]."</td><td>".$fila[1]."</td>";
-            echo '<td>';
-            //echo '<input type="text" value="'.$fila[2].'" name="genero" hidden="hidden">';
-            echo '<input type="submit" name="genero" value="'.$fila[2].'">';
+            echo '<td><form action="genero.php" method="post">';
+            echo '<input type="text" value="'.$fila[2].'" name="genero" hidden="hidden">';
+            echo '<input type="submit" value="Seleccionar">';
             
-            echo "</tr>";
+            echo "</form></tr>";
         }
-        echo "</form>";
                 
-        //echo "</table>";
+        echo "</table>";
         ?>
-        
-    </table>
-        
     </body>
-    
-
-    
-    
 </html>

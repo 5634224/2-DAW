@@ -1,0 +1,4 @@
+Siguiendo con los ejercicios de la semana pasada, veremos:
+-Controladores.
+-Migraciones.
+-ORM Eloquent.

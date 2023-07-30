@@ -1,3 +1,0 @@
-Siguiendo con el proyecto de la semana pasada:
-1. En genero.php, colocar al final de cada fila un botón que elimine el artículo.
-2. También en genero.php, colocar al final de la página un botón que nos lleve a otra página para crear un nuevo artículo (articulo.php). El género del artículo será el que estaba seleccionado en genero.php.

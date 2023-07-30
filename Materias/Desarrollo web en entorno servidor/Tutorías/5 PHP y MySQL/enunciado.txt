@@ -1,5 +1,3 @@
-En este caso vamos a realizar los ejercicios con consultas preparadas:
-
-1. Diseñar un formulario que pida en una caja de texto el código de un equipo y mostrar el número de jugadores que tiene y sus nombres.
-2. Crear un formulario que recoja datos de un nuevo equipo y lo inserte en la tabla.
-3. Implementar un formulario que pida el código de un jugador y lo elimine de la tabla.
+1. Mostrar en una tabla HTML el contenido de la tabla EQUIPOS.
+2. Crear un formulario que pida en una caja de texto el código de un jugador y mostrar el nombre del jugador pedido.
+3. Diseñar un formulario que pida en una caja de texto el código de un equipo y mostrar el número de jugadores que tiene y sus nombres.

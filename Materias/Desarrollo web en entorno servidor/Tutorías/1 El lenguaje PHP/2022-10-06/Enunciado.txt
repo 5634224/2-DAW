@@ -1,4 +1,0 @@
-1 Mostrar los 100 primeros números de la serie de Fibonacci.
-2 Crear una tabla HTML de 16x16 mostrando los caracteres del código ASCII.
-3 Dado un año y un mes, mostrar los días que tiene ese mes.
-4 Dados tres valores asignados a sendas variables ($a, $b, $c) mostrar la solución o soluciones de la resolución de la ecuación de segundo grado.

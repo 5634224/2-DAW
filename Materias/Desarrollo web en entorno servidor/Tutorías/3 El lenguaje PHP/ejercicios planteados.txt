@@ -1,0 +1,5 @@
+1 Creamos una función que determine si el número que recibe como parámetro es primo o no.
+2 Utilizando la función del ejercicio 1, creamos un programa que mediante un formulario nos pida un número y nos diga si es primo o no.
+3 Seguimos con la función del ejercicio 1 y creamos una tabla HTML de 10x10 en la que se mostrarán solo los números que son primos dentro de los 100 primeros números naturales. Si el número no es primo deberá aparecer un guión en su correspondiente celda.
+4 Implementamos una función que determine si una cadena de texto es un palíndromo o no, es decir, si se lee de izquierda a derecha igual que de derecha a izquierda. Utilizamos la función para crear un programa que pida una cadena y nos diga si es un palíndromo o no.
+5 Creamos un formulario con 8 casillas de verificación (checkbox), cada una correspondiente a un bit. Tras pulsar el botón de validación el programa debe mostrar el valor del byte en decimal.

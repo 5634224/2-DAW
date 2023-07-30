@@ -5,7 +5,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 
-require_once 'conexion.php';
+function conecta_bd() {
+    $link = mysqli_connect('localhost', 'super', '123456', 'tienda');
+
+    if (!$link) {
+        echo "Error: no se puede conectar con la base de datos";
+        exit;
+    } else {
+        return $link;
+    }
+}
 
 
 //echo $_POST["genero"];

@@ -1,0 +1,2 @@
+1. Mostrar en una tabla todos los géneros con su correspondiente proveedor.
+2. Al final de cada línea deberá aparecer un botón para seleccionar un género, al pulsar sobre él nos debe llevar a otra página que nos muestre los artículos de ese género.

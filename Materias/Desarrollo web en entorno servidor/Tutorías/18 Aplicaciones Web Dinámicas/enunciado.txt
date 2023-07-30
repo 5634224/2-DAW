@@ -1,0 +1,2 @@
+Preparación del examen del 16/03.
+Retomar el proyecto del 02/02 para que valide las entradas de los formularios mediante JS.
