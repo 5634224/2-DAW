@@ -1,0 +1,36 @@
+<!ELEMENT comunidad (propietarios,propiedades,cuotas,derramas?)>
+<!ATTLIST comunidad fecha_actualizacion CDATA #REQUIRED>
+
+<!ELEMENT propietarios (propietario+)>
+
+<!ELEMENT propietario EMPTY>
+<!ATTLIST propietario id ID #REQUIRED>
+<!ATTLIST propietario apellidos CDATA #REQUIRED>
+<!ATTLIST propietario nombre CDATA #REQUIRED>
+<!ATTLIST propietario alcorriente CDATA #IMPLIED>
+
+<!ELEMENT propiedad (participacion+)>
+<!ATTLIST propiedad id ID #REQUIRED>
+<!ATTLIST propiedad tipo IDREF #REQUIRED>
+<!ATTLIST propiedad contacto CDATA #IMPLIED>
+
+<!ELEMENT participacion EMPTY>
+<!ATTLIST participacion propietario IDREF #REQUIRED>
+<!ATTLIST participacion porcentaje CDATA #REQUIRED>
+
+<!ELEMENT propiedades (propiedad+)>
+
+<!ELEMENT cuotas (cuota*)>
+
+<!ELEMENT cuota EMPTY>
+<!ATTLIST cuota tipo ID #REQUIRED>
+<!ATTLIST cuota valor CDATA #REQUIRED>
+
+<!ELEMENT derramas (derrama*)>
+
+<!ELEMENT derrama (#PCDATA)>
+<!ATTLIST derrama id CDATA #REQUIRED>
+<!ATTLIST derrama valor CDATA #REQUIRED>
+<!ATTLIST derrama asunto CDATA #REQUIRED>
+<!ATTLIST derrama desde CDATA #REQUIRED>
+<!ATTLIST derrama hasta CDATA #REQUIRED>

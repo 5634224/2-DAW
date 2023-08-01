@@ -1,0 +1,11 @@
+1.
+
+/MensajeFacturacion/Cabecera/Codigo/data()
+
+2.
+
+/MensajeFacturacion/Facturas/FacturaATR/Medidas/Aparato/NumeroSerie/data()
+
+3.
+
+/MensajeFacturacion/Facturas/FacturaATR/Potencia/TerminoPotencia/Periodo/PotenciaContratada/data()

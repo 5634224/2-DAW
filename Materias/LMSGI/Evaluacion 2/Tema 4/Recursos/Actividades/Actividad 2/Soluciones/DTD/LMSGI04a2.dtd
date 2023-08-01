@@ -1,0 +1,25 @@
+<!ELEMENT gastos_empresa (conceptos,empleado*)>
+
+<!ELEMENT conceptos (concepto+)>
+
+<!ELEMENT concepto EMPTY>
+	<!ATTLIST concepto id ID #REQUIRED>
+	<!ATTLIST concepto descripcion CDATA #REQUIRED>
+
+<!ELEMENT empleado (gastos_empleado,observaciones?)>
+	<!ATTLIST empleado dni ID #REQUIRED>
+	<!ATTLIST empleado nombre CDATA #REQUIRED>
+	<!ATTLIST empleado departamento CDATA #IMPLIED>
+
+<!ELEMENT gastos_empleado (gasto+)>
+
+<!ELEMENT gasto (#PCDATA)>
+	<!ATTLIST gasto id ID #REQUIRED>
+	<!ATTLIST gasto fecha CDATA #REQUIRED>
+	<!ATTLIST gasto concepto IDREF #REQUIRED>
+	<!ATTLIST gasto cantidad CDATA #IMPLIED>
+	<!ATTLIST gasto precio CDATA #REQUIRED>
+	
+<!ELEMENT observaciones (#PCDATA)>
+
+

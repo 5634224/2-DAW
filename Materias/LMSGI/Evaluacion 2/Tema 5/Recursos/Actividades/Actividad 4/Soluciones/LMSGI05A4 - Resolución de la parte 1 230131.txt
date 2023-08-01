@@ -1,0 +1,4 @@
+1: /incidencias/cabecera/proveedor/@nombre/data()
+2: /incidencias/siniestros/actualizaciones/actualizacion[@estado="atendido"]/@siniestro/data()
+3: /incidencias/siniestros/encurso/siniestro[presupuesto/@importe>33]/@id/data()
+4: /incidencias/siniestros/actualizaciones/actualizacion/data()

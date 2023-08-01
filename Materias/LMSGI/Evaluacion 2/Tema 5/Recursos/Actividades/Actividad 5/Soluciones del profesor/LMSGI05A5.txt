@@ -1,0 +1,3 @@
+1: /modulo/unidades/unidad/@nombre/data()
+2: /modulo/unidades/unidad[@id="UT1"]/test/enunciado/data()
+3: /modulo/unidades/unidad[@id="UT2"]/test/opciones/opcion[@correcta]/@descripcion/data()

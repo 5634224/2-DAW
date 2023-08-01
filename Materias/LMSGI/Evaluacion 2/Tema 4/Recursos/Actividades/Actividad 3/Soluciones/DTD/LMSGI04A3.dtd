@@ -1,0 +1,32 @@
+<!ELEMENT almacen (productos,ubicaciones,palets?)>
+
+<!ELEMENT productos (producto+)>
+
+<!ELEMENT producto EMPTY>
+<!ATTLIST producto id ID #REQUIRED>
+<!ATTLIST producto descripcion CDATA #REQUIRED>
+<!ATTLIST producto valor_ud CDATA #IMPLIED>
+<!ATTLIST producto unidades CDATA #REQUIRED>
+
+<!ELEMENT ubicaciones (nave+)>
+
+<!ELEMENT nave (sector*)>
+<!ATTLIST nave id ID #REQUIRED>
+
+<!ELEMENT sector (#PCDATA)>
+<!ATTLIST sector id ID #REQUIRED>
+<!ATTLIST sector estado CDATA #REQUIRED>
+<!ATTLIST sector capacidad CDATA #IMPLIED>
+
+<!ELEMENT palets (palet*)>
+
+<!ELEMENT palet EMPTY>
+<!ATTLIST palet id ID #REQUIRED>
+<!ATTLIST palet ubicacion IDREF #IMPLIED>
+<!ATTLIST palet verificado CDATA #IMPLIED>
+
+<!ELEMENT contenido EMPTY>
+<!ATTLIST contenido producto IDREF #REQUIRED>
+<!ATTLIST contenido cantidad CDATA #REQUIRED>
+
+<!ELEMENT observaciones (#PCDATA)>

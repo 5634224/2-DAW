@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<almacen>
+	<productos>
+		<producto id="GS001" descripcion="Golosina tipo 1" valor_ud="1.30" unidades="cajas"/>
+		<producto id="PR001" descripcion="Piruleta tipo 1" valor_ud="1.50" unidades="cajas"/>
+		<producto id="PS001" descripcion="Pistacho tipo 1" valor_ud="3.25" unidades="bolsas"/>
+	</productos>
+	<ubicaciones>
+		<nave id="NV001">
+			<sector id="SC001001" estado="D" capacidad="3000" />
+			<sector id="SC001002" estado="D" capacidad="2000" />
+		</nave>
+		<nave id="NV0002">
+			<sector id="SC002001" estado="D" capacidad="2500" />
+			<sector id="SC002002" estado="N">
+				En obras por reparaciones varias.
+			</sector>
+		</nave>
+	</ubicaciones>
+	<palets>
+		<palet id="PL000001" ubicacion="SC001001" verificado="2019-01-15T17:45:00">
+			<contenido producto="PS001" cantidad="400"/>
+			<observaciones>Presenta rotura en una de las bolsas</observaciones>
+		</palet>
+		<palet id="PL000002">
+			<contenido producto="GS001" cantidad="40"/>
+			<contenido producto="PR001" cantidad="60"/>
+		</palet>
+	</palets>
+</almacen>
+
