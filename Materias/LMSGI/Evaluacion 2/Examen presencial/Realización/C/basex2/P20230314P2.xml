@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<prevision>
+  <climas>
+    <clima id="DES" descripcion="Despejado"/>
+    <clima id="NUB" descripcion="Parcialmente nublado"/>
+    <clima id="LLU" descripcion="Lluvioso"/>
+  </climas>
+  <ciudades>
+    <ciudad nombre="Madrid">
+      <dia fecha="2023-03-13" clima="DES">
+        <temperatura minima="10" maxima="18"/>
+        <viento direccion="NE" velocidad="10"/>                
+      </dia>
+      <dia fecha="2023-03-14" clima="NUB">
+        <temperatura minima="8" maxima="16"/>
+        <viento direccion="N" velocidad="15"/>
+        <lluvia cantidad="1"/>
+        <observaciones>La velocidad del viento podrá alcanzar rachas de hasta 30Km/h</observaciones>
+      </dia>
+      <dia fecha="2023-03-15" clima="LLU">
+        <temperatura minima="7" maxima="13"/>
+        <viento direccion="NO" velocidad="12"/>
+        <lluvia probabilidad="60" cantidad="10"/>
+      </dia>
+    </ciudad>
+    <ciudad nombre="Barcelona">
+      <dia fecha="2023-03-13" clima="NUB">
+        <temperatura minima="11" maxima="16"/>
+        <viento direccion="E" velocidad="20"/>
+        <lluvia cantidad="2"/>
+      </dia>
+      <dia fecha="2023-03-14" clima="DES">
+        <temperatura minima="12" maxima="20"/>
+        <viento direccion="SE" velocidad="8"/>
+      </dia>
+      <dia fecha="2023-03-15" clima="DES">
+        <temperatura minima="14" maxima="22"/>
+      </dia>
+    </ciudad>
+  </ciudades>
+</prevision>
